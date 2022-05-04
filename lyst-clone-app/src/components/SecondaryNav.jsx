@@ -91,7 +91,7 @@ const SecondaryNav = ({ active, link, setActiveProd }) => {
       <CloseNav onClick={() => setActiveProd(!active)}>
         <CloseIcon style={{ color: "#3E3D3D" }} />
       </CloseNav>
-      <NavSidebar data={Data[selected]} />
+      <NavSidebar data={Data[selected]} setActiveProd={setActiveProd} />
       <OverlayDiv />
     </div>
   );

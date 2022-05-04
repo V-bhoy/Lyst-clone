@@ -14,6 +14,7 @@ import {
 } from "./Navbar.styled";
 import { Link } from "react-router-dom";
 import SecondaryNav from "./SecondaryNav";
+import MobileNav from "./MobileNav";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -103,7 +104,7 @@ const Navbar = (props) => {
               >
                 MEN
               </p>
-              <InputDiv className="focus">
+              <InputDiv>
                 <SearchIcon />
                 <NavInput
                   placeholder={
@@ -115,6 +116,7 @@ const Navbar = (props) => {
               </InputDiv>
             </BottomNav>
           </Nav>
+          <MobileNav />
         </AppBar>
       </HideOnScroll>
       <SecondaryNav
