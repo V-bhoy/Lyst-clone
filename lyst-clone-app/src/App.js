@@ -1,7 +1,10 @@
 import React from "react";
+import Cart from "./pages/Cart";
 
 function App() {
-  return <div className="App">App</div>;
+  return <div className="App">
+    <Cart/>
+  </div>
 }
 
 export default App;
