@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import CloseIcon from "@mui/icons-material/Close";
-import { CloseNav, OverlayDiv, SecondaryNavTop } from "./Navbar.styled";
+import {
+  CloseNav,
+  OverlayDiv,
+  SecMainDiv,
+  SecondaryNavTop,
+} from "./Navbar.styled";
 import NavSidebar from "./NavSidebar";
 import { Data } from "../NavbarDB/NavDB";
 
 const SecondaryNav = ({ active, link, setActiveProd }) => {
   const [selected, setSelected] = useState("Clothing");
   return (
-    <div style={active ? { display: "block" } : { display: "none" }}>
+    <SecMainDiv style={active ? { display: "block" } : { display: "none" }}>
       <SecondaryNavTop>
         <p
           className="cursor-pointer"
@@ -93,7 +98,7 @@ const SecondaryNav = ({ active, link, setActiveProd }) => {
       </CloseNav>
       <NavSidebar data={Data[selected]} setActiveProd={setActiveProd} />
       <OverlayDiv />
-    </div>
+    </SecMainDiv>
   );
 };
 

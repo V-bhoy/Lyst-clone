@@ -54,11 +54,19 @@ export const NavInput = styled.input`
   margin-left: 0.4rem;
 `;
 
+export const SecMainDiv = styled.div`
+  position: absolute;
+  top: 101px;
+  left: 0;
+  width: 100%;
+  z-index: 2222;
+`;
+
 export const SecondaryNavTop = styled.div`
   width: 100%;
-  margin-top: 6.2rem;
   border-bottom: 1px solid #111;
   display: flex;
+  background-color: #fff;
   gap: 2rem;
   font-size: 0.9rem;
   align-items: center;
@@ -87,16 +95,16 @@ export const LinkDiv = styled.div`
 
 export const OverlayDiv = styled.div`
   position: absolute;
-  bottom: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   height: 60%;
   width: 100%;
-  z-index: 11;
+  z-index: 111;
 `;
 
 export const CloseNav = styled.div`
   position: absolute;
-  top: 10rem;
+  top: 4rem;
   right: 2rem;
   z-index: 22222;
   cursor: pointer;
