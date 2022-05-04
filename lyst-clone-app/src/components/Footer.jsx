@@ -17,6 +17,7 @@ import {
   InnerChild,
   QrBox,
   Mobile,
+  MobileDisplay,
 } from "./FooterStyled";
 import StarIcon from "@mui/icons-material/Star";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -25,7 +26,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 const Footer = () => {
   const [popup, setPopup] = useState(false);
-  const [accordian, setAccordian] = useState(false);
+  const [accordian1, setAccordian1] = useState(false);
+  const [accordian2, setAccordian2] = useState(false);
   return (
     <FooterContainer>
       <InnerContainer>
@@ -102,59 +104,99 @@ const Footer = () => {
         <MiddleContainer>
           <div>
             <h2>INTERNATIONAL</h2>
-            <AddIcon
-              onClick={() => {
-                setAccordian(!accordian);
-              }}
-            />
           </div>
           <ul>
             <li>
               <a href="/">Lyst - AU</a>
             </li>
             <li>
-              <a href=""></a>Lyst - CA
+              <a href="/">Lyst - CA</a>
             </li>
             <li>
-              <a href=""></a>Lyst - UK
+              <a href="/">Lyst - UK</a>
             </li>
             <li>
-              <a href="">Lyst - Österreich</a>
+              <a href="/">Lyst - Österreich</a>
             </li>
             <li>
-              <a href="">Lyst - Schweiz</a>
+              <a href="/">Lyst - Schweiz</a>
             </li>
             <li>
-              <a href="">Lyst - Deutschland</a>
+              <a href="/">Lyst - Deutschland</a>
             </li>
             <li>
-              <a href="">Lyst - España</a>
+              <a href="/">Lyst - España</a>
             </li>
             <li>
-              <a href="">Lyst - France</a>
+              <a href="/">Lyst - France</a>
             </li>
             <li>
-              <a href="">Lyst - Italia</a>
+              <a href="/">Lyst - Italia</a>
             </li>
             <li>
-              <a href="">Lyst - 日本</a>
+              <a href="/">Lyst - 日本</a>
             </li>
             <li>
-              <a href="">Lyst - België</a>
+              <a href="/">Lyst - België</a>
             </li>
             <li>
-              <a href="">Lyst - Nederland</a>
+              <a href="/">Lyst - Nederland</a>
             </li>
           </ul>
         </MiddleContainer>
+        <MobileDisplay>
+          <div>
+            <h2>INTERNATIONAL</h2>
+            <AddIcon
+              onClick={() => {
+                setAccordian1(!accordian1);
+              }}
+            />
+          </div>
+          {accordian1 && (
+            <ul>
+              <li>
+                <a href="/">Lyst - AU</a>
+              </li>
+              <li>
+                <a href="/">Lyst - CA</a>
+              </li>
+              <li>
+                <a href="/">Lyst - UK</a>
+              </li>
+              <li>
+                <a href="/">Lyst - Österreich</a>
+              </li>
+              <li>
+                <a href="/">Lyst - Schweiz</a>
+              </li>
+              <li>
+                <a href="/">Lyst - Deutschland</a>
+              </li>
+              <li>
+                <a href="/">Lyst - España</a>
+              </li>
+              <li>
+                <a href="/">Lyst - France</a>
+              </li>
+              <li>
+                <a href="/">Lyst - Italia</a>
+              </li>
+              <li>
+                <a href="/">Lyst - 日本</a>
+              </li>
+              <li>
+                <a href="/">Lyst - België</a>
+              </li>
+              <li>
+                <a href="/">Lyst - Nederland</a>
+              </li>
+            </ul>
+          )}
+        </MobileDisplay>
         <RightContainer>
           <div>
             <h2>HELP AND INFO</h2>
-            <AddIcon
-              onClick={() => {
-                setAccordian(!accordian);
-              }}
-            />
           </div>
           <ul>
             <li>
@@ -207,6 +249,68 @@ const Footer = () => {
             </li>
           </ul>
         </RightContainer>
+        <MobileDisplay>
+          <div>
+            <h2>HELP AND INFO</h2>
+            <AddIcon
+              onClick={() => {
+                setAccordian2(!accordian2);
+              }}
+            />
+          </div>
+          {accordian2 && (
+            <ul>
+              <li>
+                <a href="">Help center</a>
+              </li>
+              <li>
+                <a href="">About us</a>
+              </li>
+              <li>
+                <a href="">Shipping policy</a>
+              </li>
+              <li>
+                <a href="">Returns policy</a>
+              </li>
+              <li>
+                <a href="">Payments</a>
+              </li>
+              <li>
+                <a href="">Refund policy</a>
+              </li>
+              <li>
+                <a href="">Developers</a>
+              </li>
+              <li>
+                <a href="">Careers</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+              <li>
+                <a href="">Terms & conditions</a>
+              </li>
+              <li>
+                <a href="">Privacy & cookie policy</a>
+              </li>
+              <li>
+                <a href="">Intellectual property</a>
+              </li>
+              <li>
+                <a href="">Categories</a>
+              </li>
+              <li>
+                <a href="">Become a partner</a>
+              </li>
+              <li>
+                <a href="">Lyst Insights</a>
+              </li>
+              <li>
+                <a href="">Lyst News</a>
+              </li>
+            </ul>
+          )}
+        </MobileDisplay>
       </InnerContainer>
       {popup && (
         <PopupContainer>

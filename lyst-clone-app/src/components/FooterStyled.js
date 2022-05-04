@@ -127,9 +127,7 @@ export const MiddleContainer = styled.div`
     text-decoration: underline;
   }
   @media (max-width: 992px) {
-    width: 100%;
-    margin: auto;
-    padding: 10px;
+    display: none;
   }
 `;
 export const RightContainer = styled.div`
@@ -139,15 +137,6 @@ export const RightContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 992px) {
-      border-top: 1px solid black;
-    }
-    & svg {
-      display: none;
-      @media (max-width: 992px) {
-        display: block;
-      }
-    }
   }
   & h2 {
     font-size: 22px;
@@ -162,9 +151,7 @@ export const RightContainer = styled.div`
     text-decoration: underline;
   }
   @media (max-width: 992px) {
-    width: 100%;
-    margin: auto;
-    padding: 10px;
+    display: none;
   }
 `;
 export const PopupContainer = styled.div`
@@ -242,9 +229,34 @@ export const QrBox = styled.div`
 export const Mobile = styled.img`
   width: 294px;
   height: 287px;
-  /* left: 129px; */
-  /* position: absolute; */
   bottom: 0;
   display: block;
   margin: 33px auto auto;
+`;
+export const MobileDisplay = styled.div`
+  display: none;
+  div {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-top: 1px solid black;
+  }
+  & h2 {
+    font-size: 22px;
+    margin: 5px 0;
+    font-weight: normal;
+  }
+  & li {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  & a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 992px) {
+    display: block;
+    margin: auto;
+    padding: 10px;
+  }
 `;
