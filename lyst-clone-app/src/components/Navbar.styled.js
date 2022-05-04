@@ -4,6 +4,9 @@ export const Nav = styled.nav`
   width: 100%;
   padding: 0.7rem 1.4rem;
   user-select: none;
+  @media (max-width: 868px) {
+    display: none;
+  }
 `;
 export const TopNav = styled.div`
   width: 100%;
