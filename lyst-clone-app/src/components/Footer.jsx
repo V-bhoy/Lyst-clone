@@ -22,8 +22,10 @@ import StarIcon from "@mui/icons-material/Star";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CloseIcon from "@mui/icons-material/Close";
+import AddIcon from "@mui/icons-material/Add";
 const Footer = () => {
   const [popup, setPopup] = useState(false);
+  const [accordian, setAccordian] = useState(false);
   return (
     <FooterContainer>
       <InnerContainer>
@@ -98,7 +100,14 @@ const Footer = () => {
           </BottomText>
         </LeftContainer>
         <MiddleContainer>
-          <h2>INTERNATIONAL</h2>
+          <div>
+            <h2>INTERNATIONAL</h2>
+            <AddIcon
+              onClick={() => {
+                setAccordian(!accordian);
+              }}
+            />
+          </div>
           <ul>
             <li>
               <a href="/">Lyst - AU</a>
@@ -139,7 +148,14 @@ const Footer = () => {
           </ul>
         </MiddleContainer>
         <RightContainer>
-          <h2>HELP AND INFO</h2>
+          <div>
+            <h2>HELP AND INFO</h2>
+            <AddIcon
+              onClick={() => {
+                setAccordian(!accordian);
+              }}
+            />
+          </div>
           <ul>
             <li>
               <a href="">Help center</a>

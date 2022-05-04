@@ -11,10 +11,17 @@ export const InnerContainer = styled.div`
   max-width: 1020px;
   margin: 0 auto;
   padding: 50px 0px;
+  @media (max-width: 992px) {
+    display: block;
+  }
 `;
 
 export const LeftContainer = styled.div`
   max-width: 35%;
+  @media (max-width: 992px) {
+    max-width: 100%;
+    padding: 10px;
+  }
 `;
 export const Trustpilot = styled.div`
   display: flex;
@@ -93,6 +100,20 @@ export const BottomText = styled.div`
 export const MiddleContainer = styled.div`
   width: 25%;
   padding-left: 100px;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      border-top: 1px solid black;
+    }
+    & svg {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+  }
   & h2 {
     font-size: 22px;
     margin: 5px 0;
@@ -104,11 +125,30 @@ export const MiddleContainer = styled.div`
   }
   & a:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
   }
 `;
 export const RightContainer = styled.div`
   width: 30%;
   padding-left: 100px;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      border-top: 1px solid black;
+    }
+    & svg {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+  }
   & h2 {
     font-size: 22px;
     margin: 5px 0;
@@ -120,6 +160,11 @@ export const RightContainer = styled.div`
   }
   & a:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
   }
 `;
 export const PopupContainer = styled.div`
