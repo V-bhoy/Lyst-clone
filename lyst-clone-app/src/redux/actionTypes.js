@@ -5,3 +5,4 @@ export const GET_TOTAL = "GET_TOTAL";
 export const DELETE_ITEM = "DELETE_ITEM";
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
+export const UPDATE_TOTAL = "UPDATE_TOTAL";

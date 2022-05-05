@@ -1,11 +1,14 @@
 import React, {useEffect} from 'react'
-import { Flex, CartImage, ItemInfo ,Counter, Increment, Decrement, ItemCount} from './styled'
+import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove} from './styled'
 import { deleteItem } from '../redux/action'
 import { useDispatch } from 'react-redux'
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
-export default function CartItem({ title, id, brand, img, price,quantity }) {
+export default function CartItem({ title, id, description, img, price,quantity }) {
  
   const dispatch = useDispatch();
 
@@ -27,34 +30,55 @@ export default function CartItem({ title, id, brand, img, price,quantity }) {
     });
   };
 
+  
+
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
-    // console.log("Awesome");
+    
   }, [id]);
 
   return (
     <>
         <Flex  key={id}>
-        <CartImage src={img} alt={title} />
+          <div style={{width: "10%"}}>
+                <CartImage src={img} alt={title} />
+          </div>
+        
         <ItemInfo>
             
-            <h2>{brand}</h2>
-            <h4>{title}</h4>
-            <p>Price:{price}</p>
+            <h2>{title}</h2>
+            <h4>{description}</h4>
+            
             
 
            
 
         </ItemInfo>
+
+        
+        <Remove>
+              <DeleteIcon onClick={() =>removeItem({id})}></DeleteIcon>
+             {/* <button onClick={() =>removeItem({id})}>Remove</button>*/}
+        </Remove>
+
+        <div style={{width: "34%",display: "flex", justifyContent: "space-around"}}>
+
+        <p>{price}</p>
+
         <Counter>
           
-        <i class="fa-light fa-plus"></i>
-        <ItemCount type="text" placeholder={quantity} disabled />
-        <i class="fa-light fa-minus"></i>
-   
+        <RemoveIcon onClick={() =>decrement({id})}/>
+
+        <ItemCount type="text"   placeholder={quantity}   
+        />
+      
+        <AddIcon onClick={() =>increment({id})}/>
+      
       </Counter>
 
-      <button onClick={() =>removeItem({id})}>Remove</button>
+      <p>{price*quantity}</p>
+      
+      </div>
 
       </Flex>
     </>

@@ -1,43 +1,66 @@
 import styled from "styled-components"
 
+export const CartHead = styled.div`
+margin-left: 80px;
+`;
+
 export const CartPage = styled.div`
+width: 90%;
+margin: auto;
+`;
+
+export const CartTotal = styled.div`
 display : flex;
-margin-left: 50px;
+width: 30%;
+position : absolute;
+right: 4%;
+justify-content: space-around; 
 `;
 
 export const Flex = styled.div`
 display : flex;
-height: 200px;
+height: 160px;
 align-items : center;
+border-bottom : 0.5px solid grey;
 
 `;
 
 export const CartLeft = styled.div`
-width : 70%;
-border : 1px solid red;
+width : 100%;
 `;
 
 export const CartRight = styled.div`
-width : 30%;
-line-height: 1.8;
-  border : 1px solid black;
+display: flex;
+width: 100%;
+margin-top: 20px;
 `;
 
+export const CartCoupon = styled.div`
+width: 60%;
+height: 100px
+`;
+
+export const CartSubtotal = styled.div`
+position : absolute;
+right: 2%;
+line-height: 1.8;
+`;
+export const Remove = styled.div`
+width : 20%;
+`;
 export const CartImage = styled.img`
-width : 100px;
+width : 100%;
 height : 150px;
 `;
 
 export const ItemInfo = styled.div`
+width: 40%;
 margin-left : 30px;
 line-height: 1.8;
 `;
 
 export const Counter = styled.div`
 display: flex;
-justify-content: flex-end;
-align-items: center;
-margin-left : 50px;
 `;
 
 export const Increment = styled.i`
@@ -55,18 +78,36 @@ border: none;
 `;
 
 export const ItemCount = styled.input`
-width: 6rem;
-height: 3rem;
+width: 25px;
+height: 20px;
 border: 0.141rem solid var(--primary-color);
 box-sizing: border-box;
 font-style: normal;
 font-weight: normal;
-font-size: 1.6rem;
+font-size: 18px;
 text-align: center;
-text-transform: capitalize;
-color: var(--primary-color);
+color: black;
 margin: 0 1rem;
-border-radius: 0.5rem;
-outline: none;
-background-color: transparent;
+border-radius: 2px;
+outline: 1px solid gray;
+background-color: none;
 `;
+
+export const CheckOut = styled.button`
+padding: 10px 36px 10px 36px;
+font size: 12px;
+background-color: black;
+color: white;
+border: none;
+`;
+
+export const CouponInput = styled.input`
+width: 400px;
+padding: 10px;
+`
+export const CouponSubmit = styled.input`
+background-color: gray;
+width: 200px;
+padding: 12px;
+border: none;
+`

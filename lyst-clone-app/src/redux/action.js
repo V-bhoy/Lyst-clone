@@ -9,6 +9,7 @@ import {
   REQ_DATA,
   INCREMENT,
   DECREMENT,
+  UPDATE_TOTAL,
 } from "./actionTypes";
 
 function getCartData(dispatch) {
@@ -21,7 +22,9 @@ function getCartData(dispatch) {
     
 }
 
-
+export const updateTotal = (codeInput) =>({
+  type : UPDATE_TOTAL,
+})
 
 export const req_data = () => ({
   type: REQ_DATA,
@@ -35,7 +38,7 @@ export const error_data = (err) => ({
 
 export const getTotal = (cartData) => ({
     type: GET_TOTAL,
-    payload : cartData,
+    payload : cartData
    
   });
 
