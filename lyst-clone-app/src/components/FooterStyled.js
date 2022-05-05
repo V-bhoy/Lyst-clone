@@ -11,6 +11,12 @@ export const InnerContainer = styled.div`
   max-width: 1020px;
   margin: 0 auto;
   padding: 50px 0px;
+  & ul {
+    list-style: none;
+  }
+  & a {
+    color: black;
+  }
   @media (max-width: 992px) {
     display: block;
   }
