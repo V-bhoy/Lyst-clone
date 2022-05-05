@@ -6,6 +6,9 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   BottomNav,
+  DropDown,
+  DropDownSpan,
+  DropOverlay,
   InputDiv,
   Nav,
   NavButton,
@@ -32,6 +35,7 @@ function HideOnScroll(props) {
 const Navbar = (props) => {
   const [activeProd, setActiveProd] = useState(false);
   const [activeLink, setActiveLink] = useState("Men");
+  const [dropActive, setDropActive] = useState(false);
 
   activeProd
     ? document.body.classList.add("overflow-hidden")
@@ -50,11 +54,47 @@ const Navbar = (props) => {
           <Nav>
             <TopNav>
               <p>IN - US$</p>
-              <p>
+              <div
+                className="relative"
+                onClick={() => setDropActive(!dropActive)}
+              >
                 Help
                 <KeyboardArrowDownIcon style={{ fontSize: "1rem" }} />
-              </p>
-              <p className="hover:underline">Sign in</p>
+                <DropDownSpan
+                  style={
+                    dropActive ? { display: "block" } : { display: "none" }
+                  }
+                ></DropDownSpan>
+                <DropDown
+                  style={
+                    dropActive ? { display: "block" } : { display: "none" }
+                  }
+                >
+                  <Link to={"/"}>
+                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                      Help Center
+                    </p>
+                  </Link>
+                  <Link to={"/"}>
+                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                      Contact us
+                    </p>
+                  </Link>
+                  <Link to={"/"}>
+                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                      About us
+                    </p>
+                  </Link>
+                  <Link to={"/"}>
+                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                      Careers
+                    </p>
+                  </Link>
+                </DropDown>
+              </div>
+              <Link to="/">
+                <p className="hover:underline">Sign in</p>
+              </Link>
               <NavButton className="hover:underline">Join</NavButton>
             </TopNav>
 
@@ -124,6 +164,9 @@ const Navbar = (props) => {
         setActiveProd={setActiveProd}
         link={activeLink}
       />
+      <DropOverlay
+        style={dropActive ? { display: "block" } : { display: "none" }}
+      ></DropOverlay>
     </>
   );
 };

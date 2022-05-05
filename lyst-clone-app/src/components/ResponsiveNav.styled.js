@@ -6,10 +6,10 @@ export const MobileNavDiv = styled.nav`
   background-color: #fff;
   width: 100%;
   display: flex;
-  padding: 0.4rem 0rem;
+  padding: 0.4rem 0rem 0.8rem 0rem;
   justify-content: space-between;
   align-items: center;
-  @media (min-width: 868px) {
+  @media all and (min-width: 868px) {
     display: none;
   }
 `;
@@ -39,7 +39,7 @@ export const MobileSecDiv = styled.div`
   overflow-x: hidden;
   background-color: #fff;
   position: fixed;
-  top: 4rem;
+  top: 3.4rem;
   z-index: 802;
 `;
 

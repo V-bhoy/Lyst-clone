@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   width: 100%;
   padding: 0.7rem 1.4rem;
   user-select: none;
-  @media (max-width: 868px) {
+  @media all and (max-width: 868px) {
     display: none;
   }
 `;
@@ -111,4 +111,49 @@ export const CloseNav = styled.div`
   background: #f5f4f2;
   border-radius: 50%;
   padding: 0.4rem;
+`;
+
+export const DropOverlay = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: 111;
+`;
+export const DropDown = styled.div`
+  position: absolute;
+  left: -10rem;
+  top: 1.8rem;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  height: fit-content;
+  padding: 2rem;
+  z-index: 92;
+`;
+
+export const DropDownSpan = styled.span`
+  width: 21px;
+  height: 15px;
+  border: none;
+  position: absolute;
+  overflow: hidden;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 93;
+  &::after {
+    content: "";
+    width: 18px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    display: block;
+    position: relative;
+    left: 1px;
+    top: 6px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 35%);
+  }
 `;
