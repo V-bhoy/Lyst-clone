@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ProdFilterDiv } from "../pages/StyledComponents/Products.styled";
+import { useDispatch } from "react-redux";
+import { clearFilter, filterData } from "../redux/action";
 
 const ProductsFilterBar = () => {
   const [active, setActive] = useState({
@@ -9,12 +11,22 @@ const ProductsFilterBar = () => {
     sale: false,
     price: false,
   });
+
+  const dispatch = useDispatch();
   return (
     <>
       <ProdFilterDiv>
         <div className="flex justify-between  py-3 px-2 ">
           <p className="text-[22px] self-end">Filters</p>
-          <button className="font-bold text-sm self-end">Clear all</button>
+          <button
+            className="font-bold text-sm self-end"
+            onClick={() => {
+              dispatch(clearFilter());
+              setActive(!active);
+            }}
+          >
+            Clear all
+          </button>
         </div>
         <div className="border-t border-black  py-4 px-2">
           <div
@@ -42,12 +54,16 @@ const ProductsFilterBar = () => {
             style={active.gender ? { display: "block" } : { display: "none" }}
             className="px-4 bg-neutral-100 py-2"
           >
-            <input type="radio" name="gender" id="Men" />
-            &nbsp; Men
+            <label>
+              <input type="radio" name="gender" id="Men" />
+              &nbsp; Men
+            </label>
             <br />
             <br />
-            <input type="radio" name="gender" id="Men" />
-            &nbsp; Women
+            <label>
+              <input type="radio" name="gender" id="Men" />
+              &nbsp; Women
+            </label>
           </div>
         </div>
         <div className="border-t border-black  py-4 px-2 cursor-pointer">
@@ -76,24 +92,34 @@ const ProductsFilterBar = () => {
             style={active.category ? { display: "block" } : { display: "none" }}
             className="px-4 bg-neutral-100 py-2"
           >
-            <input type="radio" name="category" id="Clothing" />
-            &nbsp; Clothing
+            <label>
+              <input type="radio" name="category" id="Clothing" />
+              &nbsp; Clothing
+            </label>
             <br />
             <br />
-            <input type="radio" name="category" id="Shoes" />
-            &nbsp; Shoes
+            <label>
+              <input type="radio" name="category" id="Shoes" />
+              &nbsp; Shoes
+            </label>
             <br />
             <br />
-            <input type="radio" name="category" id="Accessories" />
-            &nbsp; Accessories
+            <label>
+              <input type="radio" name="category" id="Accessories" />
+              &nbsp; Accessories
+            </label>
             <br />
             <br />
-            <input type="radio" name="category" id="Bags" />
-            &nbsp; Bags
+            <label>
+              <input type="radio" name="category" id="Bags" />
+              &nbsp; Bags
+            </label>
             <br />
             <br />
-            <input type="radio" name="category" id="Jewelry" />
-            &nbsp;Jewelry
+            <label>
+              <input type="radio" name="category" id="Jewelry" />
+              &nbsp;Jewelry
+            </label>
           </div>
         </div>
         <div className="border-t border-black  py-4 px-2 cursor-pointer">
@@ -122,20 +148,28 @@ const ProductsFilterBar = () => {
             style={active.sale ? { display: "block" } : { display: "none" }}
             className="px-4 bg-neutral-100 py-2"
           >
-            <input type="radio" name="sale" id="OnSale" />
-            &nbsp; On Sale
+            <label>
+              <input type="radio" name="sale" id="OnSale" />
+              &nbsp; On Sale
+            </label>
             <br />
             <br />
-            <input type="radio" name="sale" id="sale" />
-            &nbsp; 20% off or more
+            <label>
+              <input type="radio" name="sale" id="sale" />
+              &nbsp; 20% off or more
+            </label>
             <br />
             <br />
-            <input type="radio" name="sale" id="sale" />
-            &nbsp; 50% off or more
+            <label>
+              <input type="radio" name="sale" id="sale" />
+              &nbsp; 50% off or more
+            </label>
             <br />
             <br />
-            <input type="radio" name="sale" id="sale" />
-            &nbsp; 70% off or more
+            <label>
+              <input type="radio" name="sale" id="sale" />
+              &nbsp; 70% off or more
+            </label>
           </div>
         </div>
         <div className="border-t border-black  py-4 px-2 cursor-pointer">
@@ -164,16 +198,37 @@ const ProductsFilterBar = () => {
             style={active.price ? { display: "block" } : { display: "none" }}
             className="px-4 bg-neutral-100 py-2"
           >
-            <input type="radio" name="price" id="price" />
-            &nbsp; Below $500
+            <label>
+              <input
+                type="radio"
+                name="price"
+                id="1000"
+                onClick={(e) => dispatch(filterData(e.target.id))}
+              />
+              &nbsp; Below $1000
+            </label>
             <br />
             <br />
-            <input type="radio" name="price" id="price" />
-            &nbsp; Below $300
+            <label>
+              <input
+                type="radio"
+                name="price"
+                id="500"
+                onClick={(e) => dispatch(filterData(e.target.id))}
+              />
+              &nbsp; Below $500
+            </label>
             <br />
             <br />
-            <input type="radio" name="price" id="price" />
-            &nbsp; Below $200
+            <label>
+              <input
+                type="radio"
+                name="price"
+                id="200"
+                onClick={(e) => dispatch(filterData(e.target.id))}
+              />
+              &nbsp; Below $200
+            </label>
           </div>
         </div>
         <div className="border-t border-black  py-4 px-2 cursor-pointer">

@@ -37,7 +37,7 @@ const Navbar = (props) => {
   const [activeLink, setActiveLink] = useState("Men");
   const [dropActive, setDropActive] = useState(false);
 
-  activeProd
+  activeProd || dropActive
     ? document.body.classList.add("overflow-hidden")
     : document.body.classList.remove("overflow-hidden");
   return (
@@ -53,9 +53,9 @@ const Navbar = (props) => {
         >
           <Nav>
             <TopNav>
-              <p>IN - US$</p>
+              <p className="cursor-pointer">IN - US$</p>
               <div
-                className="relative"
+                className="relative cursor-pointer"
                 onClick={() => setDropActive(!dropActive)}
               >
                 Help

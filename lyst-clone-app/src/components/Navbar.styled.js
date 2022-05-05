@@ -15,7 +15,6 @@ export const TopNav = styled.div`
   align-items: center;
   font-size: 0.8rem;
   gap: 1.2rem;
-  cursor: pointer;
 `;
 
 export const NavButton = styled.button`
@@ -60,6 +59,9 @@ export const SecMainDiv = styled.div`
   left: 0;
   width: 100%;
   z-index: 2222;
+  @media all and (max-width: 868px) {
+    display: none !important;
+  }
 `;
 
 export const SecondaryNavTop = styled.div`
@@ -131,7 +133,7 @@ export const DropDown = styled.div`
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   height: fit-content;
   padding: 2rem;
-  z-index: 92;
+  z-index: 2292;
 `;
 
 export const DropDownSpan = styled.span`
@@ -143,7 +145,7 @@ export const DropDownSpan = styled.span`
   bottom: -11px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 93;
+  z-index: 21293;
   &::after {
     content: "";
     width: 18px;
