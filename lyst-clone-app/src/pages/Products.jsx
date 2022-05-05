@@ -3,7 +3,11 @@ import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
 import ProductsFilterBar from "../components/ProductsFilterBar";
 import data from "../db.json";
-import { ProdHeading, ProdSection } from "./StyledComponents/Products.styled";
+import {
+  ProdGridDiv,
+  ProdHeading,
+  ProdSection,
+} from "./StyledComponents/Products.styled";
 
 const Products = () => {
   const { id } = useParams();
@@ -21,9 +25,9 @@ const Products = () => {
         <div>
           <ProductsFilterBar />
         </div>
-        <div>
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-medium">
+        <div className="w-full">
+          <div className="flex flex-col lg:justify-between lg:flex-row md:justify-between md:flex-row items-center">
+            <h2 className="text-sm lg:text-xl font-medium md:text-[18px]">
               2,155,528 products, 151 stores
             </h2>
             <select
@@ -36,11 +40,11 @@ const Products = () => {
               <option value="l2h">Sort by price(low to high)</option>
             </select>
           </div>
-          <div className="grid grid-cols-4 mt-8">
+          <ProdGridDiv>
             {Data.map((item) => {
               return <ProductItem key={item.id} {...item} />;
             })}
-          </div>
+          </ProdGridDiv>
         </div>
       </ProdSection>
     </>
