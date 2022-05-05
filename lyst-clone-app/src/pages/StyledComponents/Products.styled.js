@@ -52,3 +52,44 @@ export const ProdGridDiv = styled.aside`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
+
+export const ProdOverlayDiv = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: Center;
+`;
+
+export const AddToCartBtn = styled.button`
+  color: #fff;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 18px;
+  &::after,
+  &::before {
+    content: "Add to cart";
+    position: absolute;
+    top: 16px;
+    left: 160px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    @media all and (max-width: 762px) {
+      left: 72px;
+    }
+  }
+  &:hover:after {
+    top: 32px;
+    opacity: 1;
+  }
+  &:hover:before {
+    top: 0px;
+    opacity: 1;
+  }
+`;

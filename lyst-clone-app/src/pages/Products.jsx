@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
 import ProductsFilterBar from "../components/ProductsFilterBar";
-import data from "../db.json";
+import { getData, sortData } from "../redux/action";
+import ProductDetail from "./ProductDetail";
 import {
   ProdGridDiv,
   ProdHeading,
@@ -10,10 +12,20 @@ import {
 } from "./StyledComponents/Products.styled";
 
 const Products = () => {
+  const { data, filterData } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const Data = data[id.toLowerCase()] || [];
+  const [itemOverlay, setItemOverlay] = useState(false);
+
+  useEffect(() => {
+    dispatch(getData(id.toLowerCase()));
+  }, [dispatch, id, itemOverlay]);
+
+  const Data = filterData.length > 0 ? filterData : data;
+
   let heading;
   id === "Coats" || id === "Dresses" ? (heading = "Women") : (heading = "Men");
+
   return (
     <>
       <ProdHeading>
@@ -32,8 +44,7 @@ const Products = () => {
             </h2>
             <select
               className="outline-none border border-black py-2 px-2 font-bold text-sm"
-              name="sortBy"
-              id="sortBy"
+              onChange={(e) => dispatch(sortData(e.target.value))}
             >
               <option value="SBR">Sort by recommended</option>
               <option value="h2l">Sort by price(high to low)</option>
@@ -42,11 +53,18 @@ const Products = () => {
           </div>
           <ProdGridDiv>
             {Data.map((item) => {
-              return <ProductItem key={item.id} {...item} />;
+              return (
+                <ProductItem
+                  key={item.id}
+                  {...item}
+                  setItemOverlay={setItemOverlay}
+                />
+              );
             })}
           </ProdGridDiv>
         </div>
       </ProdSection>
+      {itemOverlay && <ProductDetail setItemOverlay={setItemOverlay} />}
     </>
   );
 };
