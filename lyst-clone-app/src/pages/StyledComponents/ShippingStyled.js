@@ -3,6 +3,7 @@ export const MainContainer = styled.div`
   display: flex;
   max-width: 1100px;
   margin: auto;
+  margin-top: 100px;
 `;
 export const LeftBox = styled.div`
   width: 52%;

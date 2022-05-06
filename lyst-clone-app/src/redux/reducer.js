@@ -1,8 +1,19 @@
-import { CLEAR_FILTER, FILTER_DATA, GET_DATA, SORT_DATA } from "./actionTypes";
+import {
+  APPLYDISCOUNT,
+  CLEAR_FILTER,
+  FILTER_DATA,
+  GETCARTDATA,
+  GET_DATA,
+  SORT_DATA,
+} from "./actionTypes";
 
 const initState = {
   data: [],
   filterData: [],
+  cartData: [],
+  totalPrice: 0,
+  tax: 0,
+  promoCodeStatus: true,
 };
 
 export const ProductsReducer = (state = initState, { type, payload }) => {
@@ -35,6 +46,22 @@ export const ProductsReducer = (state = initState, { type, payload }) => {
         ...state,
         filterData: [],
       };
+    case APPLYDISCOUNT: {
+      return {
+        ...state,
+        totalPrice: payload,
+        tax: payload * 0.12,
+        promoCodeStatus: false,
+      };
+    }
+    case GETCARTDATA: {
+      return {
+        ...state,
+        totalPrice: payload.totalPrice,
+        tax: payload.totalPrice * 0.12,
+        cartData: payload.cartData,
+      };
+    }
     default:
       return state;
   }

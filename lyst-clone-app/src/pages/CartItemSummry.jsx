@@ -1,5 +1,8 @@
+import { useSelect } from "@mui/base";
 import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCartData, updateTotalPrice } from "../redux/action";
 import {
   RightInnerBox,
   GiftCard,
@@ -12,77 +15,62 @@ import {
   ProdImg,
   ProdDetails,
   ProdPrice,
-} from "./CartItemSummryStyled";
+} from "./StyledComponents/CartItemSummryStyled";
 
 const CartItemSummry = () => {
-  let data = [
-    {
-      image:
-        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
-      title: "Shirt",
-      quant: 2,
-      price: 2000,
-    },
-    {
-      image:
-        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
-      title: "Shirt",
-      quant: 2,
-      price: 2000,
-    },
-    {
-      image:
-        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
-      title: "Shirt",
-      quant: 2,
-      price: 2000,
-    },
-  ];
-  let totalPrice = 0;
-  {
-    data.map((prod) => {
-      totalPrice = totalPrice + prod.quant * prod.price;
-    });
-  }
+  let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log(cartData, "cart");
+
+  // let totalPrice = 0;
+  // data.map((prod) => {
+  //   totalPrice = totalPrice + prod.quant * prod.price;
+  // });
   const [promoCode, setPromoCode] = useState("");
-  const [totalCost, setTotalCost] = useState(totalPrice);
-  const [taxe, setTaxe] = useState(totalCost * 0.12);
-  const handleChange = (e) => {
-    setPromoCode(e.target.value);
-  };
-  // const [discount,setDiscount] = useState(0)
+
+  const { totalPrice, tax, promoCodeStatus } = useSelector(
+    (state) => state.products
+  );
+
+  const dispatch = useDispatch();
   const handleClick = () => {
-    if (promoCode == "Masai30") {
-      setTotalCost(totalCost - totalCost * 0.3);
+    if (promoCodeStatus && promoCode == "Masai30") {
+      let discountPrice = totalPrice - totalPrice * 0.3;
+      dispatch(updateTotalPrice(discountPrice));
+      setPromoCode("");
+    } else if (promoCode !== "Masai30") {
+      alert("Enter valid code");
+    } else {
+      alert("Already used");
     }
   };
   useEffect(() => {
-    setTaxe(totalCost * 0.12);
-  }, [totalCost]);
+    dispatch(getCartData());
+  }, []);
   return (
     <RightBox>
       <RightInnerBox>
         <ProdSummryBox>
-          {data.map((prod) => {
+          {cartData.map((prod) => {
             return (
               <ProductDiv>
                 <ProdImgData>
                   <ProdImg>
-                    <img src={prod.image} alt="" />
+                    <img src={prod.img} alt="" />
                   </ProdImg>
                   <ProdDetails>
-                    <p>Product Title</p>
-                    <p>Quantity :{prod.quant}</p>
+                    <p style={{ fontSize: "14px" }}>{prod.desc}</p>
+                    <p style={{ fontSize: "12px" }}>Quantity :{prod.qty}</p>
                   </ProdDetails>
                 </ProdImgData>
-                <ProdPrice>$ {prod.price * prod.quant}</ProdPrice>
+                <ProdPrice>${prod.price * prod.qty}</ProdPrice>
               </ProductDiv>
             );
           })}
         </ProdSummryBox>
         <GiftCard>
           <input
-            onChange={handleChange}
+            value={promoCode}
+            onChange={(e) => setPromoCode(e.target.value)}
             type="text"
             placeholder="Gift card or discount code"
           />
@@ -94,7 +82,7 @@ const CartItemSummry = () => {
           <div>
             <p>Subtotal</p>
             <p>
-              $<span>{totalCost}</span>
+              $<span>{totalPrice}</span>
             </p>
           </div>
           <div>
@@ -104,7 +92,7 @@ const CartItemSummry = () => {
           <div>
             <p>Duties & Taxes</p>
             <p>
-              $<span>{taxe}</span>
+              $<span>{tax}</span>
             </p>
           </div>
         </PriceBox>
@@ -113,7 +101,7 @@ const CartItemSummry = () => {
           <div>
             <p style={{ fontSize: "12px", color: "#717171" }}>USD </p>
             <p style={{ fontSize: "24px", color: "#323232" }}>
-              $<span>total</span>
+              $<span>{totalPrice + tax}</span>
             </p>
           </div>
         </TotalBox>
