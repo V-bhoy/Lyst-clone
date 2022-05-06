@@ -1,12 +1,12 @@
-
-
 import { products } from "../pages/Products";
+import axios from "axios";
 import {
-  ERR_DATA,
-  GET_DATA,
+
+  ERR_CARTDATA,
+  GET_CARTDATA,
   GET_TOTAL,
   DELETE_ITEM,
-  REQ_DATA,
+  REQ_CARTDATA,
   INCREMENT,
   DECREMENT,
   UPDATE_TOTAL,
@@ -14,24 +14,26 @@ import {
 
 function getCartData(dispatch) {
   dispatch(req_data());
-    
+  axios
+  .get("https://movie-fake-server.herokuapp.com/products")
+  .then((res) =>
       dispatch({
-        type: GET_DATA,
+        type: GET_CARTDATA,
         payload: products,
       })
-    
+  )
 }
 
-export const updateTotal = (codeInput) =>({
+export const updateTotal = () =>({
   type : UPDATE_TOTAL,
 })
 
 export const req_data = () => ({
-  type: REQ_DATA,
+  type: REQ_CARTDATA,
 });
 
 export const error_data = (err) => ({
-  type: ERR_DATA,
+  type: ERR_CARTDATA,
   payload: err,
 });
 

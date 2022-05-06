@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove} from './styled'
+import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove, ItemSpec, ImageDiv, ValueDiv} from './styled'
 import { deleteItem } from '../redux/action'
 import { useDispatch } from 'react-redux'
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -40,20 +40,20 @@ export default function CartItem({ title, id, description, img, price,quantity }
   return (
     <>
         <Flex  key={id}>
-          <div style={{width: "10%"}}>
+          <ImageDiv>
                 <CartImage src={img} alt={title} />
-          </div>
+          </ImageDiv>
         
         <ItemInfo>
-            
+            <ItemSpec>
             <h2>{title}</h2>
             <h4>{description}</h4>
-            
+            </ItemSpec>
             
 
            
 
-        </ItemInfo>
+        
 
         
         <Remove>
@@ -61,7 +61,7 @@ export default function CartItem({ title, id, description, img, price,quantity }
              {/* <button onClick={() =>removeItem({id})}>Remove</button>*/}
         </Remove>
 
-        <div style={{width: "34%",display: "flex", justifyContent: "space-around"}}>
+        <ValueDiv>
 
         <p>{price}</p>
 
@@ -78,8 +78,8 @@ export default function CartItem({ title, id, description, img, price,quantity }
 
       <p>{price*quantity}</p>
       
-      </div>
-
+      </ValueDiv>
+      </ItemInfo>
       </Flex>
     </>
   )

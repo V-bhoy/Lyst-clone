@@ -8,10 +8,11 @@ import { CartPage,
   CartHead,
   CartTotal, 
   CartSubtotal,
-   CartCoupon,
-    CheckOut,
-     CouponInput,
-     CouponSubmit} from '../components/styled';
+  CartCoupon,
+  CheckOut,
+  CouponInput,
+  CouponSubmit,
+  BorderDiv} from '../components/styled';
 
 
 export default function Cart() {
@@ -37,9 +38,6 @@ export default function Cart() {
     }
    }
       
-  
-  
-
       useEffect(() => {
       dispatch({ type: "GET_TOTAL" ,
           
@@ -60,14 +58,15 @@ export default function Cart() {
          <div style={{height: "50px"}}>               
          <CheckOut style={ {position : "absolute",right: "5%"}}>PROCEED TO CHECKOUT</CheckOut>
          </div>
-         <div style={{borderBottom : "0.5px solid grey",marginTop : "0px", height: "20px", width: "90%", margin: "auto"}}>
+         <BorderDiv style={{borderBottom : "0.5px solid grey",marginTop : "0px", height: "20px", width: "90%", margin: "auto",
+          }}>
          
             <CartTotal>
                 <h4>Price</h4>
                 <h4>Quantity</h4>
                 <h4>SubTotal</h4>
             </CartTotal>
-         </div>
+         </BorderDiv>
           
           <CartPage >
             

@@ -2,12 +2,16 @@ import styled from "styled-components"
 
 export const CartHead = styled.div`
 margin-left: 80px;
+@media (min-width: 0px) and (max-width: 600px){
+  margin: auto;
+}
 `;
 
 export const CartPage = styled.div`
 width: 90%;
 margin: auto;
 `;
+
 
 export const CartTotal = styled.div`
 display : flex;
@@ -23,10 +27,15 @@ height: 160px;
 align-items : center;
 border-bottom : 0.5px solid grey;
 
+@media (min-width: 0px) and (max-width: 600px){
+  border: none; 
+  height: 200px;
+}
 `;
 
 export const CartLeft = styled.div`
 width : 100%;
+
 `;
 
 export const CartRight = styled.div`
@@ -37,7 +46,7 @@ margin-top: 20px;
 
 export const CartCoupon = styled.div`
 width: 60%;
-height: 100px
+height: 100px;
 `;
 
 export const CartSubtotal = styled.div`
@@ -47,35 +56,65 @@ line-height: 1.8;
 `;
 export const Remove = styled.div`
 width : 20%;
+@media (min-width: 0px) and (max-width: 600px){
+  margin: auto; 
+}
+
+`;
+
+export const ImageDiv = styled.div`
+width : 10%;
+@media (min-width: 0px) and (max-width: 600px){
+ width: 15%; 
+}
+
 `;
 export const CartImage = styled.img`
 width : 100%;
 height : 150px;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 200%; 
+  height: 120px;
+}
+`;
+
+export const ItemSpec = styled.div`
+width: 41%;
+margin-left : 30px;
+line-height: 1.8;
+
+@media (min-width: 0px) and (max-width: 600px){
+  margin: auto;
+}
 `;
 
 export const ItemInfo = styled.div`
-width: 40%;
+display: flex;
+width: 90%;
 margin-left : 30px;
 line-height: 1.8;
+@media (min-width: 0px) and (max-width: 600px){
+      display: block; 
+      width: 60%;
+      font-size: 80%;
+      text-align: center;
+      line-height: 0.5cm;
+}
 `;
 
 export const Counter = styled.div`
 display: flex;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 100%;
+  margin:auto;
+}
+`;
+export const BorderDiv = styled.div`
+@media (min-width: 0px) and (max-width: 600px){
+  display: none; 
+}
 `;
 
-export const Increment = styled.i`
-border: none;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-`;
-
-export const Decrement = styled.i`
-border: none;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-`;
 
 export const ItemCount = styled.input`
 width: 25px;
@@ -104,7 +143,19 @@ border: none;
 export const CouponInput = styled.input`
 width: 400px;
 padding: 10px;
-`
+`;
+
+export const ValueDiv = styled.div`
+display: flex;
+width: 34%;
+ justify-Content: space-around;
+ @media (min-width: 0px) and (max-width: 600px){
+  display : block;
+  width: 25%;
+  margin: auto;
+ text-align: center;
+}
+`;
 export const CouponSubmit = styled.input`
 background-color: gray;
 width: 200px;

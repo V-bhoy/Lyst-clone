@@ -1,7 +1,7 @@
 import {
-    ERR_DATA,
-    GET_DATA,
-    REQ_DATA,
+    ERR_CARTDATA,
+    GET_CARTDATA,
+    REQ_CARTDATA,
     DELETE_ITEM,
     GET_TOTAL,
     INCREMENT,
@@ -19,23 +19,23 @@ import {
   
   };
   
-  const reducer = (state = initState, { type, payload }) => {
+  const cartReducer = (state = initState, { type, payload }) => {
     switch (type) {
-      case REQ_DATA:
+      case REQ_CARTDATA:
         return {
           ...state,
           isLoggedIn: true,
           isError: false,
           cartData: [],
         };
-      case ERR_DATA:
+      case ERR_CARTDATA:
         return {
           ...state,
           isLoggedIn: false,
           isError: true,
           cartData: [],
         };
-      case GET_DATA:
+      case GET_CARTDATA:
         return {
           ...state,
           isLoggedIn: false,
@@ -67,7 +67,7 @@ import {
               }
             );
            
-            return { ...state, totalItem, totalAmount };
+            return { ...state, totalItem, totalAmount, isCouponUsed : false };
 
 
             case DECREMENT :
@@ -101,4 +101,4 @@ import {
         return state;
     }
   };
-  export { reducer };
+  export { cartReducer };

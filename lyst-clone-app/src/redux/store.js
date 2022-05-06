@@ -5,7 +5,7 @@ import {
     compose,
   } from "redux";
   import thunk from "redux-thunk";
-  import { reducer } from "./reducer";
+  import { cartReducer } from "./reducer";
   
   const composeEnhancers =
     typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -19,7 +19,7 @@ import {
     // other store enhancers if any
   );
   
-  export const store = createStore(reducer, enhancer);
+  export const store = createStore(cartReducer, enhancer);
   
   // do not remove this code, its for testing purpose
   
