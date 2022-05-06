@@ -1,12 +1,10 @@
 import React from "react";
-import Footer from "./components/Footer";
-import Shipping from "./pages/Shipping";
+import MainRoutes from "./Routes/MainRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <Shipping />
-      <Footer />
+    <div>
+      <MainRoutes />
     </div>
   );
 }
