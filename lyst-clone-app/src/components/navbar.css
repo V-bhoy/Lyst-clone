@@ -1,0 +1,45 @@
+.navbar-container {
+    display: flex;
+    flex-direction: raw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 50px;
+    /* box-shadow: 2px 0px 5px var(--box-shadow-color-1); */
+    background: rgb(40,116,240);
+  
+  }
+  
+  .navbar__company-logo {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    letter-spacing: 1.2px;
+    /* color: var(--text-color-1); */
+  
+  }
+  
+  .navbar__btn-container {
+  display:flex;
+  gap:10px;
+  color:white;
+    /* border: 2px solid var(--border-color-1); */
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 16px;
+    /* background-color: var(--background-color-1); */
+    cursor: pointer;
+    /* color: var(--text-color-2); */
+  }
+  .navbar__btn-container button:hover {
+    background-color: var(--background-color-2);
+    color: var(--text-color-1);
+  
+  }
+  
+  .navbar__fetch-btn {
+    margin-right: 20px;
+  
+  }
+  
