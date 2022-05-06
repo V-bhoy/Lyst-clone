@@ -1,8 +1,15 @@
-import { CLEAR_FILTER, FILTER_DATA, GET_DATA, SORT_DATA } from "./actionTypes";
+import {
+  CLEAR_FILTER,
+  FILTER_DATA,
+  GET_DATA,
+  SEARCH_ITEMS,
+  SORT_DATA,
+} from "./actionTypes";
 
 const initState = {
   data: [],
   filterData: [],
+  searchData: [],
 };
 
 export const ProductsReducer = (state = initState, { type, payload }) => {
@@ -34,6 +41,11 @@ export const ProductsReducer = (state = initState, { type, payload }) => {
       return {
         ...state,
         filterData: [],
+      };
+    case SEARCH_ITEMS:
+      return {
+        ...state,
+        searchData: payload,
       };
     default:
       return state;

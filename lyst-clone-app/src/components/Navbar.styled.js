@@ -44,6 +44,7 @@ export const InputDiv = styled.div`
   align-items: center;
   padding: 0.6rem;
   border: 1px solid #111;
+  position: relative;
 `;
 
 export const NavInput = styled.input`

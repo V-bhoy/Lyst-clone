@@ -25,7 +25,9 @@ const Products = () => {
     filterData.length > 0 ? filterData : data !== undefined ? data : [];
 
   let heading;
-  id === "Coats" || id === "Dresses" ? (heading = "Women") : (heading = "Men");
+  id.toLowerCase() === "coats" || id.toLowerCase() === "dresses"
+    ? (heading = "Women")
+    : (heading = "Men");
 
   return (
     <>

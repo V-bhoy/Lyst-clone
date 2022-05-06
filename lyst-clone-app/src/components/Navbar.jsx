@@ -18,6 +18,9 @@ import {
 import { Link } from "react-router-dom";
 import SecondaryNav from "./SecondaryNav";
 import MobileNav from "./MobileNav";
+import SearchList from "./SearchList";
+import { useDispatch } from "react-redux";
+import { searchItem } from "../redux/action";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -36,6 +39,25 @@ const Navbar = (props) => {
   const [activeProd, setActiveProd] = useState(false);
   const [activeLink, setActiveLink] = useState("Men");
   const [dropActive, setDropActive] = useState(false);
+  const [searchActive, setsearchActive] = useState(false);
+  const [searchValue, setsearchValue] = useState("");
+
+  const dispatch = useDispatch();
+
+  const searchForItems = (e) => {
+    let value = e.target.value;
+    if (
+      value === "jeans" ||
+      value === "coats" ||
+      value === "dresses" ||
+      value === "jackets"
+    ) {
+      dispatch(searchItem(value));
+      setsearchActive(true);
+    } else {
+      setsearchActive(false);
+    }
+  };
 
   return (
     <>
@@ -143,7 +165,17 @@ const Navbar = (props) => {
                       ? 'SEARCH (E.G. "Acne Jeans")'
                       : 'SEARCH (E.G. "Valentino dresses")'
                   }
+                  onChange={(e) => setsearchValue(e.target.value)}
+                  onInput={(e) => {
+                    searchForItems(e);
+                  }}
                 ></NavInput>
+                {searchActive && (
+                  <SearchList
+                    value={searchValue}
+                    setsearchActive={setsearchActive}
+                  />
+                )}
               </InputDiv>
             </BottomNav>
           </Nav>
