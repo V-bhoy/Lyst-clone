@@ -3,12 +3,7 @@ import Footer from "./components/Footer";
 import Shipping from "./pages/Shipping";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <Shipping /> */}
-      <Footer />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;

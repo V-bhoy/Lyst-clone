@@ -1,0 +1,31 @@
+[{
+    "title":"WOMEN'S CLOTHING",
+    "data":[{"text":"Jackets"},{"text":"Shorts"},{"text":"Pants"},{"text":"Nightwear"},{"text":"Skirts"},{"text":"Knitwear"},{"text":"Activewear"},{"text":"Coats"},{"text":"Dresses"},{"text":"Suits"},{"text":"Tops"},{"text":"Jumpsuits"},{"text":"Jeans"},{"text":"Beachwear"}]
+}, {
+    "title":"MEN'S CLOTHING",
+    "data":[{"text":"Jackets"},{"text":"Shorts"},{"text":"Shirts"},{"text":"Pants"},{"text":"T-shirts"},{"text":"Nightwear"},{"text":"Sweaters and Knitwear"},{"text":"Activewear"},{"text":"Coats"},{"text":"Suits"},{"text":"Underwear"},{"text":"Jeans"},{"text":"Beachwear"}]
+},{
+    "title":"WOMEN'S SHOES",
+    "data":[{"text":"Flats"},{"text":"Heels"},{"text":"Boots"},{"text":"Sneakers"}]
+},{
+    "title":"MEN'S SHOES",
+    "data":[{"text":"Boots"},{"text":"Sandals"},{"text":"Slip-ons"},{"text":"Sneakers"},{"text":"Lace-ups"}]
+},{
+    "title":"WOMEN'S ACCESSORIES",
+    "data":[{"text":"Cases"},{"text":"Wallets and cardholders"},{"text":"Scarves"},{"text":"Watches"},{"text":"Face masks"},{"text":"Hats"},{"text":"Belts"},{"text":"Umbrellas"},{"text":"Sunglasses"},{"text":"Gloves"},{"text":"Hair"}]
+},{
+    "title":"MEN'S ACCESSORIES",
+    "data":[{"text":"Cufflinks"},{"text":"Scarves and handkerchiefs"},{"text":"Watches"},{"text":"Face Masks"},{"text":"Hats"},{"text":"Belts"},{"text":"Sunglasses"},{"text":"Gloves"},{"text":"Wallets and cardholders"},{"text":"Ties"}]
+},{
+    "title":"WOMEN'S BAGS",
+    "data":[{"text":"Totes and shopper bags"},{"text":"Clutches"},{"text":"Shoulder bags"},{"text":"Holdalls and weekend bags"},{"text":"Beach and straw bags"},{"text":"Briefcases and work bags"},{"text":"Crossbody bags"},{"text":"Hobo bags"},{"text":"Top-handle bags"},{"text":"Belt bags"},{"text":"Bucket bags"},{"text":"Makeup bags"},{"text":"Bag accessories"},{"text":"Backpacks"}]
+},{
+    "title":"MEN'S BAGS",
+    "data":[{"text":"Tote bags"},{"text":"Cases"},{"text":"Pouches"},{"text":"Gym bags"},{"text":"Messenger"},{"text":"Holdalls and weekend bags"},{"text":"Briefcases and work bags"},{"text":"Toiletry bags"},{"text":"Belt bags"},{"text":"Luggage and suitcases"},{"text":"Backpacks"}]
+},{
+    "title":"WOMEN'S JEWELRY",
+    "data":[{"text":"Necklaces"},{"text":"Brooches"},{"text":"Rings"},{"text":"Earrings"},{"text":"Bracelets"}]
+},{
+    "title":"MEN'S JEWELRY",
+    "data":[{"text":"Rings"},{"text":"Bracelets"},{"text":"Necklaces"}]
+}]
