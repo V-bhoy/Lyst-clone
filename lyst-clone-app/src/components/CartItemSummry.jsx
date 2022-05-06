@@ -1,19 +1,64 @@
 import Button from "@mui/material/Button";
 import React from "react";
 import {
-  RightBox,
   RightInnerBox,
   GiftCard,
   PriceBox,
   TotalBox,
   ProdSummryBox,
-} from "./ShippingStyled";
+  RightBox,
+  ProductDiv,
+  ProdImgData,
+  ProdImg,
+  ProdDetails,
+  ProdPrice,
+} from "./CartItemSummryStyled";
 
 const CartItemSummry = () => {
+  const data = [
+    {
+      image:
+        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
+      title: "Shirt",
+      quant: 2,
+      price: 2000,
+    },
+    {
+      image:
+        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
+      title: "Shirt",
+      quant: 2,
+      price: 2000,
+    },
+    {
+      image:
+        "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
+      title: "Shirt",
+      quant: 2,
+      price: 2000,
+    },
+  ];
   return (
     <RightBox>
       <RightInnerBox>
-        <ProdSummryBox></ProdSummryBox>
+        <ProdSummryBox>
+          {data.map((prod) => {
+            return (
+              <ProductDiv>
+                <ProdImgData>
+                  <ProdImg>
+                    <img src={prod.image} alt="" />
+                  </ProdImg>
+                  <ProdDetails>
+                    <p>Product Title</p>
+                    <p>Quantity :</p>
+                  </ProdDetails>
+                </ProdImgData>
+                <ProdPrice>$Price</ProdPrice>
+              </ProductDiv>
+            );
+          })}
+        </ProdSummryBox>
         <GiftCard>
           <input type="text" placeholder="Gift card or discount code" />
           <Button size="large">Apply</Button>

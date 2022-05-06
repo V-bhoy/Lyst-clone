@@ -5,8 +5,8 @@ import Shipping from "./components/Shipping";
 function App() {
   return (
     <div className="App">
-      {/* <Footer /> */}
       <Shipping />
+      {/* <Footer /> */}
     </div>
   );
 }

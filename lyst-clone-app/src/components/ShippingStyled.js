@@ -9,6 +9,9 @@ export const LeftBox = styled.div`
   padding-top: 56px;
   padding-right: 6%;
   float: left;
+  @media (max-width: 1002px) {
+    margin: auto;
+  }
 `;
 export const LeftInnerBox = styled.div``;
 export const ImageBox = styled.div`
@@ -110,57 +113,19 @@ export const PolicyDiv = styled.div`
     color: #212121;
   }
 `;
-export const RightBox = styled.div`
+export const DekstopView = styled.div`
   width: 45%;
   padding-left: 56px;
   padding-top: 56px;
   border-left: 1px solid #d9d9d9;
-`;
-export const RightInnerBox = styled.div``;
-export const ProdSummryBox = styled.div`
-  height: 300px;
-  border: 1px solid #d9d9d9;
-  overflow-y: scroll;
-`;
-export const GiftCard = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 30px 0;
-  & input {
-    width: 81%;
-    font-size: 15px;
-    padding: 12px 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #d9d9d9;
-  }
-  & button {
-    color: white;
-    background-color: #c8c8c8;
+  @media (max-width: 1002px) {
+    display: none;
   }
 `;
 
-export const PriceBox = styled.div`
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  & div {
-    display: flex;
-    justify-content: space-between;
-    & p {
-      font-size: 14px;
-      padding: 5px 0;
-    }
-  }
-`;
-export const TotalBox = styled.div`
-  display: flex;
-  padding: 15px 0;
-  justify-content: space-between;
-  & div {
-    display: flex;
-    grid-gap: 5px;
-    align-items: center;
+export const MobileView = styled.div`
+  display: none;
+  @media (max-width: 1002px) {
+    display: block;
   }
 `;
