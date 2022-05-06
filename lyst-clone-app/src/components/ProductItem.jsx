@@ -35,7 +35,7 @@ const ProductItem = ({
         <h2 className="font-semibold hover:text-blue-600 cursor-pointer">
           {title}
         </h2>
-        <p className="text-[14px] h-[65px] md:h-[80px] hover:text-blue-600 cursor-pointer">
+        <p className="text-[14px] h-[100px] md:h-[80px] lg:h-[60px] hover:text-blue-600 cursor-pointer">
           {desc}
         </p>
         <div className="flex font-bold">
