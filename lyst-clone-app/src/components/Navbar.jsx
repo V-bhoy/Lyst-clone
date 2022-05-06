@@ -37,9 +37,6 @@ const Navbar = (props) => {
   const [activeLink, setActiveLink] = useState("Men");
   const [dropActive, setDropActive] = useState(false);
 
-  activeProd || dropActive
-    ? document.body.classList.add("overflow-hidden")
-    : document.body.classList.remove("overflow-hidden");
   return (
     <>
       <HideOnScroll {...props}>
@@ -60,37 +57,31 @@ const Navbar = (props) => {
               >
                 Help
                 <KeyboardArrowDownIcon style={{ fontSize: "1rem" }} />
-                <DropDownSpan
-                  style={
-                    dropActive ? { display: "block" } : { display: "none" }
-                  }
-                ></DropDownSpan>
-                <DropDown
-                  style={
-                    dropActive ? { display: "block" } : { display: "none" }
-                  }
-                >
-                  <Link to={"/"}>
-                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
-                      Help Center
-                    </p>
-                  </Link>
-                  <Link to={"/"}>
-                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
-                      Contact us
-                    </p>
-                  </Link>
-                  <Link to={"/"}>
-                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
-                      About us
-                    </p>
-                  </Link>
-                  <Link to={"/"}>
-                    <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
-                      Careers
-                    </p>
-                  </Link>
-                </DropDown>
+                {dropActive && <DropDownSpan></DropDownSpan>}
+                {dropActive && (
+                  <DropDown>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Help Center
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Contact us
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        About us
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Careers
+                      </p>
+                    </Link>
+                  </DropDown>
+                )}
               </div>
               <Link to="/">
                 <p className="hover:underline">Sign in</p>
@@ -157,13 +148,14 @@ const Navbar = (props) => {
             </BottomNav>
           </Nav>
           <MobileNav />
+          <SecondaryNav
+            active={activeProd}
+            setActiveProd={setActiveProd}
+            link={activeLink}
+          />
         </AppBar>
       </HideOnScroll>
-      <SecondaryNav
-        active={activeProd}
-        setActiveProd={setActiveProd}
-        link={activeLink}
-      />
+
       <DropOverlay
         style={dropActive ? { display: "block" } : { display: "none" }}
       ></DropOverlay>
