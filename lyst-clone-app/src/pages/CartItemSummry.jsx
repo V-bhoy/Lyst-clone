@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   RightInnerBox,
   GiftCard,
@@ -15,7 +15,7 @@ import {
 } from "./CartItemSummryStyled";
 
 const CartItemSummry = () => {
-  const data = [
+  let data = [
     {
       image:
         "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
@@ -38,6 +38,27 @@ const CartItemSummry = () => {
       price: 2000,
     },
   ];
+  let totalPrice = 0;
+  {
+    data.map((prod) => {
+      totalPrice = totalPrice + prod.quant * prod.price;
+    });
+  }
+  const [promoCode, setPromoCode] = useState("");
+  const [totalCost, setTotalCost] = useState(totalPrice);
+  const [taxe, setTaxe] = useState(totalCost * 0.12);
+  const handleChange = (e) => {
+    setPromoCode(e.target.value);
+  };
+  // const [discount,setDiscount] = useState(0)
+  const handleClick = () => {
+    if (promoCode == "Masai30") {
+      setTotalCost(totalCost - totalCost * 0.3);
+    }
+  };
+  useEffect(() => {
+    setTaxe(totalCost * 0.12);
+  }, [totalCost]);
   return (
     <RightBox>
       <RightInnerBox>
@@ -51,23 +72,29 @@ const CartItemSummry = () => {
                   </ProdImg>
                   <ProdDetails>
                     <p>Product Title</p>
-                    <p>Quantity :</p>
+                    <p>Quantity :{prod.quant}</p>
                   </ProdDetails>
                 </ProdImgData>
-                <ProdPrice>$Price</ProdPrice>
+                <ProdPrice>$ {prod.price * prod.quant}</ProdPrice>
               </ProductDiv>
             );
           })}
         </ProdSummryBox>
         <GiftCard>
-          <input type="text" placeholder="Gift card or discount code" />
-          <Button size="large">Apply</Button>
+          <input
+            onChange={handleChange}
+            type="text"
+            placeholder="Gift card or discount code"
+          />
+          <Button onClick={handleClick} size="large">
+            Apply
+          </Button>
         </GiftCard>
         <PriceBox>
           <div>
             <p>Subtotal</p>
             <p>
-              $<span>Price</span>
+              $<span>{totalCost}</span>
             </p>
           </div>
           <div>
@@ -77,7 +104,7 @@ const CartItemSummry = () => {
           <div>
             <p>Duties & Taxes</p>
             <p>
-              $<span>Taxes</span>
+              $<span>{taxe}</span>
             </p>
           </div>
         </PriceBox>
