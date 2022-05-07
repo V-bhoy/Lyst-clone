@@ -21,10 +21,13 @@ const Products = () => {
     dispatch(getData(id.toLowerCase()));
   }, [dispatch, id, itemOverlay]);
 
-  const Data = filterData.length > 0 ? filterData : data;
+  const Data =
+    filterData.length > 0 ? filterData : data !== undefined ? data : [];
 
   let heading;
-  id === "Coats" || id === "Dresses" ? (heading = "Women") : (heading = "Men");
+  id.toLowerCase() === "coats" || id.toLowerCase() === "dresses"
+    ? (heading = "Women")
+    : (heading = "Men");
 
   return (
     <>

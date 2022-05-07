@@ -5,12 +5,20 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CancelIcon from "@mui/icons-material/Cancel";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   AddToCartBtn,
   ProdOverlayDiv,
 } from "./StyledComponents/Products.styled";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetail = ({ setItemOverlay }) => {
+  const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
+
   const data = JSON.parse(localStorage.getItem("Details"));
   const { img, title, desc, price, category, strikedOffPrice } = data;
 
@@ -31,6 +39,42 @@ const ProductDetail = ({ setItemOverlay }) => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   };
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <>
+      <Button
+        sx={{
+          color: "#111",
+          fontWeight: "600",
+        }}
+        size="small"
+        onClick={() => navigate("/cart")}
+      >
+        Go To Cart
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </>
+  );
+
   return (
     <>
       <ProdOverlayDiv>
@@ -61,7 +105,10 @@ const ProductDetail = ({ setItemOverlay }) => {
             <span className="text-[16px] pl-2">{category}</span>
             <div
               className="w-full bg-black text-center my-4 cursor-pointer"
-              onClick={addToCart}
+              onClick={() => {
+                addToCart();
+                handleClick();
+              }}
             >
               <AddToCartBtn>Add to cart</AddToCartBtn>
             </div>
@@ -81,6 +128,20 @@ const ProductDetail = ({ setItemOverlay }) => {
             </Accordion>
           </div>
         </div>
+
+        <Snackbar
+          ContentProps={{
+            sx: {
+              background: "#fff",
+              color: "#111",
+            },
+          }}
+          open={open}
+          autoHideDuration={4000}
+          onClose={handleClose}
+          message="Added to Cart successfully"
+          action={action}
+        />
       </ProdOverlayDiv>
     </>
   );

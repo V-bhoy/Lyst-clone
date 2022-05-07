@@ -5,11 +5,32 @@ import { HamButton, HamDiv, MobileNavDiv } from "./ResponsiveNav.styled";
 import { Link } from "react-router-dom";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import MobileSecondaryNav from "./MobileSecondaryNav";
+import SearchList from "./SearchList";
+import { useDispatch } from "react-redux";
+import { searchItem } from "../redux/action";
 
 const MobileNav = () => {
   const [hamActive, setHamActive] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
+  const [SearchActive, setsearchActive] = useState(false);
+  const [searchValue, setsearchValue] = useState("");
 
+  const dispatch = useDispatch();
+
+  const searchForItems = (e) => {
+    let value = e.target.value;
+    if (
+      value === "jeans" ||
+      value === "coats" ||
+      value === "dresses" ||
+      value === "jackets"
+    ) {
+      dispatch(searchItem(value));
+      setsearchActive(true);
+    } else {
+      setsearchActive(false);
+    }
+  };
   return (
     <>
       <MobileNavDiv>
@@ -75,15 +96,25 @@ const MobileNav = () => {
               type="text"
               placeholder="Search"
               className="w-full border-0 px-2 outline-none"
+              onChange={(e) => setsearchValue(e.target.value)}
+              onInput={(e) => {
+                searchForItems(e);
+              }}
             />
           </div>
           <CloseIcon
-            onClick={() => setSearchActive(!searchActive)}
+            onClick={() => {
+              setSearchActive(!searchActive);
+              setsearchActive(false);
+            }}
             style={{ fontSize: "2rem" }}
           />
+          {SearchActive && (
+            <SearchList value={searchValue} setsearchActive={setsearchActive} />
+          )}
         </div>
 
-        {hamActive && <MobileSecondaryNav />}
+        {hamActive && <MobileSecondaryNav setHamActive={setHamActive} />}
       </MobileNavDiv>
     </>
   );

@@ -4,6 +4,8 @@ export const Nav = styled.nav`
   width: 100%;
   padding: 0.7rem 1.4rem;
   user-select: none;
+  position: relative;
+  z-index: 112;
   @media all and (max-width: 868px) {
     display: none;
   }
@@ -42,6 +44,7 @@ export const InputDiv = styled.div`
   align-items: center;
   padding: 0.6rem;
   border: 1px solid #111;
+  position: relative;
 `;
 
 export const NavInput = styled.input`
@@ -54,8 +57,8 @@ export const NavInput = styled.input`
 `;
 
 export const SecMainDiv = styled.div`
-  position: absolute;
-  top: 101px;
+  position: relative;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 2222;
@@ -116,7 +119,7 @@ export const CloseNav = styled.div`
 `;
 
 export const DropOverlay = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);

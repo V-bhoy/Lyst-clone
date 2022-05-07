@@ -10,6 +10,7 @@ const Container = styled.div``;
 const PortFolio= styled.div`
     width: 100%;
     margin-bottom: 6%;
+    margin-top: 80px;
 `;
 const Poster = styled.img`
     width: 100%;
