@@ -82,17 +82,17 @@ const Navbar = (props) => {
                 {dropActive && <DropDownSpan></DropDownSpan>}
                 {dropActive && (
                   <DropDown>
-                    <Link to={"/"}>
+                    <Link to={"/help"}>
                       <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
                         Help Center
                       </p>
                     </Link>
-                    <Link to={"/"}>
+                    <Link to={"/contact-us"}>
                       <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
                         Contact us
                       </p>
                     </Link>
-                    <Link to={"/"}>
+                    <Link to={"/aboutus"}>
                       <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
                         About us
                       </p>
