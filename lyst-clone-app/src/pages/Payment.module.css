@@ -1,0 +1,103 @@
+.mainrg{
+    height: 1250px;
+    width: 50%;
+    border: 2px solid grey;
+    display: flex;
+}
+
+.paymentrg{
+    height: 1050px;
+    width: 70%;
+    /* border: 2px solid red; */
+    margin-left:20%;
+    margin-top: 20px;
+}
+
+.paprg{
+    display: flex;
+    margin-left:20px;
+}
+
+.paprg > div{
+    margin-left:10px;
+    color: grey;
+    font-weight: 570;
+}
+
+.paprg > div > button{
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.acrg{
+    height: 200px;
+    width: 95%;
+    border: 1px solid grey;
+    margin-left: 5%;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.acrg > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33.33%;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.acrg > div > div{
+    padding: 10px;   
+}
+
+.acrg > div > div:first-child{ 
+    font-family:"Helvetica";
+    color: gray;
+}
+
+.raj{
+    height: 357px;
+    margin-left:20px;
+    border-radius: 8px;
+    width: 95%;
+    border: 1px solid grey;
+}
+
+.raja{
+    height: 45px;
+    width: 100%;
+    border-radius: 8px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+
+.raja > h3{
+  font-weight: 480;
+  font: size 12px;
+  margin-right: 150px;
+  font-family: "Helvetica",;
+}
+
+.abcrg{
+    width: 90%;
+    align-items: center;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 5px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.rgrg{
+    height: 50px;
+    width: 100px;
+    background-color:black;
+    color: white;
+    border: 0px;
+    font-size:16px;
+    font-weight:530;
+    margin-left: 230px;
+}
