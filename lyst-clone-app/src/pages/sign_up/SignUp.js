@@ -81,8 +81,8 @@ const SignUp = () => {
         >
 
           <div className="chandanbtn">
-            <button>New to Lyst?</button>
-            <button>Already a member</button>
+            <button onClick={() => navigate("/signup")}>New to Lyst?</button>
+            <button onClick={() => navigate("/login")}>Already a member</button>
           </div>
 
           <div>
