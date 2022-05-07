@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Error from "../pages/Error";
 import Cart from "../pages/Cart";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
@@ -11,9 +12,10 @@ const MainRoutes = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/products/:id" element={<Products />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </>
