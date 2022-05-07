@@ -34,7 +34,7 @@ const MainRoutes = () => {
         <Route path="/products/:id" element={<Products />} />
         {/* <Route path="/information" element={<Instruction />} /> */}
         <Route path="/shipping" element={<Shipping />} />
-        <Route path="/payment" element={<Payment />} />
+        {/* <Route path="/payment" element={<Payment />} /> */}
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

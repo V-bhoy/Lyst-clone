@@ -2,9 +2,6 @@ import {
   CLEAR_FILTER,
   FILTER_DATA,
   GET_DATA,
-  CLEAR_FILTER,
-  FILTER_DATA,
-  GET_DATA,
   SEARCH_ITEMS,
   SORT_DATA,
 } from "./actionTypes";
@@ -13,9 +10,7 @@ const initState = {
   data: [],
   filterData: [],
   cartData: [],
-  totalPrice: 0,
-  tax: 0,
-  promoCodeStatus: true,
+
   searchData: [],
 };
 

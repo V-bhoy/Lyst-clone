@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCartData, updateTotalPrice } from "../redux/action";
+import { getCartItems, updateTotalPrice } from "../redux/action";
 import {
   RightInnerBox,
   GiftCard,
@@ -27,7 +27,7 @@ const CartItemSummry = () => {
   const [promoCode, setPromoCode] = useState("");
 
   const { totalPrice, tax, promoCodeStatus } = useSelector(
-    (state) => state.products
+    (state) => state.shipping
   );
 
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const CartItemSummry = () => {
     }
   };
   useEffect(() => {
-    dispatch(getCartData());
+    dispatch(getCartItems());
   }, []);
   return (
     <RightBox>
