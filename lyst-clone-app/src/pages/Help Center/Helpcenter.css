@@ -108,7 +108,7 @@
   border: 1px solid black;
 }
 
-img {
+.help1 > img {
   height: 248px;
   width: 100%;
 }
