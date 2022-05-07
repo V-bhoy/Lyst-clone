@@ -8,25 +8,27 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
-export default function CartItem({ title, id, description, img, price,quantity }) {
+export default function CartItem({ title, id, desc, img, price,qty }) {
  
   const dispatch = useDispatch();
 
   const removeItem = (id) =>{
-    deleteItem(dispatch, id)
+    deleteItem(dispatch, id);
+    
+
   }
   
-  const decrement = (id,quantity) => {
+  const decrement = (id,qty) => {
     return dispatch({
       type: "DECREMENT",
-      payload: id,quantity
+      payload: id,qty
     });
   };
  
-  const increment = (id,quantity) => {
+  const increment = (id,qty) => {
     return dispatch({
       type: "INCREMENT",
-      payload: id,quantity
+      payload: id,qty
     });
   };
 
@@ -47,7 +49,7 @@ export default function CartItem({ title, id, description, img, price,quantity }
         <ItemInfo>
             <ItemSpec>
             <h2>{title}</h2>
-            <h4>{description}</h4>
+            <h4>{desc}</h4>
             </ItemSpec>
             
 
@@ -69,14 +71,14 @@ export default function CartItem({ title, id, description, img, price,quantity }
           
         <RemoveIcon onClick={() =>decrement({id})}/>
 
-        <ItemCount type="text"   placeholder={quantity}   
+        <ItemCount type="text"   placeholder={qty}   
         />
       
         <AddIcon onClick={() =>increment({id})}/>
       
       </Counter>
 
-      <p>{price*quantity}</p>
+      <p>{price*qty}</p>
       
       </ValueDiv>
       </ItemInfo>

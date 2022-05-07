@@ -9,11 +9,10 @@ import {
 } from "./actionTypes";
 import {
 
-  ERR_CARTDATA,
   GET_CARTDATA,
   GET_TOTAL,
   DELETE_ITEM,
-  REQ_CARTDATA,
+  
   INCREMENT,
   DECREMENT,
   UPDATE_TOTAL,
@@ -31,14 +30,8 @@ export const updateTotal = () =>({
   type : UPDATE_TOTAL,
 })
 
-export const req_data = () => ({
-  type: REQ_CARTDATA,
-});
 
-export const error_data = (err) => ({
-  type: ERR_CARTDATA,
-  payload: err,
-});
+
 
 
 export const getTotal = (cartData) => ({

@@ -1,8 +1,7 @@
 import {
     
-        ERR_CARTDATA,
         GET_CARTDATA,
-        REQ_CARTDATA,
+
         DELETE_ITEM,
         GET_TOTAL,
         INCREMENT,
@@ -12,7 +11,6 @@ import {
       
       const initState = {
         isLoggedIn: false,
-        isError: false,
         isCouponUsed : false,
         cartData: [],
         totalAmount: 0,
@@ -22,20 +20,6 @@ import {
       
       const cartReducer = (state = initState, { type, payload }) => {
         switch (type) {
-          case REQ_CARTDATA:
-            return {
-              ...state,
-              isLoggedIn: true,
-              isError: false,
-              cartData: [],
-            };
-          case ERR_CARTDATA:
-            return {
-              ...state,
-              isLoggedIn: false,
-              isError: true,
-              cartData: [],
-            };
           case GET_CARTDATA:
             return {
               ...state,
@@ -44,11 +28,13 @@ import {
               cartData: payload,
             };
             case DELETE_ITEM:
+                let newData = state.cartData.filter((curElem) => {
+                    return curElem.id !== payload.id;
+                 })
+                 localStorage.setItem("cart",JSON.stringify(newData));
                 return {
                  ...state,
-                 cartData: state.cartData.filter((curElem) => {
-                  return curElem.id !== payload.id;
-                }),
+                 cartData:newData ,
                 };
     
               case GET_TOTAL :

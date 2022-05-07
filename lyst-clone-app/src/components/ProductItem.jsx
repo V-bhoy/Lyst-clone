@@ -3,6 +3,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LinkIcon from "@mui/icons-material/Link";
 
 const ProductItem = ({
+  id,
   img,
   title,
   desc,
@@ -13,6 +14,7 @@ const ProductItem = ({
 }) => {
   const handleItem = () => {
     const details = {
+      id,
       img,
       title,
       desc,

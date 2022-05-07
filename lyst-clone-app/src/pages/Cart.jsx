@@ -17,11 +17,11 @@ import { CartPage,
 
 
 export default function Cart() {
-    const { isLoggedIn, isError, isCouponUsed, cartData , totalAmount, totalItem} = useSelector((state) => state.cart);
+    const {  isCouponUsed, cartData , totalAmount, totalItem} = useSelector((state) => state.cart);
 
     const [codeInput, setCodeInput] = useState('')
 
- 
+ console.log(cartData)
 
 
     const dispatch = useDispatch();
@@ -61,12 +61,7 @@ export default function Cart() {
       <>
 
         <CartHead>YOUR SHOPPING BAG : You Have  Total {totalItem} Items In Your Bag</CartHead>
-        {isLoggedIn ? (
-          <h1>Loading....</h1>
-        ) : isError ? (
-          <h1>Error.. Something went wrong</h1>
-        ) : (
-         <>
+
 
          <div style={{height: "50px", textAlign: "center", marginTop: "10px"}}>               
          <CheckOut >PROCEED TO CHECKOUT</CheckOut>
@@ -86,8 +81,8 @@ export default function Cart() {
           
             <CartLeft>
               
-            {cartData.map((prod) => (
-              <CartItem key={prod.id} {...prod} />
+            {cartData.map((prod,index) => (
+              <CartItem key={index} {...prod} />
             ))}
             </CartLeft>
          
@@ -107,8 +102,8 @@ export default function Cart() {
                     
             </CartRight>
           </CartPage>
-          </>
-        )}
+      
+        )
        
       </>
     );
