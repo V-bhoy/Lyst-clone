@@ -1,6 +1,7 @@
 .coverdiv{
     display:  flex;
     margin: auto;
+    margin-top: 9%;
     width: 65%;
     height: 1225px;
    gap: 40px;
@@ -185,12 +186,16 @@
     font-weight: bold;
     font-size: 27px;
     font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 1.3;
+    line-height: 2.5;
 }
 
 .innerdiv1 p{
     font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 1.3;
+    line-height: 1.2;
+}
+
+.head2{
+    margin-top: 20px;
 }
 
 .innerdiv1 h3{
@@ -198,7 +203,12 @@
     font-weight: 700;
     font-weight: bold;
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.4;
+}
+
+.pa1{
+    margin-top: 18px;
+line-height: 1.9;
 }
 
 .para2{
@@ -206,11 +216,13 @@
     font-weight: 400;
     line-height: 1.3;
     font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin-top: 20px;
 }
 
 .notediv{
     display: flex;
     gap: 20px;
+    margin-top: 40px;
 }
 
 .note{
@@ -218,6 +230,10 @@
     height: 122px;
     background-color: black;
     border-radius: 5px;
+}
+
+.para3{
+    margin-top: 40px;
 }
 
 .notediv.notepara{

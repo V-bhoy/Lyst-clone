@@ -68,7 +68,7 @@ export const ShoppingonLyst = () => {
             then process, fulfill and deliver the item to you.
           </p>
           <h3 className="head2">Placing Orders</h3>
-          <p>
+          <p className="pa1">
             To place an order on Lyst, simply select a size, if necessary, and
             click the "Add to Bag” button. Guest checkout is available although
             we recommend you sign in for faster checkout. You will have an
@@ -77,7 +77,7 @@ export const ShoppingonLyst = () => {
             send you a confirmation email that the order has been received.
           </p>
           <p className="para2">Shipping Information</p>
-          <p>
+          <p className="pa1">
             ​Shipping options vary by store and delivery destination. We will
             display an estimated shipping cost at the beginning of the checkout
             process. This is based on the best standard domestic options offered
@@ -86,7 +86,7 @@ export const ShoppingonLyst = () => {
             destination.
           </p>
           <p className="para2">Returns & Exchanges</p>
-          <p>
+          <p className="pa1">
             Returns and exchange policies vary by store and we would advise
             checking their website for the most detailed information about
             return policies.
@@ -96,7 +96,7 @@ export const ShoppingonLyst = () => {
             <div className="note"></div>
             <div className="notepara">
               Please Note
-              <p>
+              <p className="pa1">
                 Although we try very hard to keep this information up to date,
                 we cannot guarantee the accuracy of the information presented
                 and cannot be held liable for mistakes. It is only meant to be
@@ -106,23 +106,23 @@ export const ShoppingonLyst = () => {
               </p>
             </div>
           </div>
-          <p className="para2">Payment Security</p>
-          <p>
+          <p className="para3">Payment Security</p>
+          <p className="pa1">
             Your security is important to us. Lyst uses the industry standard
             protocol known as Transport Layer Security (TLS), which encrypts
             potentially sensitive information for all data transmission.
           </p>
-          <p>
+          <p className="pa1">
             If you purchase an item as a registered member, some of your payment
             details will be saved for faster checkout in the future. We only
             display the last 4 digits of your credit card and the expiration
             date.
           </p>
-          <p>
+          <p className="pa1">
             To keep this information secure we will always ask for your username
             and password during checkout.
           </p>
-          <p>
+          <p className="pa1">
             If you are using Klarna checkout, any storage, transmission,
             processing or handling of customer information by Klarna will be
             governed by Klarna’s terms and conditions which can be viewed{" "}
@@ -130,7 +130,7 @@ export const ShoppingonLyst = () => {
               here.
             </Link>
           </p>
-          <p>
+          <p className="pa1">
             If you change your password, all your payment details are
             automatically deleted and you will need to fill in your payment
             details again during your next purchase. We will also notify you via

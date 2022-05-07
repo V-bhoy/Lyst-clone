@@ -1,5 +1,8 @@
 .helpcenter {
   background-color: rgba(245, 243, 242, 1);
+  margin-top:101px;
+  height: 365px;
+  border-bottom: 1px solid black;
 }
 .lyst {
   margin-left: 20px;
@@ -7,7 +10,7 @@
   margin-top: 5px;
   font-weight: bold;
   color: black;
-  cursor: pointer;
+  /* cursor: pointer; */
   text-decoration: none;
   height: 50px;
 }
@@ -166,8 +169,14 @@ img {
   cursor: pointer;
   font-weight: 600;
   font-family: "Suisse Int'l", Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* line-height:2; */
   /* border: 1px solid red; */
 }
+
+.prefercontactusmaindiv1 p{
+  margin-top: 20px;
+}
+
 .mailid:hover {
   color: blueviolet;
 }
@@ -177,16 +186,19 @@ img {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 31px;
+  margin-top: 2%;
   /* border: 1px solid red; */
 }
 
 .address {
+  margin-top: 2%;
   font-family: "Suisse Int'l", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: #000;
 }
 
 .contactcutomer button {
+  margin-top: 2%;
   height: 45px;
   width: 26%;
   background-color: #cafc4f;

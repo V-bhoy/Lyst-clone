@@ -1,8 +1,9 @@
 .contactcoverdiv{
     display:  flex;
     margin: auto;
+    margin-top: 9%;
     width: 65%;
-    height: 625px;
+    height: 635px;
    gap: 40px;
 }
 
@@ -184,7 +185,7 @@
     font-weight: bold;
     font-size: 27px;
     font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 1.3;
+    line-height: 2.2;
     /* border: 1px solid red; */
 }
 
@@ -195,6 +196,15 @@
     font-weight: 300;
     color: #000;
 }
+
+.p1{
+    margin-top: 6%;
+}
+
+.p2{
+    margin-top: 20px;
+}
+
 
 .helpcenter{
     color: #000;
