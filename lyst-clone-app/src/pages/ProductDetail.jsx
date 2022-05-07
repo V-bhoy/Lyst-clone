@@ -60,7 +60,7 @@ const ProductDetail = ({ setItemOverlay }) => {
           fontWeight: "600",
         }}
         size="small"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/cart")}
       >
         Go To Cart
       </Button>
