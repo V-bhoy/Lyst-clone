@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState } from "react";
-import "./InstructionPage.css"
-const InstructionPage = () => {
+import CartItemSummry from './CartItemSummry';
+import "./StyledComponents/CartItemSummryStyled"
+import "./StyledComponents/CartItemSummryStyled"
+import "./Instruction.css"
+const Instruction = () => {
     const [user, setUser] = useState({
         fName: "",
         lName: "",
@@ -19,9 +22,9 @@ const InstructionPage = () => {
         name = e.target.name;
         value = e.target.value;
         setUser({ ...user, [name]: value })
-       
+
     }
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('userData', JSON.stringify(user));
     }
@@ -99,8 +102,8 @@ const InstructionPage = () => {
                             </div>
                             <div class="col-md-4">
                                 <select id="inputState" class="form-select" name='country' onChange={handleInputs}>
-                                    
-                 
+
+
                                     <option selected name='country' value={user.country}>USA</option>
                                     <option name='country' value="INDIA">INDIA</option>
                                     <option name='country' value="CHINA">CHINA</option>
@@ -116,14 +119,14 @@ const InstructionPage = () => {
                             </div>
                             <div class="col-md-4">
                                 <select id="inputState" class="form-select" name='state' onChange={handleInputs}>
-                                    
-                                    <option selected  name='state' value="GOA">GOA</option>
+
+                                    <option selected name='state' value="GOA">GOA</option>
                                     <option name='state' value="BIHAR">BIHAR</option>
                                     <option name='state' value="ASSAM">ASSAM</option>
                                     <option name='state' value="GUJRAT">GUJRAT</option>
                                     <option name='state' value="MUMBAI">MUMBAI</option>
                                     <option name='state' value="DELHI">DELHI</option>
-                                    <option name='state'  value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
+                                    <option name='state' value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
                                     <option name='state' value="UTTAR-PRADESH">UTTAR-PRADESH</option>
                                     <option name='state' value="JHARKHAND">JHARKHAND</option>
                                     <option name='state' value="MADHYA-PRADESH">MADHYA-PRADESH</option>
@@ -168,52 +171,11 @@ const InstructionPage = () => {
 
                 <div className='Instruction-Main-right'>
 
-
-                    <div className='Instruction-Main-right-product'>
-                        <div>
-                        <img src="img_girl.jpg" alt="Girl in a jacket"/>
-                        </div>
-                        <div>
-                            <h6>product name</h6>
-                            <p>Product Size</p>
-                        </div>
-                        <div>
-                            <h6>Price</h6>
-                        </div>
-                    </div>
-
-
-
-
-                    <div className='Instruction-Main-right-summary'>
-                        <h2>Order Summary</h2>
-                        <div className='Instruction-Main-right-summary-details'>
-                            <div>
-                                <p>
-                                    Subtotal</p>
-                                <p>Shipping</p>
-                                <p>Taxes (estimated)</p>
-                                <hr></hr>
-                                <h4>Total</h4>
-                            </div>
-                            <div>
-                                <p>€154.00
-                                </p>
-                                <p>€5.99
-                                </p>
-                                <p>-€49.69
-                                </p>
-                                <hr></hr>
-                                <h4>USD $805.31
-                                </h4>
-
-                            </div>
-                        </div>
-                    </div>
+                    <CartItemSummry/>
                 </div>
             </div>
         </div>
     )
 }
 
-export default InstructionPage;
+export default Instruction;

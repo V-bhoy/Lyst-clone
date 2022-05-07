@@ -43,6 +43,7 @@ export const getCartData = () => {
   cartData.map((prod) => {
     totalPrice = totalPrice + prod.price * prod.qty;
   });
+  console.log(totalPrice,"price")
   return {
     type: GETCARTDATA,
     payload: { cartData, totalPrice },
