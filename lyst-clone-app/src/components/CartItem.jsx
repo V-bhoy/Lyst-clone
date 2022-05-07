@@ -9,7 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 export default function CartItem({ title, id, desc, img, price,qty }) {
- 
+
   const dispatch = useDispatch();
 
   const removeItem = (id) =>{
@@ -32,12 +32,10 @@ export default function CartItem({ title, id, desc, img, price,qty }) {
     });
   };
 
-  
-
   useEffect(() => {
-    dispatch({ type: "GET_TOTAL" });
+    dispatch({ type: "GET_TOTAL",payload: id });
     
-  }, [id]);
+  }, []);
 
   return (
     <>
@@ -74,7 +72,7 @@ export default function CartItem({ title, id, desc, img, price,qty }) {
         <ItemCount type="text"   placeholder={qty}   
         />
       
-        <AddIcon onClick={() =>increment({id})}/>
+        <AddIcon onClick={() =>increment({id},{qty})}/>
       
       </Counter>
 

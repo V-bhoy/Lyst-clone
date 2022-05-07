@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 
-export default function () {
+export default function EmptyCart() {
     console.log("Empty");
   return (
    <>
@@ -12,7 +13,9 @@ export default function () {
         </div>
 
         <div style={{textAlign: "center", marginTop : "20px"}}>
+        <Link to={"/"}>
         <Button variant="contained" size="large">SHOP NOW</Button>
+        </Link>
         </div>
    </>
   )

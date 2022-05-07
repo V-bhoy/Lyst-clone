@@ -28,6 +28,15 @@ export default function Cart() {
     (state) => state.cart
   );
 
+
+    const [codeInput, setCodeInput] = useState('');
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+      getCartData(dispatch);
+    }, [dispatch]);
+   
+   
   const [codeInput, setCodeInput] = useState("");
   const [open, setOpen] = React.useState(false);
   const [message, setMessage] = useState("");
@@ -39,6 +48,7 @@ export default function Cart() {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
+
     }
 
     setOpen(false);

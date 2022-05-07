@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const CartHead = styled.div`
-  margin-left: 80px;
-  margin-top: 110px;
+
+margin-left: 80px;
+margin-top: 150px;
   @media (min-width: 0px) and (max-width: 600px) {
     margin: auto;
   }
+
 `;
 
 export const CartPage = styled.div`
@@ -165,11 +167,15 @@ export const CheckOut = styled.button`
 `;
 
 export const CouponInput = styled.input`
-  width: 400px;
-  padding: 10px;
-  @media (min-width: 0px) and (max-width: 600px) {
-    width: 200px;
-  }
+
+width: 400px;
+padding: 10px;
+border: 1px solid grey;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 200px;
+}
+ }
+
 `;
 
 export const ValueDiv = styled.div`
