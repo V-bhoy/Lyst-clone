@@ -1,11 +1,13 @@
-// create store here
-import {
+
+import { combineReducers,
     applyMiddleware,
     legacy_createStore as createStore,
     compose,
   } from "redux";
-  import thunk from "redux-thunk";
-  import { cartReducer } from "./reducer";
+
+import thunk from "redux-thunk";
+import { ProductsReducer } from "./reducer";
+import { cartReducer } from "./cartReducer";
   
   const composeEnhancers =
     typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -18,8 +20,11 @@ import {
     applyMiddleware(thunk)
     // other store enhancers if any
   );
-  
-  export const store = createStore(cartReducer, enhancer);
-  
-  // do not remove this code, its for testing purpose
-  
+
+  const rootReducer = combineReducers({
+    products: ProductsReducer,
+    cart:cartReducer
+  });
+
+export const store = createStore(rootReducer,enhancer);
+

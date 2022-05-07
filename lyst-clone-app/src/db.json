@@ -1,0 +1,862 @@
+{
+  "coats": [
+    {
+      "id": 1,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/e51cbd0d/mugler-beige-Cutout-Belted-Trench-Coat.jpeg",
+      "title": "MUGLER",
+      "desc": "Cutout Belted Trench Coat - Natural",
+      "price": "1,759",
+      "category": "Mytheresa",
+      "strikedOffPrice": "2499"
+    },
+    {
+      "id": 2,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/820527e6/nasty-gal-designer-beige-Faux-Leather-Button-Down-Longline-Trench-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Faux Leather Button Down Longline Trench Coat - Natural",
+      "price": "177",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "205"
+    },
+    {
+      "id": 3,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/24sevres/f632d241/louis-vuitton-henne-Monogram-Trenchcoat-mit-Gurtel.jpeg",
+      "title": "LOUIS VUITTON",
+      "desc": "Monogram Belted Trench - Brown",
+      "price": "4726",
+      "category": "24S",
+      "strikedOffPrice": "6378"
+    },
+    {
+      "id": 4,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f8ccc085/acne-beige-Cotton-Trench-Coat.jpeg",
+      "title": "ACNE STUDIOS",
+      "desc": "Cotton Trench Coat - Natural",
+      "price": "615",
+      "category": "Mytheresa",
+      "strikedOffPrice": "435"
+    },
+    {
+      "id": 5,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/0cb0c523/nasty-gal-designer-khaki-Two-Tone-Belted-Oversized-Trench-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Back To Mac Oversized Trench Coat - Natural",
+      "price": "114",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "345"
+    },
+    {
+      "id": 6,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/5279a116/nasty-gal-designer-mid-grey-Twill-Oversized-Trench-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Twill Oversized Trench Coat - Gray",
+      "price": "118",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "83"
+    },
+    {
+      "id": 7,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/theoutnet/3eb5f2d1/michael-by-michael-kors-Weinrot-Tel-aus-kunstfell.jpeg",
+      "title": "MICHAEL MICHAEL KORS",
+      "desc": "Faux Fur Coat - Red",
+      "price": "463",
+      "category": "THE OUTNET.COM",
+      "strikedOffPrice": "637"
+    },
+    {
+      "id": 8,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/d3b20e3f/burberry-Multi-Monogram-Print-Trench-Coat.jpeg",
+      "title": "BURBERRY",
+      "desc": "Monogram Print Trench Coat - Brown",
+      "price": "5356",
+      "category": "Cettire",
+      "strikedOffPrice": "6378"
+    },
+    {
+      "id": 9,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/0b00156b/burberry-blue-Kensington-Gabardine-Trench-Coat.jpeg",
+      "title": "BURBERRY",
+      "desc": "Chelsea Gabardine Trench Coat - Blue",
+      "price": "1633",
+      "category": "Mytheresa",
+      "strikedOffPrice": "2638"
+    },
+    {
+      "id": 10,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/291b0c50/nasty-gal-designer-black-Embellished-Floral-Design-Longline-Kimono.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Embellished Floral Design Longline Kimono - Black",
+      "price": "146",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "246"
+    },
+    {
+      "id": 11,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/coltortiboutique/f9f0fdac/burberry-BeigeBrown-Dockray-Trench-Coat-With-Leather-Finishes-6-Cottonleather.jpeg",
+      "title": "BURBERRY",
+      "desc": "Dockray Trench Coat With Leather Finishes",
+      "price": "1648",
+      "category": "Coltorti",
+      "strikedOffPrice": "2537"
+    },
+    {
+      "id": 12,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/9b54bc57/nasty-gal-designer-sage-Floral-Satin-Open-Front-Midi-Kimono.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Floral Satin Open Front Midi Kimono - Green",
+      "price": "37",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "53"
+    },
+    {
+      "id": 13,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/d60cae90/nasty-gal-designer-tan-Vintage-Look-Faux-Fur-Jacket.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Vintage Look Faux Fur Jacket - Brown",
+      "price": "227",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "325"
+    },
+    {
+      "id": 14,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/7fa2b1d1/nasty-gal-designer-grey-Shaggy-Borg-Faux-Fur-Longline-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Shaggy Borg Faux Fur Longline Coat - Gray",
+      "price": "37",
+      "category": "NASTY GAL",
+      "strikedOffPrice": "250"
+    },
+    {
+      "id": 15,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/436137ed/max-mara-brown-Manteau-En-Poil-De-Chameau-A-Ceinture-Manuela-Icon.jpeg",
+      "title": "MAX MARA",
+      "desc": "Manuela Icon Belted Camel Hair Coat - Brown",
+      "price": "2033",
+      "category": "NET-A-PORTER",
+      "strikedOffPrice": "2533"
+    },
+    {
+      "id": 16,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/ruelala/341265f7/mackage-Blk-Black-Adali-Leather-trim-Down-Coat.jpeg",
+      "title": "MACKAGE",
+      "desc": "Adali Leather-trim Down Coat - Black",
+      "price": "600",
+      "category": "Rue La La",
+      "strikedOffPrice": "905"
+    },
+    {
+      "id": 17,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/ruelala/75cd637f/burberry-Yellow-Reissued-Vintage-Check-Wool-Coat.jpeg",
+      "title": "BURBERRY",
+      "desc": "Reissued Vintage Check Wool Coat - Yellow",
+      "price": "2580",
+      "category": "Rue La La",
+      "strikedOffPrice": "3150"
+    },
+    {
+      "id": 18,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/6c41766d/nasty-gal-designer-chocolate-Im-That-Girl-Faux-Fur-Collar-Trench-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "I'm That Girl Faux Fur Collar Trench Coat - Brown",
+      "price": "70",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "270"
+    },
+    {
+      "id": 19,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/d947d7d3/nasty-gal-designer-cream-Plus-Size-Quilted-Padded-Trench-Coat.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Plus Size Quilted Padded Trench Coat - Natural",
+      "price": "36",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "146"
+    },
+    {
+      "id": 20,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/ruelala/bbeeb4b4/burberry-Blue-Double-breasted-Belted-Waist-Coat.jpeg",
+      "title": "BURBERRY",
+      "desc": "Double-breasted Belted Waist Coat - Blue",
+      "price": "1600",
+      "category": "Rue La La",
+      "strikedOffPrice": "1900"
+    }
+  ],
+
+  "dresses": [
+    {
+      "id": 21,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/f127a618/nasty-gal-designer-champagne-Cowl-Back-Satin-Wrap-Maxi-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Cowl Back Satin Wrap Maxi Dress - Multicolor",
+      "price": "72",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "105"
+    },
+    {
+      "id": 22,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/frmoda/e8c1ee47/burberry-Dark-Birch-Brown-Knee-Length-Dress-Sleeveless.jpeg",
+      "title": "BUBERRY",
+      "desc": "Knee Length Dress Sleeveless - Brown",
+      "price": "605",
+      "category": "FRMODA",
+      "strikedOffPrice": "555"
+    },
+    {
+      "id": 23,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/c9e8c08e/mugler-black-Robe-asymetrique.jpeg",
+      "title": "MUGLER",
+      "desc": "Cutout One-shoulder Minidress - Black",
+      "price": "2,904",
+      "category": "Mytheresa",
+      "strikedOffPrice": "3564"
+    },
+    {
+      "id": 24,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/b7f02410/nasty-gal-designer-beige-Sequin-Embellished-Strappy-Tulle-Maxi-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Sequin Embellished Strappy Tulle Maxi Dress - Natural",
+      "price": "267",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "367"
+    },
+    {
+      "id": 25,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/a3586e8c/nasty-gal-designer-blue-Floral-Jacquard-Balloon-Sleeve-Skater-Mini-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Floral Jacquard Balloon Sleeve Skater Mini Dress - Blue",
+      "price": "51",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "73"
+    },
+    {
+      "id": 26,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/8ac9632e/nasty-gal-designer-pink-Midi-Shirt-Dress-In-Print.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Midi Shirt Dress In Print - Pink",
+      "price": "16",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "68"
+    },
+    {
+      "id": 27,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/b3bcc5d2/burberry-Multi-Archive-Print-Tie-Waist-Dress.jpeg",
+      "title": "BURBERRY",
+      "desc": "Archive Print Tie Waist Dress - Multicolor",
+      "price": "1269",
+      "category": "Cettire",
+      "strikedOffPrice": "2538.27"
+    },
+    {
+      "id": 28,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/6f534396/mugler-black-Chain-trimmed-Minidress.jpeg",
+      "title": "MUGLER",
+      "desc": "Chain-trimmed Minidress - Black",
+      "price": "1,759",
+      "category": "Mytheresa",
+      "strikedOffPrice": "3522"
+    },
+    {
+      "id": 29,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/42fb250c/nasty-gal-designer-cream-Cowl-Back-Satin-Wrap-Maxi-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Satin Long Sleeve Cowl Back Maxi Dress - Natural",
+      "price": "73",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "103"
+    },
+    {
+      "id": 30,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/9120b814/nasty-gal-designer-white-Balloon-Sleeve-Sequin-Embellished-Mini-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Balloon Sleeve Sequin Embellished Mini Dress - White",
+      "price": "205",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "344"
+    },
+    {
+      "id": 31,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/stefaniamode/964b3930/burberry-black-Pleated-Panel-Dress.jpeg",
+      "title": "BURBERRY",
+      "desc": "Panel Detail Shift Dress - Black",
+      "price": "2598",
+      "category": "Modes",
+      "strikedOffPrice": "2712"
+    },
+    {
+      "id": 32,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/24927641/nasty-gal-designer-pink-Blurred-Print-Satin-Column-Maxi-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Blurred Print Satin Column Maxi Dress - Pink",
+      "price": "68",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "97"
+    },
+    {
+      "id": 33,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/5b2352bd/nasty-gal-designer-black-Embellished-Sequin-Fringe-Trim-Bodycon-Mini-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Embellished Sequin Fringe Trim Mini Dress - Black",
+      "price": "154",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "220"
+    },
+    {
+      "id": 34,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/c302cf7b/nasty-gal-designer-navy-Satin-V-Neck-Wrap-Maxi-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Satin V Neck Slit Maxi Dress - Blue",
+      "price": "63",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "76"
+    },
+    {
+      "id": 35,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/6d992563/burberry-Multicolore-Abito-midi-in-seta-con-stampa-floreale.jpeg",
+      "title": "BURBERRY",
+      "desc": "Floral Foulard-trim Silk Midi Dress - Multicolor",
+      "price": "1583",
+      "category": "Mytheresa",
+      "strikedOffPrice": "2389"
+    },
+    {
+      "id": 36,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/fb9a2f5c/nasty-gal-designer-silver-Tulle-Strappy-Maxi-Glitter-Prom-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Tulle Strappy Maxi Glitter Prom Dress - Metallic",
+      "price": "257",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "738"
+    },
+    {
+      "id": 37,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/65de932d/nasty-gal-designer-taupe-Embellished-Sequin-Tulle-Maxi-Prom-Dress.jpeg",
+      "title": "MUGLER",
+      "desc": "Embellished Sequin Tulle Maxi Prom Dress - Multicolor",
+      "price": "347",
+      "category": "SSENSE",
+      "strikedOffPrice": "634"
+    },
+    {
+      "id": 38,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/fa12c07d/mugler-Multicolore-Abito-midi-a-stampa.jpeg",
+      "title": "MUGLER",
+      "desc": "Printed Midi Dress - Yellow",
+      "price": "890",
+      "category": "Mytheresa",
+      "strikedOffPrice": "897"
+    },
+    {
+      "id": 39,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/9c7500fe/nasty-gal-designer-multi-Floral-Print-Strapless-Mini-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Floral Print Strapless Mini Dress - Multicolor",
+      "price": "45",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "55"
+    },
+    {
+      "id": 40,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/nastygal/94c2280e/nasty-gal-designer-orange-Colour-Block-Ruffle-Front-Bodycon-Mini-Dress.jpeg",
+      "title": "NASTY GAL",
+      "desc": "Color Block Ruffle Front Bodycon Mini Dress - Orange",
+      "price": "45",
+      "category": "Nasty Gal",
+      "strikedOffPrice": "78"
+    }
+  ],
+
+  "jackets": [
+    {
+      "id": 41,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/carolazeta/4e3e4bfc/burberry-BeigeBlackRed-Ruthland-Reversible-Short-Down-Jacket-In-Recycled-Nylon.jpeg",
+      "title": "BURBERRY",
+      "desc": "Ruthland Reversible Short Down Jacket In Recycled Nylon - Black",
+      "price": "5634",
+      "category": "Carola Zeta",
+      "strikedOffPrice": "5679"
+    },
+    {
+      "id": 42,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/frmoda/b8476f80/burberry-Marrone-Betulla-Scuro-Woolouterwear-Jacket-Blouson.jpeg",
+      "title": "BURBERRY",
+      "desc": "Wool'outerwear Jacket Blouson - Brown",
+      "price": "3038",
+      "category": "FRMODA",
+      "strikedOffPrice": "4000"
+    },
+    {
+      "id": 43,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/eraldo/f3346758/canada-goose-Black-Lodge-Hoody-r-Padded-Jacket.jpeg",
+      "title": "CANADA GOOSE",
+      "desc": "Lodge Hoody-r Padded Jacket - Black",
+      "price": "353",
+      "category": "Eraldo",
+      "strikedOffPrice": "455"
+    },
+    {
+      "id": 44,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/carolazeta/ed863b7f/burberry--Romford-Reversible-Vest-In-Recycled-Nylon.jpeg",
+      "title": "BURBERRY",
+      "desc": "Romford Reversible Vest In Recycled Nylon - Black",
+      "price": "5267",
+      "category": "Carola Zeta",
+      "strikedOffPrice": "7689"
+    },
+    {
+      "id": 45,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/tessuti/0dce67c1/fred-perry-Navy-Corduroy-Tennis-Bomber-Jacket-Blue.jpeg",
+      "title": "FRED PERRY",
+      "desc": "Corduroy Tennis Bomber Jacket Blue - Blue",
+      "price": "455",
+      "category": "Tessuti UK",
+      "strikedOffPrice": "563"
+    },
+    {
+      "id": 46,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/gilt/55b9a227/burberry-Blue-Leather-Sleeve-Wool-blend-Bomber-Jacket.jpeg",
+      "title": "BURBERRY",
+      "desc": "Leather Sleeve Wool-blend Bomber Jacket - Blue",
+      "price": "543",
+      "category": "Gilt",
+      "strikedOffPrice": "564"
+    },
+    {
+      "id": 47,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/44ecd02c/stone-island-blue-Garment-dyed-Down-tc-Nylon-Reps-Jacket.jpeg",
+      "title": "STONE ISLAND",
+      "desc": "Garment-dyed Down-tc Nylon Reps Jacket - Blue",
+      "price": "507",
+      "category": "Mytheresa",
+      "strikedOffPrice": "725"
+    },
+    {
+      "id": 48,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/thehut/0e501236/levis-Blue-Levis-The-Trucker-Jacket.jpeg",
+      "title": "LEVI'S",
+      "desc": "The Trucker Jacket - Blue",
+      "price": "547",
+      "category": "The Hut",
+      "strikedOffPrice": "978"
+    },
+    {
+      "id": 49,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/0f14b653/burberry-brown-Veste-bomber-Stanley.jpeg",
+      "title": "BURBERRY",
+      "desc": "Stanley Down-filled Bomber Jacket - Brown",
+      "price": "2291",
+      "category": "Mytheresa",
+      "strikedOffPrice": "3400"
+    },
+    {
+      "id": 50,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/vitkac/c617fc2f/dolce-gabbana-WHITE-The-reborn-To-Live-Collection-T-shirt-With-Logo.jpeg",
+      "title": "DOLCE & GABBANA",
+      "desc": "The 'reborn To Live' Collection T-shirt With Logo - Blue",
+      "price": "648",
+      "category": "VITKAC",
+      "strikedOffPrice": "990"
+    },
+    {
+      "id": 51,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/gilt/217d7cfa/burberry-Brown-Leather-trim-Wool-blend-Bomber-Jacket.jpeg",
+      "title": "BURBERRY",
+      "desc": "Leather-trim Wool-blend Bomber Jacket - Brown",
+      "price": "544",
+      "category": "Gilt",
+      "strikedOffPrice": "788"
+    },
+    {
+      "id": 52,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/gilt/cb384a44/karl-lagerfeld-White-Colorblock-Track-Jacket.jpeg",
+      "title": "KARL LAGERFELD",
+      "desc": "Colorblock Track Jacket - White",
+      "price": "59",
+      "category": "Gilt",
+      "strikedOffPrice": "90"
+    },
+    {
+      "id": 53,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/81ea5cab/moncler-Multi-Color-block-Mockneck-Zip-up-Jacket.jpeg",
+      "title": "MONCLER",
+      "desc": "Color-block Mockneck Zip-up Jacket - Blue",
+      "price": "715",
+      "category": "Cettire",
+      "strikedOffPrice": "793.87"
+    },
+    {
+      "id": 54,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f16fec30/moncler-black-Wargnier-Down-Jacket.jpeg",
+      "title": "MONCLER",
+      "desc": "Wargnier Down Jacket - Black",
+      "price": "1019",
+      "category": "Mytheresa",
+      "strikedOffPrice": "1299"
+    },
+    {
+      "id": 55,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/genteroma/6db4b1a1/moncler-red-Gilet-smanicato-Ortac-rosso.jpeg",
+      "title": "MONCLER",
+      "desc": "Red Ortac Sleeveless Vest - Red",
+      "price": "564",
+      "category": "GENTE Roma",
+      "strikedOffPrice": "749"
+    },
+    {
+      "id": 56,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/2d2c003a/burberry-Brown-English-Fit-Tailored-Jacket.jpeg",
+      "title": "BURBERRY",
+      "desc": "Lihou Hooded Down Jacket - White",
+      "price": "633",
+      "category": "Cettire",
+      "strikedOffPrice": "970"
+    },
+    {
+      "id": 57,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/adb9f210/moncler-White-Lihou-Hooded-Down-Jacket.jpeg",
+      "title": "MONCLER",
+      "desc": "Lihou Hooded Down Jacket - White",
+      "price": "633",
+      "category": "Cettire",
+      "strikedOffPrice": "970"
+    },
+    {
+      "id": 58,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/mytheresa/fc715465/moncler-grey-Padded-Down-Vest.jpeg",
+      "title": "MONCLER",
+      "desc": "Padded Down Vest - Gray",
+      "price": "643",
+      "category": "Mytheresa",
+      "strikedOffPrice": "890"
+    },
+    {
+      "id": 59,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/24sevres/3253e755/burberry-black-Veste-sans-manches.jpeg",
+      "title": "BURBERRY",
+      "desc": "Gilet - Black",
+      "price": "346",
+      "category": "24S",
+      "strikedOffPrice": "634"
+    },
+    {
+      "id": 60,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/tessuti/846ea186/new-balance-Grey-Print-Impact-Jacket.jpeg",
+      "title": "NEW BALANCE",
+      "desc": "Print Impact Jacket - Gray",
+      "price": "88",
+      "category": "Tessuti UK",
+      "strikedOffPrice": "157"
+    }
+  ],
+
+  "jeans": [
+    {
+      "id": 61,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/stefaniamode/aeca5346/burberry-black-Contrast-stitch-Straight-leg-Jeans.jpeg",
+      "title": "BURBERRY",
+      "desc": "Contrast-stitch Straight-leg Jeans - Black",
+      "price": "1474",
+      "category": "Modes",
+      "strikedOffPrice": "1230"
+    },
+    {
+      "id": 62,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/8ab666b7/moncler-Blue-Logo-Patch-Straight-Leg-Jeans.jpeg",
+      "title": "MONCLER",
+      "desc": "Logo Patch Straight Leg Jeans - Blue",
+      "price": "537",
+      "category": "Cettire",
+      "strikedOffPrice": "677"
+    },
+    {
+      "id": 63,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/0780941f/burberry-Blue-Straight-Leg-Jeans.jpeg",
+      "title": "BURBERRY",
+      "desc": "5-pocket Straight-leg Jeans - Blue",
+      "price": "444",
+      "category": "Cettire",
+      "strikedOffPrice": "544"
+    },
+    {
+      "id": 64,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/ssense/9db93cb3/mugler-LIGHTMEDIUMBL-Paneled-Spiral-Jeans.jpeg",
+      "title": "MUGLER",
+      "desc": "Paneled Spiral Jeans - Blue",
+      "price": "561",
+      "category": "SSENSE",
+      "strikedOffPrice": "678"
+    },
+    {
+      "id": 65,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/vitkac/256f06a1/moncler-NAVY-BLUE-Relaxed-fitting-Jeans.jpeg",
+      "title": "MONCLER",
+      "desc": "Relaxed-fitting Jeans - Blue",
+      "price": "567",
+      "category": "VITKAC",
+      "strikedOffPrice": "893"
+    },
+    {
+      "id": 66,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/vitkac/1459cbdf/burberry-BLACK-Jeans-With-Stitching-Details.jpeg",
+      "title": "BURBERRY",
+      "desc": "Jeans With Stitching Details - Black",
+      "price": "788",
+      "category": "VITKAC",
+      "strikedOffPrice": "1099"
+    },
+    {
+      "id": 67,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/atterley/5356f0bc/burberry-Blue-Jeans.jpeg",
+      "title": "BURBERRY",
+      "desc": "Jeans - Blue",
+      "price": "436",
+      "category": "Atterley",
+      "strikedOffPrice": "567"
+    },
+    {
+      "id": 68,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/vitkac/7eeda506/burberry-cream-Slim-Fit-Jeans.jpeg",
+      "title": "BURBERRY",
+      "desc": "Slim Fit Jeans - Natural",
+      "price": "585",
+      "category": "VITKAC",
+      "strikedOffPrice": "899"
+    },
+    {
+      "id": 69,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/ea7c27d4/boss-by-hugo-boss-Navy-Maine3-Jeans.jpeg",
+      "title": "BOSS BY HUGO BOSS",
+      "desc": "Maine3 Jeans - Blue",
+      "price": "25",
+      "category": "Saks OFF 5TH",
+      "strikedOffPrice": "66"
+    },
+    {
+      "id": 70,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/genteroma/4a20d7a1/amiri-blue-Jeans-blu-con-dettaglio-patchwork.jpeg",
+      "title": "AMIRI",
+      "desc": "Patchwork-detail Denim Jeans - Blue",
+      "price": "534",
+      "category": "GENTE Roma",
+      "strikedOffPrice": "783"
+    },
+    {
+      "id": 71,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/6fbe808b/g-star-raw-Light-Vintage-Wash-Super-Slim-Vintage-Wash-Skinny-Jeans.jpeg",
+      "title": "G-STAR RAW",
+      "desc": "Super Slim Vintage Wash Skinny Jeans - Blue",
+      "price": "25",
+      "category": "Saks OFF 5TH",
+      "strikedOffPrice": "48"
+    },
+    {
+      "id": 72,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/carolazeta/50e8d2b0/amiri-Grey-Jeans-Trasher.jpeg",
+      "title": "AMIRI",
+      "desc": "Jeans Trasher - Gray",
+      "price": "617",
+      "category": "Carola Zeta",
+      "strikedOffPrice": "617"
+    },
+    {
+      "id": 73,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/e24c7397/boss-by-hugo-boss-Blue-Delaware-Skinny-Jeans.jpeg",
+      "title": "BOSS BY HUGO BOSS",
+      "desc": "Delaware Skinny Jeans - Blue",
+      "price": "20",
+      "category": "Saks OFF 5TH",
+      "strikedOffPrice": "198"
+    },
+    {
+      "id": 74,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/farfetch/2ca1f984/burberry-blue-Jeans-slim.jpeg",
+      "title": "BURBERRY",
+      "desc": "Patch Detail Slim Jeans - Blue",
+      "price": "899",
+      "category": "FARFETCH",
+      "strikedOffPrice": "999"
+    },
+    {
+      "id": 75,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/9b1205da/dolce-gabbana-Blue-Ripped-Cropped-Jeans.jpeg",
+      "title": "DOLCE & GABBANA",
+      "desc": "Ripped Cropped Jeans - Blue",
+      "price": "536",
+      "category": "Cettire",
+      "strikedOffPrice": "789"
+    },
+    {
+      "id": 76,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/285ca3d4/dsquared-Blue-Slim-fit-Straight-Leg-Jeans.jpeg",
+      "title": "DSQUARED²",
+      "desc": "Slim-fit Straight Leg Jeans - Blue",
+      "price": "177",
+      "category": "Cettire",
+      "strikedOffPrice": "350.67"
+    },
+    {
+      "id": 77,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/cettire/d1029ba0/dsquared-Blue-Skater-Distressed-Skinny-Jeans.jpeg",
+      "title": "DSQUARED²",
+      "desc": "Skater Fit Jeans 54 Cotton,denim - Blue",
+      "price": "363",
+      "category": "Cettire",
+      "strikedOffPrice": "726.88"
+    },
+    {
+      "id": 78,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/stand-out/64c9313f/levis-Black-501-Original-Fit-Jeans.jpeg",
+      "title": "LEVI'S",
+      "desc": "501 Shrink To Fit Jean - Black",
+      "price": "72",
+      "category": "Standout",
+      "strikedOffPrice": "90"
+    },
+    {
+      "id": 79,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/97fa1ead/g-star-raw-Faded-Quartz-5620-3d-Slim-fit-Jeans.jpeg",
+      "title": "G-STAR RAW",
+      "desc": "5620 3d Slim-fit Jeans - Blue",
+      "price": "90",
+      "category": "Saks OFF 5TH",
+      "strikedOffPrice": "230"
+    },
+    {
+      "id": 80,
+      "img": "https://cdna.lystit.com/200/250/tr/photos/vitkac/400e648e/diesel-BLACK-d-vider-Jeans.jpeg",
+      "title": "DIESEL",
+      "desc": "'d-vider' Jeans - Black",
+      "price": "59",
+      "category": "VITKAC",
+      "strikedOffPrice": "294"
+    }
+  ],
+
+  "breakoutBrands": [
+    {
+      "id": 81,
+      "img": "",
+      "title": "BREAKOUT BRANDS"
+    },
+    {
+      "id": 82,
+      "img": "https://cdna.lystit.com/cms/My_Post_81_76121ffa01.jpg",
+      "title": "PATOU"
+    },
+    {
+      "id": 83,
+      "img": "https://cdna.lystit.com/cms/designer_rail_gucci_eca9e74796.jpg",
+      "title": "GUCCI"
+    },
+    {
+      "id": 84,
+      "img": "https://cdna.lystit.com/cms/designer_rail_saint_laurent_2031eb80f7.jpeg",
+      "title": "SAINT LAURENT"
+    },
+    {
+      "id": 85,
+      "img": "https://cdna.lystit.com/cms/designer_rail_off_white_co_virgil_abloh_d8c6b37a9f.jpeg",
+      "title": "OFF-WHITE C/O VIRGIL ABLOH"
+    },
+    {
+      "id": 86,
+      "img": "https://cdna.lystit.com/cms/designer_rail_balenciaga_215cbc0fe0.jpeg",
+      "title": "BALENCIAGA"
+    },
+    {
+      "id": 87,
+      "img": "https://cdna.lystit.com/cms/designer_rail_nike_c3045162ba.png",
+      "title": "NIKE"
+    },
+    {
+      "id": 88,
+      "img": "https://cdna.lystit.com/cms/designer_rail_dolce_gabbana_bcb7049bb0.jpeg",
+      "title": "DOLCE & GABBANA"
+    },
+    {
+      "id": 89,
+      "img": "https://cdna.lystit.com/cms/designer_rail_moncler_bcdcdc131d.jpeg",
+      "title": "MONCLEAR"
+    },
+    {
+      "id": 90,
+      "img": "https://cdna.lystit.com/cms/designer_rail_valentino_421c18fab0.jpeg",
+      "title": "VALENTINO"
+    }
+  ],
+
+  "trendingNow": [
+    {
+      "id": 91,
+      "img": "https://cdna.lystit.com/cms/balenciaga_earrings_28c5ac2ab9.jpeg",
+      "title": "BALENCIAGA EARRINGS"
+    },
+    {
+      "id": 92,
+      "img": "https://cdna.lystit.com/cms/simone_rocha_earrings_d997cb6315.jpeg",
+      "title": ""
+    },
+    {
+      "id": 93,
+      "img": "",
+      "title": "TRENDING NOW"
+    },
+    {
+      "id": 94,
+      "img": "https://cdna.lystit.com/cms/mens_off_white_co_virgil_abloh_sandals_5c477cbb4a.jpeg",
+      "title": "OFF-WHITE C/O VIRGIL ABLOH SANDALS"
+    },
+    {
+      "id": 95,
+      "img": "https://cdna.lystit.com/cms/mens_amiri_jeans_98aeae1fcc.jpeg",
+      "title": "AMIRI JEANS"
+    },
+    {
+      "id": 96,
+      "img": "https://cdna.lystit.com/cms/designer_category_fendi_jumpsuits_9f9ac55f4f.jpeg",
+      "title": "FENDI JUMPSUITS"
+    },
+    {
+      "id": 97,
+      "img": "https://cdna.lystit.com/cms/mens_gucci_suits_af6c650ce2.jpeg",
+      "title": "GUCCI SUITS"
+    }
+  ],
+
+  "hotRightNow": [
+    {
+      "id": 98,
+      "img": "https://cdna.lystit.com/cms/designer_category_mens_balenciaga_t_shirts_2c33757129.jpeg",
+      "title": "BALENCIAGA T-SHIRTS"
+    },
+    {
+      "id": 99,
+      "img": "",
+      "title": "HOT RIGHT NOW"
+    },
+    {
+      "id": 100,
+      "img": "https://cdna.lystit.com/cms/designer_category_mens_canali_coats_fcd56d8791.jpeg",
+      "title": "CANALI COATS"
+    },
+    {
+      "id": 101,
+      "img": "https://cdna.lystit.com/cms/designer_category_camilla_dresses_ed5dbcc2dc.jpeg",
+      "title": "CAMILLA DRESSES"
+    },
+    {
+      "id": 102,
+      "img": "https://cdna.lystit.com/cms/designer_category_chanel_shoulder_bags_969f71f141.jpeg",
+      "title": "CHANEL SHOULDER BAGS"
+    },
+    {
+      "id": 103,
+      "img": "https://cdna.lystit.com/cms/balenciaga_shoulder_bags_3febdd5725.jpeg",
+      "title": "BALENCIAGA SHOULDER BAGS"
+    },
+    {
+      "id": 104,
+      "img": "https://cdna.lystit.com/cms/designer_category_mens_giorgio_armani_sunglasses_80768d4fe9.jpeg",
+      "title": "GIORGIO ARMANI SUNGLASSES"
+    }
+  ]
+}

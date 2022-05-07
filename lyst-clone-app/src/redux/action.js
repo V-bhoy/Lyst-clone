@@ -1,5 +1,12 @@
-import { products } from "../pages/Products";
-import axios from "axios";
+
+import data from "../db.json";
+import {
+  CLEAR_FILTER,
+  FILTER_DATA,
+  GET_DATA,
+  SEARCH_ITEMS,
+  SORT_DATA,
+} from "./actionTypes";
 import {
 
   ERR_CARTDATA,
@@ -13,15 +20,11 @@ import {
 } from "./actionTypes";
 
 function getCartData(dispatch) {
-  dispatch(req_data());
-  axios
-  .get("https://movie-fake-server.herokuapp.com/products")
-  .then((res) =>
-      dispatch({
-        type: GET_CARTDATA,
-        payload: products,
-      })
-  )
+  let cartData= JSON.parse(localStorage.getItem("cart"))||[];
+  dispatch({
+    type:GET_CARTDATA,
+    payload:cartData
+  })
 }
 
 export const updateTotal = () =>({
@@ -52,17 +55,45 @@ export const deleteItem = (dispatch,id) =>{
     });
 }
 
-export const incrementItem = (dispatch,id,quantity) =>{
+export const incrementItem = (dispatch,id,qty) =>{
   dispatch({
     type : INCREMENT,
-    payload : id,quantity,
+    payload : id,qty,
   })
 }
 
-export const decrementItem = (dispatch,id,quantity) =>{
+export const decrementItem = (dispatch,id,qty) =>{
   dispatch({
     type : DECREMENT,
-    payload : id,quantity,
+    payload : id,qty,
   })
 }
+
+
+
+
+export const getData = (id) => ({
+  type: GET_DATA,
+  payload: data[id],
+});
+
+export const sortData = (payload) => ({
+  type: SORT_DATA,
+  payload,
+});
+
+export const filterData = (payload) => ({
+  type: FILTER_DATA,
+  payload,
+});
+
+export const clearFilter = () => ({
+  type: CLEAR_FILTER,
+});
+
+export const searchItem = (payload) => ({
+  type: SEARCH_ITEMS,
+  payload: data[payload],
+});
+
 export { getCartData};
