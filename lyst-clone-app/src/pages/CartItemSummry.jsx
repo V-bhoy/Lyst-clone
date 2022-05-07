@@ -39,8 +39,10 @@ const CartItemSummry = () => {
       setPromoCode("");
     } else if (promoCode !== "Masai30") {
       alert("Enter valid code");
+      setPromoCode("");
     } else {
       alert("Already used");
+      setPromoCode("");
     }
   };
   useEffect(() => {

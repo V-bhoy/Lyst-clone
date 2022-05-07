@@ -22,6 +22,12 @@ import {
   DekstopView,
 } from "./StyledComponents/ShippingStyled";
 const Shipping = () => {
+  let data = {
+    email: "abc@gmail.com",
+    address: "location xyz,XYZ",
+  };
+  localStorage.setItem("userData", JSON.stringify(data));
+  let userData = JSON.parse(localStorage.getItem("userData")) || [];
   return (
     <MainContainer>
       <LeftBox>
@@ -42,7 +48,7 @@ const Shipping = () => {
                 <ChevronRightIcon />
               </span>
             </div>
-            <div>
+            <div style={{ color: "black" }}>
               Shipping
               <span>
                 <ChevronRightIcon />
@@ -58,7 +64,9 @@ const Shipping = () => {
           <Details>
             <Contact>
               <div style={{ fontSize: "14px", color: "#737373" }}>Contact</div>
-              <div style={{ fontSize: "14px", color: "#333333" }}>Email</div>
+              <div style={{ fontSize: "14px", color: "#333333" }}>
+                {userData.email}
+              </div>
               <div style={{ fontSize: "12px", color: "#333333" }}>Change</div>
             </Contact>
             <ShipTo>
@@ -73,7 +81,9 @@ const Shipping = () => {
               >
                 Ship to
               </div>
-              <div style={{ fontSize: "14px", color: "#333333" }}>Address</div>
+              <div style={{ fontSize: "14px", color: "#333333" }}>
+                {userData.address}
+              </div>
               <div style={{ fontSize: "12px", color: "#333333" }}>Change</div>
             </ShipTo>
           </Details>
@@ -103,14 +113,14 @@ const Shipping = () => {
             </div>
           </IPES>
           <PaymentDiv>
-            <ReturnToInfo>
-              {/* <Link to=""> */}
-              <span>
-                <KeyboardArrowLeftIcon />
-              </span>
-              <span>Return to information</span>
-              {/* </Link> */}
-            </ReturnToInfo>
+            <Link to="Information">
+              <ReturnToInfo>
+                <span>
+                  <KeyboardArrowLeftIcon />
+                </span>
+                <span>Return to information</span>
+              </ReturnToInfo>
+            </Link>
             <Link to="payment">
               <PaymentButton>Continue to payment</PaymentButton>
             </Link>

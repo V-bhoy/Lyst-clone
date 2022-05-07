@@ -4,8 +4,7 @@ export const RightBox = styled.div`
 `;
 export const RightInnerBox = styled.div``;
 export const ProdSummryBox = styled.div`
-  height: 300px;
-  border: 1px solid #d9d9d9;
+  height: 250px;
   overflow-y: scroll;
 `;
 export const ProductDiv = styled.div`

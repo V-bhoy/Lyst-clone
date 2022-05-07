@@ -7,7 +7,7 @@ export const MainContainer = styled.div`
 `;
 export const LeftBox = styled.div`
   width: 52%;
-  padding-top: 56px;
+  /* padding-top: 5px; */
   padding-right: 6%;
   float: left;
   @media (max-width: 1002px) {
@@ -33,6 +33,9 @@ export const PageTracker = styled.div`
     color: #a6a6a6;
     font-size: 12px;
     &:hover {
+      color: black;
+    }
+    &:active {
       color: black;
     }
   }
@@ -89,13 +92,14 @@ export const Radio = styled.div`
 
 export const PaymentDiv = styled.div`
   display: flex;
-  margin-top: 25px;
+  margin-top: 50px;
   padding-bottom: 56px;
   align-items: center;
   justify-content: space-between;
 `;
 export const ReturnToInfo = styled.div`
   display: flex;
+  color: black;
   align-items: center;
 `;
 export const PaymentButton = styled.div`
@@ -106,8 +110,8 @@ export const PaymentButton = styled.div`
 export const PolicyDiv = styled.div`
   display: flex;
   grid-gap: 15px;
-  padding: 10px 0;
-  margin-top: 50px;
+  padding: 15px 0;
+  margin-top: 60px;
   border-top: 1px solid #d9d9d9;
   & p {
     font-size: 12px;
@@ -117,7 +121,7 @@ export const PolicyDiv = styled.div`
 export const DekstopView = styled.div`
   width: 45%;
   padding-left: 56px;
-  padding-top: 56px;
+  padding-top: 20px;
   border-left: 1px solid #d9d9d9;
   @media (max-width: 1002px) {
     display: none;
