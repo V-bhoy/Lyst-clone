@@ -17,7 +17,7 @@ import { CartPage,
 
 
 export default function Cart() {
-    const { isLoggedIn, isError, isCouponUsed, cartData , totalAmount, totalItem} = useSelector((state) => state);
+    const { isLoggedIn, isError, isCouponUsed, cartData , totalAmount, totalItem} = useSelector((state) => state.cart);
 
     const [codeInput, setCodeInput] = useState('')
 
