@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove, ItemSpec, ImageDiv, ValueDiv} from './styled'
+import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove, ItemSpec, ImageDiv, ValueDiv} from './cartStyled'
 import { deleteItem } from '../redux/action'
 import { useDispatch } from 'react-redux'
 import RemoveIcon from '@mui/icons-material/Remove';

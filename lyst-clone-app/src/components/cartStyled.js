@@ -10,6 +10,9 @@ margin-left: 80px;
 export const CartPage = styled.div`
 width: 90%;
 margin: auto;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 80%;
+}
 `;
 
 
@@ -30,29 +33,45 @@ border-bottom : 0.5px solid grey;
 @media (min-width: 0px) and (max-width: 600px){
   border: none; 
   height: 200px;
+  border-bottom: 1px solid grey;
 }
 `;
 
 export const CartLeft = styled.div`
 width : 100%;
-
+@media (min-width: 0px) and (max-width: 600px){
+}
 `;
 
 export const CartRight = styled.div`
 display: flex;
 width: 100%;
 margin-top: 20px;
+@media (min-width: 0px) and (max-width: 600px){
+ display: block;
+ align-items: center;
+}
 `;
 
 export const CartCoupon = styled.div`
 width: 60%;
 height: 100px;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 100%;
+  text-align: center;
+}
 `;
 
 export const CartSubtotal = styled.div`
 position : absolute;
 right: 2%;
 line-height: 1.8;
+
+@media (min-width: 0px) and (max-width: 600px){
+  position : relative;
+  text-align: center;
+  right: 0%;
+}
 `;
 export const Remove = styled.div`
 width : 20%;
@@ -95,7 +114,7 @@ margin-left : 30px;
 line-height: 1.8;
 @media (min-width: 0px) and (max-width: 600px){
       display: block; 
-      width: 60%;
+      width: 80%;
       font-size: 80%;
       text-align: center;
       line-height: 0.5cm;
@@ -104,9 +123,10 @@ line-height: 1.8;
 
 export const Counter = styled.div`
 display: flex;
+
 @media (min-width: 0px) and (max-width: 600px){
   width: 100%;
-  margin:auto;
+  justify-content: center;
 }
 `;
 export const BorderDiv = styled.div`
@@ -138,16 +158,26 @@ font size: 12px;
 background-color: black;
 color: white;
 border: none;
+position : absolute;
+right: 5%;
+@media (min-width: 0px) and (max-width: 600px){
+padding: 10px 18px 10px 18px;
+position: relative;
+right: 0%;
+}
 `;
 
 export const CouponInput = styled.input`
 width: 400px;
 padding: 10px;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 200px;
+}
 `;
 
 export const ValueDiv = styled.div`
 display: flex;
-width: 34%;
+width: 36%;
  justify-Content: space-around;
  @media (min-width: 0px) and (max-width: 600px){
   display : block;
@@ -161,4 +191,8 @@ background-color: gray;
 width: 200px;
 padding: 12px;
 border: none;
-`
+@media (min-width: 0px) and (max-width: 600px){
+  width: 200px;
+  margin-top: 10px;
+}
+`;

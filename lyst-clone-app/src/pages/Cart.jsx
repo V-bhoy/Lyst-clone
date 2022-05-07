@@ -1,4 +1,5 @@
 import React,{ useEffect,useState} from 'react'
+import EmptyCart from '../components/EmptyCart';
 import CartItem from '../components/CartItem'
 import { getCartData} from '../redux/action';
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +13,7 @@ import { CartPage,
   CheckOut,
   CouponInput,
   CouponSubmit,
-  BorderDiv} from '../components/styled';
+  BorderDiv} from '../components/cartStyled';
 
 
 export default function Cart() {
@@ -32,9 +33,13 @@ export default function Cart() {
      if((codeInput==="MASAI30" || codeInput === "masai30") && isCouponUsed === false){
       dispatch({ type: "UPDATE_TOTAL" ,
      });
+     alert("Congratulations! Coupon Applied Successfully");
+    }
+    else if(isCouponUsed === true){
+      alert("You Have Already Used This Coupon Code");
     }
     else{
-      alert("You Have Already Used This Coupon Code");
+      alert("Enter a Valid Coupon Code");
     }
    }
       
@@ -43,6 +48,14 @@ export default function Cart() {
           
     });
     },[ cartData]);
+
+     if(cartData.length === 0){
+       return(
+         <>
+            <EmptyCart/>
+         </>
+       )
+     }
   
     return (
       <>
@@ -55,8 +68,8 @@ export default function Cart() {
         ) : (
          <>
 
-         <div style={{height: "50px"}}>               
-         <CheckOut style={ {position : "absolute",right: "5%"}}>PROCEED TO CHECKOUT</CheckOut>
+         <div style={{height: "50px", textAlign: "center", marginTop: "10px"}}>               
+         <CheckOut >PROCEED TO CHECKOUT</CheckOut>
          </div>
          <BorderDiv style={{borderBottom : "0.5px solid grey",marginTop : "0px", height: "20px", width: "90%", margin: "auto",
           }}>
@@ -89,7 +102,7 @@ export default function Cart() {
                     <CartSubtotal>
                             <h3 >Grand Total : &#8377; {totalAmount}</h3>
                             <br />
-                            <CheckOut style={{marginRight: "30px" }}>PROCEED TO CHECKOUT</CheckOut>
+                            <CheckOut style={{marginRight: "30px", position : "relative"}}>PROCEED TO CHECKOUT</CheckOut>
                     </CartSubtotal>
                     
             </CartRight>
