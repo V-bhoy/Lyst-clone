@@ -75,10 +75,13 @@
  */
 
 .sign-up-container{
+  margin-top: 140px;
+  margin-bottom: 40px;
+  margin-left: 18%;
   display: flex;
-  height: 970px;
+  height: 1070px;
   width: 65%;
-  margin: auto;
+  /* margin: auto; */
   gap: 4%;
   /* border:2px solid red; */
 }
