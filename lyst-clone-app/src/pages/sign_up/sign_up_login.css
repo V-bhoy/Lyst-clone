@@ -1,0 +1,201 @@
+/* .sign-up-container,
+.login-container {
+  display: grid;
+  place-content: center;
+  height: calc(100vh - 50px);
+}
+
+.sign-up__content-container,
+.login__content-container {
+  
+  border-radius: 10px;
+  padding: 15px 20px;
+  max-width: 40vw;
+  min-width: 1200px;
+}
+.sign-up__heading,
+.login__heading {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: var(--text-color-1);
+  text-align: center;
+  margin-bottom: 15px;
+}
+.sign-up-form__input-container,
+.login-form__input-container {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.sign-up__input-field,
+.login__input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.sign-up__input-field input,
+.login__input-field input {
+  outline: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color-1);
+  border-radius: 5px;
+  margin-top: 2px;
+}
+.sign-up__input-field input:focus,
+.login__input-field input:focus {
+  box-shadow: 0px 0px 3px var(--text-color-1);
+}
+.sign-up__input-field input[type="radio"]:focus {
+  box-shadow: none;
+}
+
+.sign-up-form__gender {
+  flex-direction: row;
+}
+.sign-up-form__gender label {
+  margin-right: 20px;
+}
+
+
+.sign-up__submit-btn,
+.login__submit-btn {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid var(--border-color-1);
+  align-self: center;
+  background: rgb(92,184,92);
+  color: aliceblue;
+  border-radius: 5px;
+  margin-top: 10px;
+  min-width: 80px;
+}
+ */
+
+.sign-up-container{
+  margin-top: 140px;
+  margin-bottom: 40px;
+  margin-left: 18%;
+  display: flex;
+  height: 1070px;
+  width: 65%;
+  /* margin: auto; */
+  gap: 4%;
+  /* border:2px solid red; */
+}
+
+.sign-up-container > div{
+  /* border: 2px solid black; */
+  width: 48%;
+}
+
+.chandanbtn > button{
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size:16px;
+  width: 50%;
+} 
+
+.chandanbtn > button:first-child{
+  background-color:black;
+  color: white;
+  font-weight:540;
+  border: 0px;
+}
+
+.chandanbtn > button:last-child{
+  background-color:white;
+  font-weight:540;
+  border: 1px solid black;
+}
+
+.drj{
+  text-align: center;
+  font-size: 27px;
+  font-weight:640;
+  word-spacing: 4px;
+}
+
+.adi{
+   margin-top:15px;
+   margin-bottom:30px;
+   text-align:center;
+   color: rgb(108, 107, 107);
+}
+
+.rgl{
+  font-size:17px;
+  color: rgba(8, 7, 7, 0.945);
+  margin-top:30px;
+  margin-left: 5px;
+}
+
+.rgi > div{
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.rgi > input{
+  margin-left: 5px;
+  height: 40px;
+  width: 99%;
+  font-size:16px;
+  padding: 10px;
+}
+
+.rgc{
+  margin-top: 20px;
+  padding: 10px;
+  margin-bottom:20px;
+}
+
+.sign-up__submit-btn{
+  height: 40px;
+  width: 100%;
+  background-color:black;
+  color: white;
+  font-size:16px;
+  font-weight: 520;
+  border: 0px;
+}
+
+.tc{
+  margin-top: 10px;
+  color: gray;
+  text-align: center;
+  padding: 15px;
+}
+
+.right_div{
+  background-image: url("https://static.lystit.com/static/n/img/encouraged-search/gradient-bg-6-2.deff3c85cca058ba0fe2cc465803e1fa.jpg");
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.dabba{
+  height: 250px;
+  padding: 20px;
+  width: 350px;
+  background-color:white;
+}
+
+.rgr{
+  display: flex;
+  margin-top: 23px;
+}
+
+.rgr > div:last-child{
+  margin-left: 40px;
+  font-size:18px;
+}
+
+.sign-up-form__error-message{
+  color: red;
+  margin-top: -10px;
+  margin-bottom:10px;
+  font-weight: 600
+}

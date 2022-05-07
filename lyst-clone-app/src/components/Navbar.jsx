@@ -6,6 +6,9 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   BottomNav,
+  DropDown,
+  DropDownSpan,
+  DropOverlay,
   InputDiv,
   Nav,
   NavButton,
@@ -15,6 +18,9 @@ import {
 import { Link } from "react-router-dom";
 import SecondaryNav from "./SecondaryNav";
 import MobileNav from "./MobileNav";
+import SearchList from "./SearchList";
+import { useDispatch } from "react-redux";
+import { searchItem } from "../redux/action";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -32,10 +38,27 @@ function HideOnScroll(props) {
 const Navbar = (props) => {
   const [activeProd, setActiveProd] = useState(false);
   const [activeLink, setActiveLink] = useState("Men");
+  const [dropActive, setDropActive] = useState(false);
+  const [searchActive, setsearchActive] = useState(false);
+  const [searchValue, setsearchValue] = useState("");
 
-  activeProd
-    ? document.body.classList.add("overflow-hidden")
-    : document.body.classList.remove("overflow-hidden");
+  const dispatch = useDispatch();
+
+  const searchForItems = (e) => {
+    let value = e.target.value;
+    if (
+      value === "jeans" ||
+      value === "coats" ||
+      value === "dresses" ||
+      value === "jackets"
+    ) {
+      dispatch(searchItem(value));
+      setsearchActive(true);
+    } else {
+      setsearchActive(false);
+    }
+  };
+
   return (
     <>
       <HideOnScroll {...props}>
@@ -49,12 +72,42 @@ const Navbar = (props) => {
         >
           <Nav>
             <TopNav>
-              <p>IN - US$</p>
-              <p>
+              <p className="cursor-pointer">IN - US$</p>
+              <div
+                className="relative cursor-pointer"
+                onClick={() => setDropActive(!dropActive)}
+              >
                 Help
                 <KeyboardArrowDownIcon style={{ fontSize: "1rem" }} />
-              </p>
-              <p className="hover:underline">Sign in</p>
+                {dropActive && <DropDownSpan></DropDownSpan>}
+                {dropActive && (
+                  <DropDown>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Help Center
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Contact us
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        About us
+                      </p>
+                    </Link>
+                    <Link to={"/"}>
+                      <p className="border-b border-black py-4 w-[160px] text-[12px] hover:underline">
+                        Careers
+                      </p>
+                    </Link>
+                  </DropDown>
+                )}
+              </div>
+              <Link to="/login">
+                <p className="hover:underline">Sign in</p>
+              </Link>
               <NavButton className="hover:underline">Join</NavButton>
             </TopNav>
 
@@ -112,18 +165,32 @@ const Navbar = (props) => {
                       ? 'SEARCH (E.G. "Acne Jeans")'
                       : 'SEARCH (E.G. "Valentino dresses")'
                   }
+                  onChange={(e) => setsearchValue(e.target.value)}
+                  onInput={(e) => {
+                    searchForItems(e);
+                  }}
                 ></NavInput>
+                {searchActive && (
+                  <SearchList
+                    value={searchValue}
+                    setsearchActive={setsearchActive}
+                  />
+                )}
               </InputDiv>
             </BottomNav>
           </Nav>
           <MobileNav />
+          <SecondaryNav
+            active={activeProd}
+            setActiveProd={setActiveProd}
+            link={activeLink}
+          />
         </AppBar>
       </HideOnScroll>
-      <SecondaryNav
-        active={activeProd}
-        setActiveProd={setActiveProd}
-        link={activeLink}
-      />
+
+      <DropOverlay
+        style={dropActive ? { display: "block" } : { display: "none" }}
+      ></DropOverlay>
     </>
   );
 };

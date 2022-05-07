@@ -5,10 +5,11 @@ import {
   MobileSecDiv,
   MobileSecLink,
 } from "./ResponsiveNav.styled";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const MobileSecondaryNav = () => {
+const MobileSecondaryNav = ({ setHamActive }) => {
   const [ActiveLink, setActiveLink] = useState("Women");
+  const navigate = useNavigate();
   return (
     <>
       <MobileSecDiv>
@@ -52,34 +53,96 @@ const MobileSecondaryNav = () => {
         >
           <MobileSecLink>
             <MobileSecButton>
-              <Link to="/"> Clothing </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Clothing{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Shoes </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Shoes{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Accessories </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Accessories{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Bags </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Bags{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Jewelery </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Jewelery{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Popular Brands </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Popular Brands{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/">All {ActiveLink}'s</Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                All {ActiveLink}'s
+              </div>
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/">Sale</Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                Sale
+              </div>
             </MobileSecButton>
             <p className="p-4">Country:IN - US$</p>
             <p className="p-4">Help Center</p>
@@ -89,34 +152,96 @@ const MobileSecondaryNav = () => {
           </MobileSecLink>
           <MobileSecLink>
             <MobileSecButton>
-              <Link to="/"> Clothing </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Clothing{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Shoes </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Shoes{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Accessories </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Accessories{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Bags </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Bags{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Jewelery </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Jewelery{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/"> Popular Brands </Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                {" "}
+                Popular Brands{" "}
+              </div>
               <ArrowForwardIcon className="absolute top-4 right-5" />
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/">All {ActiveLink}'s</Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                All {ActiveLink}'s
+              </div>
             </MobileSecButton>
             <MobileSecButton>
-              <Link to="/">Sale</Link>
+              <div
+                onClick={() => {
+                  navigate("/products/jackets");
+                  setHamActive(false);
+                }}
+              >
+                Sale
+              </div>
             </MobileSecButton>
             <p className="p-4">Country:IN - US$</p>
             <p className="p-4">Help Center</p>
