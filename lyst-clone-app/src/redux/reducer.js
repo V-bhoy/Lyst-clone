@@ -1,5 +1,4 @@
-
-import{
+import {
   CLEAR_FILTER,
   FILTER_DATA,
   GET_DATA,
@@ -10,6 +9,8 @@ import{
 const initState = {
   data: [],
   filterData: [],
+  cartData: [],
+
   searchData: [],
 };
 
@@ -43,6 +44,7 @@ export const ProductsReducer = (state = initState, { type, payload }) => {
         ...state,
         filterData: [],
       };
+
     case SEARCH_ITEMS:
       return {
         ...state,
