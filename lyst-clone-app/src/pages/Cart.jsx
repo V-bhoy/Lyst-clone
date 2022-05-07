@@ -19,10 +19,7 @@ import { CartPage,
 export default function Cart() {
     const {  isCouponUsed, cartData , totalAmount, totalItem} = useSelector((state) => state.cart);
 
-    const [codeInput, setCodeInput] = useState('')
-
- console.log(cartData)
-
+    const [codeInput, setCodeInput] = useState('');
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -33,7 +30,6 @@ export default function Cart() {
      if((codeInput==="MASAI30" || codeInput === "masai30") && isCouponUsed === false){
       dispatch({ type: "UPDATE_TOTAL" ,
      });
-     alert("Congratulations! Coupon Applied Successfully");
     }
     else if(isCouponUsed === true){
       alert("You Have Already Used This Coupon Code");

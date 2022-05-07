@@ -28,13 +28,13 @@ import {
               cartData: payload,
             };
             case DELETE_ITEM:
-                let newData = state.cartData.filter((curElem) => {
+                let newData2 = state.cartData.filter((curElem) => {
                     return curElem.id !== payload.id;
                  })
-                 localStorage.setItem("cart",JSON.stringify(newData));
+                 localStorage.setItem("cart",JSON.stringify(newData2));
                 return {
                  ...state,
-                 cartData:newData ,
+                 cartData:newData2 ,
                 };
     
               case GET_TOTAL :
@@ -57,27 +57,31 @@ import {
                 return { ...state, totalItem, totalAmount, isCouponUsed : false };
     
     
-                case DECREMENT :
-                  const updatedCart = state.cartData
-          .map((curElem) => {
-            if (curElem.id === payload.id) {
-              return { ...curElem, qty: curElem.qty - 1 };
-            }
-            return curElem;
-          })
-          .filter((curElem) => curElem.qty !== 0);
-        return { ...state, cartData: updatedCart };
-    
+                case DECREMENT :{
+                  let newData1 = state.cartData.filter((curElem) => {
+                    if(curElem.id === payload.id){
+                    if(curElem.qty > 1){let newqty = curElem.qty-1;
+                    return curElem.qty = newqty;
+                    }
+                  }
+                  return state.cartData; 
+                 })
+                 localStorage.setItem("cart",JSON.stringify(newData1));
+                  return { ...state, cartData: newData1 };
+  
+                }
     
               case INCREMENT :{
-                const updatedCart = state.cartData.map((curElem) => {
-                  if (curElem.id === payload.id) {
-                    return { ...curElem, qty: curElem.qty + 1 };
+                let newData = state.cartData.filter((curElem) => {
+                  if(curElem.id === payload.id){
+                  if(curElem.qty < 5){let newqty = curElem.qty+1;
+                  return curElem.qty = newqty;
                   }
-                  return curElem;
-                });
-            
-                return { ...state, cartData: updatedCart };
+                }
+                return state.cartData; 
+               })
+               localStorage.setItem("cart",JSON.stringify(newData));
+                return { ...state, cartData: newData };
               }
               case UPDATE_TOTAL:
                 let updatedTotal = 0;
