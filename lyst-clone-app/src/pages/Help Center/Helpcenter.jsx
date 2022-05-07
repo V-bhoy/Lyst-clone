@@ -14,9 +14,9 @@ export const Helpcenter = () => {
     <div>
       <div className="helpcenter">
         <div className="lyst">
-          <Link className="lyst" to="/">
+          {/* <Link className="lyst" to="/">
             LYST
-          </Link>
+          </Link> */}
         </div>
         <div className="helpdiv">
           <p className="help">HOW CAN WE HELP YOU TODAY?</p>

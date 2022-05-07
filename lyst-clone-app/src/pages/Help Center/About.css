@@ -1,13 +1,14 @@
 .mainaboutdiv {
   margin: auto;
-  margin-top: 30px;
+  margin-top: 12%;
   width: 47%;
   height: 485px;
 }
 
-.mainaboutdiv h1 {
+h1 {
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 36px;
 }
 
 .aboutthisweb {
@@ -19,12 +20,15 @@
   font-weight: 300;
 }
 
-.aboutacchive {
+.aboutthisweb p{
+  margin-top: 25px;
+}
+
+.aboutacchiv {
+  margin-top: 20%;
   height: 25px;
   margin: auto;
   margin-top: 72px;
-  /* width: 55%; */
-  /* border: 1px solid red; */
   display: flex;
 }
 
@@ -129,6 +133,7 @@
 
 .fashionimg img {
   width: 100%;
+  height: 600px;
   border-bottom: 1px solid black;
 }
 
@@ -146,6 +151,8 @@
   font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 350;
   color: #000;
+  line-height: 1.4;
+  margin-top: 2%;
 }
 
 .fashiontalent {
@@ -192,6 +199,7 @@
 }
 
 .presscovergaemaindiv {
+
   margin-top: 4%;
   height: 535px;
   background-color: #f5f4f2;
@@ -223,7 +231,7 @@
 }
 
 .techcrunch {
-  height: 35px;
+  height: 38px;
   margin: auto;
   width: 32%;
   display: flex;
@@ -260,8 +268,6 @@
 }
 
 .uk {
-  /* argin-left: 10px;m */
-  border: 1px solid white;
   width: 32%;
   background-color: white;
 }
@@ -337,7 +343,7 @@
   font-weight: bold;
 }
 
-.presstwo1 {
+.presstwo1 { 
   display: flex;
   width: 50%;
   justify-content: space-between;
@@ -410,9 +416,10 @@
 
 .linkdindiv img {
   height: 20px;
+  width: 20px;
   margin-top: 14px;
   margin-left: 16px;
-  border-radius: px;
+  border-radius: 5px;
 }
 
 .linkdinlink {
@@ -467,6 +474,11 @@
   display: flex;
 }
 
+.dismorewrite{
+  margin-top: 5px;
+}
+
+
 .arrow1 {
   height: 20px;
   font-weight: bold;
@@ -504,4 +516,5 @@
 
 .detail {
   width: 90%;
+  margin-top: 5px;
 }
