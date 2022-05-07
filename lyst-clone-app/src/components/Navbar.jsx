@@ -105,7 +105,7 @@ const Navbar = (props) => {
                   </DropDown>
                 )}
               </div>
-              <Link to="/">
+              <Link to="/login">
                 <p className="hover:underline">Sign in</p>
               </Link>
               <NavButton className="hover:underline">Join</NavButton>

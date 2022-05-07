@@ -1,0 +1,95 @@
+.right_div_login{
+    background-image: url("https://static.lystit.com/static/n/img/encouraged-search/gradient-bg-6-2.deff3c85cca058ba0fe2cc465803e1fa.jpg");
+    display: flex;
+    align-items: center;
+    justify-content:center;    
+}
+
+.sign_in_container{
+    display: flex;
+    height: 500px;
+    width: 65%;
+    margin: auto;
+    margin-top:50px;
+    gap: 4%;
+    /* border:2px solid red; */
+
+}
+
+.sign_in_container > div{
+    /* border: 2px solid black; */
+    width: 48%;
+  }
+
+  .chandanbtnLogin > button{
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size:16px;
+    width: 50%;
+  } 
+  
+  .chandanbtnLogin > button:first-child{
+    background-color:white;
+    font-weight:540;
+    border: 1px solid black;
+  }
+  
+  .chandanbtnLogin > button:last-child{
+    background-color:black;
+    color: white;
+    font-weight:540;
+    border: 0px;
+  }
+
+  .rgll{
+    font-size:17px;
+    color: rgba(8, 7, 7, 0.945);
+    margin-top:30px;
+    margin-left: 5px;
+  }
+  
+  .rgil > div{
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  
+  .rgil > input{
+    margin-left: 5px;
+    height: 40px;
+    width: 99%;
+    font-size:16px;
+    padding: 10px;
+  }
+
+  .rg{
+      width: 99%;
+      height: 40px;
+      background-color:black;
+      border: 0px;
+      color: white;
+      font-size:18px;
+      font-weight:520;
+      margin-top:20px;
+      margin-left: 5px;
+  }
+
+  .popat{
+      text-align: center;
+      font-size:22px;
+      font-weight:670;
+  }
+
+  .imgrg{
+      border: 2px solid black;
+      margin-left: 5px;
+  }
+
+  .prg{
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(69, 65, 65);
+  }
