@@ -19,6 +19,10 @@ const InstructionPage = () => {
         name = e.target.name;
         value = e.target.value;
         setUser({ ...user, [name]: value })
+       
+    }
+    const handleSubmit = (e) =>{
+        e.preventDefault();
         localStorage.setItem('userData', JSON.stringify(user));
     }
     console.log(user);
@@ -34,7 +38,7 @@ const InstructionPage = () => {
                             </div>
                             <div>
                                 <p>Already have an account?
-                                    <a>Log in</a></p>
+                                    <a href='./login'>Log in</a></p>
                             </div>
                         </div>
                         <div class="mb-3 Instruction-Main-left-email-bottom">
@@ -56,7 +60,7 @@ const InstructionPage = () => {
                     </div>
 
                     <div className='Instruction-Main-left-form'>
-                        <form class="row g-3 onSubmit=(handleSubmit)">
+                        <form class="row g-3 " onSubmit={handleSubmit}>
                             <div class="col">
                                 <input type="text"
                                     name='fName'
@@ -94,38 +98,36 @@ const InstructionPage = () => {
                                     placeholder='City' class="form-control" id="inputCity" />
                             </div>
                             <div class="col-md-4">
-                                <select id="inputState" class="form-select">
-                                    name='country'
-                                    onChange={handleInputs}
+                                <select id="inputState" class="form-select" name='country' onChange={handleInputs}>
+                                    
+                 
                                     <option selected name='country' value={user.country}>USA</option>
-                                    <option name='country' value={user.country}>INDIA</option>
-                                    <option value={user.country}>CHINA</option>
-                                    <option value={user.country}>RUSSIA</option>
-                                    <option value={user.country}>NEPAL</option>
-                                    <option value={user.country}>BHUTAN</option>
-                                    <option value={user.country}>PAKISTAN</option>
-                                    <option value={user.country}>AUSTRALIA</option>
-                                    <option value={user.country}>ENGLAND</option>
-                                    <option value={user.country}>NEW-ZELAND</option>
-                                    <option value={user.country}>SRI-LANKA</option>
+                                    <option name='country' value="INDIA">INDIA</option>
+                                    <option name='country' value="CHINA">CHINA</option>
+                                    <option name='country' value="RUSSIA">RUSSIA</option>
+                                    <option name='country' value="NEPAL">NEPAL</option>
+                                    <option name='country' value="BHUTAN">BHUTAN</option>
+                                    <option name='country' value="PAKISTAN">PAKISTAN</option>
+                                    <option name='country' value="AUSTRALIA">AUSTRALIA</option>
+                                    <option name='country' value="ENGLAND">ENGLAND</option>
+                                    <option name='country' value="NEW-ZELAND">NEW-ZELAND</option>
+                                    <option name='country' value="SRI-LANKA">SRI-LANKA</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <select id="inputState" class="form-select">
-                                    name='state'
-                                    value={user.state}
-                                    onChange={handleInputs}
-                                    <option selected value={user.country}>Choose...</option>
-                                    <option value="Bihar">BIHAR</option>
-                                    <option value={user.state}>ASSAM</option>
-                                    <option value={user.state}>GUJRAT</option>
-                                    <option value={user.state}>MUMBAI</option>
-                                    <option value={user.state}>DELHI</option>
-                                    <option value={user.state}>JAMMU & KASHMIR</option>
-                                    <option value={user.state}>UTTAR-PRADESH</option>
-                                    <option value={user.state}>JHARKHAND</option>
-                                    <option value={user.state}>MADHYA-PRADESH</option>
-                                    <option value={user.state}>HIMACHAL-PRADESH</option>
+                                <select id="inputState" class="form-select" name='state' onChange={handleInputs}>
+                                    
+                                    <option selected  name='state' value="GOA">GOA</option>
+                                    <option name='state' value="BIHAR">BIHAR</option>
+                                    <option name='state' value="ASSAM">ASSAM</option>
+                                    <option name='state' value="GUJRAT">GUJRAT</option>
+                                    <option name='state' value="MUMBAI">MUMBAI</option>
+                                    <option name='state' value="DELHI">DELHI</option>
+                                    <option name='state'  value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
+                                    <option name='state' value="UTTAR-PRADESH">UTTAR-PRADESH</option>
+                                    <option name='state' value="JHARKHAND">JHARKHAND</option>
+                                    <option name='state' value="MADHYA-PRADESH">MADHYA-PRADESH</option>
+                                    <option name='state' value="HIMACHAL-PRADESH">HIMACHAL-PRADESH</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
