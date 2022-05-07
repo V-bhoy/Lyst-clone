@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
-
+import Shipping from "../pages/Shipping";
+import Payment from "../pages/Payment";
 const MainRoutes = () => {
   return (
     <>
@@ -12,6 +13,8 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/products/:id" element={<Products />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </>

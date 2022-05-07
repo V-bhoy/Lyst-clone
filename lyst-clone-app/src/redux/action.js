@@ -1,9 +1,12 @@
 import data from "../db.json";
 import {
-  CLEAR_FILTER,
+  
   FILTER_DATA,
   GET_DATA,
   SEARCH_ITEMS,
+  APPLYDISCOUNT,
+  CLEAR_FILTER,
+  GETCARTDATA,
   SORT_DATA,
 } from "./actionTypes";
 
@@ -30,3 +33,18 @@ export const searchItem = (payload) => ({
   type: SEARCH_ITEMS,
   payload: data[payload],
 });
+export const updateTotalPrice = (value) => ({
+  type: APPLYDISCOUNT,
+  payload: value,
+});
+export const getCartData = () => {
+  let totalPrice = 0;
+  let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  cartData.map((prod) => {
+    totalPrice = totalPrice + prod.price * prod.qty;
+  });
+  return {
+    type: GETCARTDATA,
+    payload: { cartData, totalPrice },
+  };
+};
