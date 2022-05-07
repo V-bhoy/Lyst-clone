@@ -8,6 +8,7 @@ import { combineReducers,
 import thunk from "redux-thunk";
 import { ProductsReducer } from "./reducer";
 import { cartReducer } from "./cartReducer";
+import loginReducer from "./LoginData/reducer"
   
   const composeEnhancers =
     typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -23,7 +24,8 @@ import { cartReducer } from "./cartReducer";
 
   const rootReducer = combineReducers({
     products: ProductsReducer,
-    cart:cartReducer
+    cart:cartReducer,
+    login: loginReducer
   });
 
 export const store = createStore(rootReducer,enhancer);
