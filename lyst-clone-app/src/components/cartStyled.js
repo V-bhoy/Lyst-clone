@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const CartHead = styled.div`
-  margin-left: 80px;
-  margin-top: 110px;
+
+margin-left: 80px;
+margin-top: 150px;
   @media (min-width: 0px) and (max-width: 600px) {
     margin: auto;
   }
+
 `;
 
 export const CartPage = styled.div`
@@ -63,8 +65,10 @@ export const CartCoupon = styled.div`
 `;
 
 export const CartSubtotal = styled.div`
+  position: absolute;
+  right: 2%;
   line-height: 1.8;
-  border: 1px solid red;
+
   @media (min-width: 0px) and (max-width: 600px) {
     position: relative;
     text-align: center;
@@ -163,11 +167,15 @@ export const CheckOut = styled.button`
 `;
 
 export const CouponInput = styled.input`
-  width: 40%;
-  padding: 10px;
-  @media (min-width: 0px) and (max-width: 600px) {
-    width: 200px;
-  }
+
+width: 400px;
+padding: 10px;
+border: 1px solid grey;
+@media (min-width: 0px) and (max-width: 600px){
+  width: 200px;
+}
+ }
+
 `;
 
 export const ValueDiv = styled.div`
@@ -183,7 +191,7 @@ export const ValueDiv = styled.div`
 `;
 export const CouponSubmit = styled.input`
   background-color: gray;
-  width: 20%px;
+  width: 200px;
   padding: 12px;
   border: none;
   @media (min-width: 0px) and (max-width: 600px) {

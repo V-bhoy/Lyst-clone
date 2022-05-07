@@ -28,6 +28,15 @@ export default function Cart() {
     (state) => state.cart
   );
 
+
+    const [codeInput, setCodeInput] = useState('');
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+      getCartData(dispatch);
+    }, [dispatch]);
+   
+   
   const [codeInput, setCodeInput] = useState("");
   const [open, setOpen] = React.useState(false);
   const [message, setMessage] = useState("");
@@ -39,6 +48,7 @@ export default function Cart() {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
+
     }
 
     setOpen(false);
@@ -124,7 +134,7 @@ export default function Cart() {
           </CartCoupon>
 
           <CartSubtotal>
-            <h3 style={{textAlign: "right"}}>Grand Total : &#8377; {totalAmount}</h3>
+            <h3>Grand Total : &#8377; {totalAmount}</h3>
             <br />
             <CheckOut style={{ marginRight: "30px", position: "relative" }}>
               PROCEED TO CHECKOUT
