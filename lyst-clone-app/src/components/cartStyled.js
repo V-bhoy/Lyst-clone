@@ -63,10 +63,8 @@ export const CartCoupon = styled.div`
 `;
 
 export const CartSubtotal = styled.div`
-  position: absolute;
-  right: 2%;
   line-height: 1.8;
-
+  border: 1px solid red;
   @media (min-width: 0px) and (max-width: 600px) {
     position: relative;
     text-align: center;
@@ -165,7 +163,7 @@ export const CheckOut = styled.button`
 `;
 
 export const CouponInput = styled.input`
-  width: 400px;
+  width: 40%;
   padding: 10px;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 200px;
@@ -185,7 +183,7 @@ export const ValueDiv = styled.div`
 `;
 export const CouponSubmit = styled.input`
   background-color: gray;
-  width: 200px;
+  width: 20%px;
   padding: 12px;
   border: none;
   @media (min-width: 0px) and (max-width: 600px) {

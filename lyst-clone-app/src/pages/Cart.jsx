@@ -124,7 +124,7 @@ export default function Cart() {
           </CartCoupon>
 
           <CartSubtotal>
-            <h3>Grand Total : &#8377; {totalAmount}</h3>
+            <h3 style={{textAlign: "right"}}>Grand Total : &#8377; {totalAmount}</h3>
             <br />
             <CheckOut style={{ marginRight: "30px", position: "relative" }}>
               PROCEED TO CHECKOUT
