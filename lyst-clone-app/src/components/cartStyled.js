@@ -18,7 +18,7 @@ export const CartPage = styled.div`
 
 export const CartTotal = styled.div`
   display: flex;
-  width: 30%;
+  width: 32%;
   position: absolute;
   right: 4%;
   justify-content: space-around;
@@ -54,7 +54,7 @@ export const CartRight = styled.div`
 `;
 
 export const CartCoupon = styled.div`
-  width: 70%;
+  width: 58%;
   height: 100px;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 100%;
@@ -63,17 +63,20 @@ export const CartCoupon = styled.div`
 `;
 
 export const CartSubtotal = styled.div`
-text-align: right;
+  width: 42%;
+  text-align: right;
   line-height: 1.8;
-  border : 1px solid red;
+  margin-right: 30px;
   @media (min-width: 0px) and (max-width: 600px) {
-   
+    width: 100%;
+    margin-top : 20px;
     text-align: center;
-    right: 0%;
   }
 `;
 export const Remove = styled.div`
-  width: 20%;
+  width: 25%;
+  margin: auto;
+  text-align: center;
   @media (min-width: 0px) and (max-width: 600px) {
     margin: auto;
   }
@@ -95,7 +98,7 @@ export const CartImage = styled.img`
 `;
 
 export const ItemSpec = styled.div`
-  width: 41%;
+  width: 35%;
   margin-left: 30px;
   line-height: 1.8;
 
@@ -114,13 +117,14 @@ export const ItemInfo = styled.div`
     width: 80%;
     font-size: 80%;
     text-align: center;
-    line-height: 0.5cm;
+    line-height: 0.7cm;
   }
 `;
 
 export const Counter = styled.div`
   display: flex;
-
+  width: 30%;
+  justify-content: space-around;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 100%;
     justify-content: center;
@@ -133,19 +137,19 @@ export const BorderDiv = styled.div`
 `;
 
 export const ItemCount = styled.input`
-  width: 25px;
+  width: 50%;
   height: 20px;
-  border: 0.141rem solid var(--primary-color);
-  box-sizing: border-box;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   text-align: center;
   color: black;
   margin: 0 1rem;
-  border-radius: 2px;
-  outline: 1px solid gray;
+  border: none;
   background-color: none;
+  @media (min-width: 0px) and (max-width: 600px) {
+    width: 40%;
+  }
 `;
 
 export const CheckOut = styled.button`
@@ -157,8 +161,6 @@ export const CheckOut = styled.button`
   margin-right: 0;
   @media (min-width: 0px) and (max-width: 600px) {
     padding: 10px 18px 10px 18px;
-    position: relative;
-    right: 0%;
   }
 `;
 
@@ -176,13 +178,15 @@ border: 1px solid grey;
 
 export const ValueDiv = styled.div`
   display: flex;
-  width: 36%;
+  width: 38%;
   justify-content: space-around;
+  margin: auto;
   @media (min-width: 0px) and (max-width: 600px) {
     display: block;
-    width: 25%;
+    width: 50%;
     margin: auto;
     text-align: center;
+    font-type: bold;
   }
 `;
 export const CouponSubmit = styled.input`
@@ -193,5 +197,25 @@ export const CouponSubmit = styled.input`
   @media (min-width: 0px) and (max-width: 600px) {
     width: 200px;
     margin-top: 10px;
+  }
+`;
+
+export const CheckOutTop = styled.div`
+  width: 90%;
+  height: "50px";
+  margin : auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: right;
+  margin-left : 40px;
+  @media (min-width: 0px) and (max-width: 600px) {
+    padding: 10px 18px 10px 18px;
+  }
+`;
+
+export const Quantity = styled.h4`
+  @media (min-width: 0px) and (max-width: 600px) {
+  margin-bottom : 2px;
+   font-size: 20px;
   }
 `;

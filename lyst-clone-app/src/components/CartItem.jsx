@@ -1,5 +1,13 @@
 import React, {useEffect} from 'react'
-import { Flex, CartImage, ItemInfo ,Counter, ItemCount, Remove, ItemSpec, ImageDiv, ValueDiv} from './cartStyled'
+import { Flex, 
+  CartImage,
+   ItemInfo ,
+   Counter,
+    Remove,
+     ItemSpec,
+      ImageDiv,
+       ValueDiv,
+      Quantity} from './cartStyled'
 import { deleteItem } from '../redux/action'
 import { useDispatch } from 'react-redux'
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -69,8 +77,7 @@ export default function CartItem({ title, id, desc, img, price,qty }) {
           
         <RemoveIcon onClick={() =>decrement({id})}/>
 
-        <ItemCount type="text"   placeholder={qty}   
-        />
+        <Quantity>{qty}</Quantity>
       
         <AddIcon onClick={() =>increment({id},{qty})}/>
       
