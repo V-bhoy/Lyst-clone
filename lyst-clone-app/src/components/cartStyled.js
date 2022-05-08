@@ -34,7 +34,7 @@ export const Flex = styled.div`
 
   @media (min-width: 0px) and (max-width: 600px) {
     border: none;
-    height: 200px;
+    height: 240px;
     border-bottom: 1px solid grey;
   }
 `;
@@ -56,7 +56,7 @@ export const CartRight = styled.div`
 `;
 
 export const CartCoupon = styled.div`
-  width: 60%;
+  width: 70%;
   height: 100px;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 100%;
@@ -65,12 +65,11 @@ export const CartCoupon = styled.div`
 `;
 
 export const CartSubtotal = styled.div`
-  position: absolute;
-  right: 2%;
+text-align: right;
   line-height: 1.8;
-
+  border : 1px solid red;
   @media (min-width: 0px) and (max-width: 600px) {
-    position: relative;
+   
     text-align: center;
     right: 0%;
   }
@@ -89,7 +88,7 @@ export const ImageDiv = styled.div`
   }
 `;
 export const CartImage = styled.img`
-  width: 100%;
+  width: 120%;
   height: 150px;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 200%;
@@ -156,9 +155,8 @@ export const CheckOut = styled.button`
   font-size: 12px;
   background-color: black;
   color: white;
-  border: none;
-  position: absolute;
-  right: 5%;
+  margin-left: auto;
+  margin-right: 0;
   @media (min-width: 0px) and (max-width: 600px) {
     padding: 10px 18px 10px 18px;
     position: relative;
@@ -168,7 +166,7 @@ export const CheckOut = styled.button`
 
 export const CouponInput = styled.input`
 
-width: 400px;
+width: 40%;
 padding: 10px;
 border: 1px solid grey;
 @media (min-width: 0px) and (max-width: 600px){
@@ -191,7 +189,7 @@ export const ValueDiv = styled.div`
 `;
 export const CouponSubmit = styled.input`
   background-color: gray;
-  width: 200px;
+  width: 30%;
   padding: 12px;
   border: none;
   @media (min-width: 0px) and (max-width: 600px) {

@@ -29,12 +29,7 @@ export default function Cart() {
   );
 
 
-    const [codeInput, setCodeInput] = useState('');
-
-    const dispatch = useDispatch();
-    useEffect(() => {
-      getCartData(dispatch);
-    }, [dispatch]);
+   
    
    
   const [codeInput, setCodeInput] = useState("");
@@ -136,7 +131,7 @@ export default function Cart() {
           <CartSubtotal>
             <h3>Grand Total : &#8377; {totalAmount}</h3>
             <br />
-            <CheckOut style={{ marginRight: "30px", position: "relative" }}>
+            <CheckOut>
               PROCEED TO CHECKOUT
             </CheckOut>
           </CartSubtotal>
