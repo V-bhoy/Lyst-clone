@@ -108,7 +108,10 @@ const Navbar = (props) => {
               <Link to="/login">
                 <p className="hover:underline">Sign in</p>
               </Link>
-              <NavButton className="hover:underline">Join</NavButton>
+              <Link to="/signup">
+                {" "}
+                <NavButton className="hover:underline">Join</NavButton>
+              </Link>
             </TopNav>
 
             <BottomNav>
