@@ -93,6 +93,7 @@ export default function Cart() {
           height: "20px",
           width: "90%",
           margin: "auto",
+          paddingBottom: "2rem",
         }}
       >
         <CartTotal>

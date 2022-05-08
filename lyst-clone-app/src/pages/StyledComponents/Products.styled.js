@@ -77,7 +77,7 @@ export const AddToCartBtn = styled.button`
     content: "Add to cart";
     position: absolute;
     top: 16px;
-    left: 160px;
+    left: 164px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
     @media all and (max-width: 762px) {
