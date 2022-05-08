@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from "react-router-dom"
 import styles from './Payment.module.css'
 import CartItemSummry from "./CartItemSummry"
 import {
@@ -16,6 +17,8 @@ import {
   } from "./StyledComponents/CartItemSummryStyled";
 
 const Payment = () => {
+
+  const navigate = useNavigate();      // navigate
   
 
   let name = document.getElementById("arg");
@@ -32,6 +35,8 @@ const Payment = () => {
   // userArr.push(userObj);
   localStorage.setItem("userData", JSON.stringify(userObj))
 
+  //original Part
+
   let userArr = JSON.parse(localStorage.getItem("userData"));
 
 
@@ -39,7 +44,7 @@ const Payment = () => {
     <div style={{display: "flex"}}>
       <div  className= {styles.mainrg}>
         <div  className={styles.paymentrg}>
-           <h1 style={{marginLeft:"20px", fontFamily:"Helvetica"}}>PAYMENT</h1>
+           <h1 style={{marginLeft:"20px", fontFamily:"Helvetica", fontSize:"30px", fontWeight:"bold"}}>PAYMENT</h1>
            <div  className={styles.paprg}>
              <div>
                <button>Cart   ></button>
@@ -76,7 +81,7 @@ const Payment = () => {
 
            </div>
            <div style={{marginLeft:"20px"}}>
-             <h3 style={{marginBottom:"-10px", marginTop:"80px"}}>Payment Options</h3>
+             <h3 style={{marginBottom:"10px", marginTop:"80px" , fontFamily:"Helvetica", fontSize:"20px", fontWeight:"560"}}>Payment Options</h3>
              <p>All transactions are secure and encrypted.</p>
            </div>
            <div className={styles.raj}>
@@ -103,7 +108,7 @@ const Payment = () => {
                  <div>
                    <input type="text" placeholder="Name on Card" required className={styles.abcrg} />
                  </div>
-                 <div style={{display:"flex" , gap:"15px"}}>
+                 <div style={{display:"flex" , gap:"15px", marginTop:"8px"}}>
                    <div>
                       <input type="text" placeholder="Expiration date(MM/YY)" style={{width:"200px" , marginLeft:"25px"}} requireed className={styles.abcrg}/>
                    </div>
@@ -115,9 +120,9 @@ const Payment = () => {
                  <div style={{borderTop:"2px solid grey" , marginTop:"20px"}}  className={styles.raja}>
                    <h3><input type="radio" style={{height: "20px" , width: "50px"}}/>AfterPay</h3>
                    <div>
-                     <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/h4d8fozveszevvxogwo7" alt="" height="30px" width="50px" style={{marginLeft:"20px"}} />
+                     <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/h4d8fozveszevvxogwo7" alt="" width="50px" style={{marginLeft:"20px", height:"28px"}} />
                    </div>
-                   <a href="https://www.afterpay.com/global/country-select" style={{marginTop:"-10px" ,color:"black"}}>What is Afterpay?</a>
+                   <a href="https://www.afterpay.com/global/country-select" style={{marginTop:"-2px" ,color:"black"}}>What is Afterpay?</a>
                  </div>
 
                  <div  className={styles.raja} >
@@ -127,7 +132,7 @@ const Payment = () => {
                     </div>
                  </div>
                  <div style={{marginLeft:"20px" }}>
-                      <h3 style={{marginBottom:"-10px", marginTop:"80px" , fontFamily:"Helvetica"}}>Billing Address</h3>
+                      <h3 style={{marginBottom:"10px", marginTop:"80px" , fontFamily:"Helvetica", fontSize:"20px", fontWeight:"560"}}>Billing Address</h3>
                       <p>Select a address that matches your card or payment method.</p>
                  </div>
                  <div style={{border:"2px solid grey" , marginTop:"20px"}}  className={styles.raja}>
@@ -135,7 +140,7 @@ const Payment = () => {
                  </div>
 
                  <div style={{border:"2px solid grey"}} className={styles.raja}>
-                    <h3 style={{marginTop:"20px"}}><input type="radio" style={{height: "20px" , width: "50px"}}/>Use a different billing address</h3>
+                    <h3 style={{marginTop:"10px"}}><input type="radio" style={{height: "20px" , width: "50px"}}/>Use a different billing address</h3>
                  </div>
 
                  <div style={{display:"flex"}}>
@@ -143,10 +148,10 @@ const Payment = () => {
                        <a href="shipping.jsx"  style={{textDecoration: "none",color:"black"  , fontSize:"18px"}}>Return to shipping</a>
                      </div>
                      <div style={{marginTop:"20px"}}>
-                       <button className={styles.rgrg}>Pay now</button>
+                       <button className={styles.rgrg} onClick={() => navigate("/PaymentSuccess")}>Pay now</button>
                      </div>
                  </div>
-                 <div  style={{display:"flex"}}>
+                 <div  style={{display:"flex", justifyContent: "center"}}>
                        <div style={{marginLeft:"15px" , marginTop:"40px"}}>Refund policy</div>
                        <div style={{marginLeft:"20px" , marginTop:"40px"}}>Privacy policy</div>
                        <div style={{marginLeft:"20px" , marginTop:"40px"}}>Terms of services</div>
@@ -156,7 +161,7 @@ const Payment = () => {
 
         </div>
       </div>  
-      <div>
+      <div style={{marginLeft:"230px", marginTop:"150px"}}>
         <CartItemSummry />
       </div>
     </div>

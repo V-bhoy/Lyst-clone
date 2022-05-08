@@ -23,7 +23,7 @@ const AppProvider = ({ children }) => {
 
   const verifyUser = (personDetail) => {
     const resultantUser = store
-      .getState().login
+      .getState().login       
       .userList.find((item) => item.email === personDetail.email);
     if (!resultantUser) return { verified: false, error: "User not found." };
     if (resultantUser.password !== personDetail.password)
@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
   };
 
   const fetchMandiData = async () => {
-    if (store.getState().isMandiDataAvailable) return;
+    if (store.getState().login.isMandiDataAvailable) return;
     await axios
       .get(
         "https://api.krishi.network/mandi?lat=28.44108136&lon=77.0526054&ver=89&lang=hi&crop_id=10"

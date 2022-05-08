@@ -16,6 +16,8 @@ import { Helpcenter } from "../pages/Help Center/Helpcenter";
 import { ShoppingonLyst } from "../pages/Help Center/ShoppingonLyst";
 import { Contact } from "../pages/Help Center/Contact";
 import { About_us } from "../pages/Help Center/About_us";
+import PaymentSuccess from "../pages/PaymentSuccess";
+
 
 const MainRoutes = () => {
   return (
@@ -34,7 +36,8 @@ const MainRoutes = () => {
         <Route path="/products/:id" element={<Products />} />
         {/* <Route path="/information" element={<Instruction />} /> */}
         <Route path="/shipping" element={<Shipping />} />
-        {/* <Route path="/payment" element={<Payment />} /> */}
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
