@@ -1,0 +1,50 @@
+
+    .rahul{
+        background-image: url("https://www.8shades.com/wp-content/uploads/2021/02/test-5.gif");
+    /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex;
+        align-items: center;
+        background-size: cover;
+        height: 700px;
+        width: 100%;
+      }
+   
+     .placed{
+       height: 450px;
+       padding: 10px;
+       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+       border-radius: 25px;
+       background-color: antiquewhite;
+       margin: auto;
+       margin-top: 150px;
+       width: 350px;
+       /* border: 1px solid black; */
+     }   
+  
+     .heading{
+       font-size: 26px;
+       text-align: center;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+  
+     .logo{
+       margin-top: 20px;
+       margin-left: 65px;
+     }
+  
+     .morebtn{
+       height: 35px;
+       width: 150px;
+       margin-left: 30%;
+       font-size: 20px;
+       font-weight: 550;
+       color: cyan;
+       background-color: tomato;
+       border: 0px;
+       border-radius: 10px;
+       margin-top: 20px;
+     }
+  
+  

@@ -50,7 +50,6 @@ const Login = () => {
 
           <h3 className={styles.popat}>Sign in</h3>
           <form
-            action=""
             className="login-form"
             onSubmit={(e) => handleSubmit(e)}
           >

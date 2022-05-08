@@ -75,7 +75,6 @@ const SignUp = () => {
       <div className="sign-up__content-container">
     
         <form
-          action=""
           className="sign-up-form"
           onSubmit={(e) => handleSubmit(e)}
         >
