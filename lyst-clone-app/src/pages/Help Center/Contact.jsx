@@ -67,9 +67,9 @@ export const Contact = () => {
             help you, please see below for the correct contact.
           </p>
 
-          <p>Are you a customer with a question about shopping on Lyst?</p>
+          <p className="p1">Are you a customer with a question about shopping on Lyst?</p>
 
-          <p>
+          <p className="p2">
             Visit our{" "}
             <Link className="helpcenter" to={"/help"}>
               Help Center,
@@ -77,11 +77,11 @@ export const Contact = () => {
             or contact Customer Care at customercare@lyst.com.
           </p>
 
-          <p>
+          <p className="p2">
             Are you a store, brand or designer interested in featuring on Lyst?
           </p>
 
-          <p>
+          <p className="p2">
             Apply{" "}
             <Link className="helpcenter" to={""}>
               here
@@ -89,20 +89,21 @@ export const Contact = () => {
             to become a Lyst partner.
           </p>
 
-          <p>Press inquiries</p>
+          <p className="p2">Press inquiries</p>
 
-          <p>
+          <p className="p2">
             For any media inquiries, image requests or interview opportunities
             please contact
+            
           </p>
+          <Link to={""}>press@lyst.com</Link>
+          <h5 className="p2">Registered Office</h5>
 
-          <h5>Registered Office</h5>
-
-          <p>Lyst Limited</p>
-          <p>Floor 7, The Minster Building</p>
-          <p>21 Mincing Lane</p>
-          <p>London</p>
-          <p>EC3R 7AG</p>
+          <p className="p2">Lyst Limited</p>
+          <p className="p2">Floor 7, The Minster Building</p>
+          <p className="p2">21 Mincing Lane</p>
+          <p className="p2">London</p>
+          <p className="p2">EC3R 7AG</p>
         </div>
 
        

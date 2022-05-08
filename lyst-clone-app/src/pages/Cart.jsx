@@ -28,10 +28,6 @@ export default function Cart() {
     (state) => state.cart
   );
 
-
-   
-   
-   
   const [codeInput, setCodeInput] = useState("");
   const [open, setOpen] = React.useState(false);
   const [message, setMessage] = useState("");
@@ -43,7 +39,6 @@ export default function Cart() {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
-
     }
 
     setOpen(false);
@@ -98,6 +93,7 @@ export default function Cart() {
           height: "20px",
           width: "90%",
           margin: "auto",
+          paddingBottom: "2rem",
         }}
       >
         <CartTotal>

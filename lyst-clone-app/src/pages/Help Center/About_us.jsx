@@ -9,7 +9,7 @@ export const About_us = () => {
         <h1>ABOUT US</h1>
 
         <div className="aboutthisweb">
-          <p>Lyst is a fashion technology company, and premium shopping app.</p>
+          <p className="about1">Lyst is a fashion technology company, and premium shopping app.</p>
           <p>
             For over 160 million annual shoppers, we offer the most
             comprehensive range of products from 17,000 of the world’s leading
@@ -21,7 +21,7 @@ export const About_us = () => {
           </p>
         </div>
 
-        <div className="aboutacchive">
+        <div className="aboutacchiv">
           <div className="aboutacchive1"></div>
           <div className="aboutacchive2"></div>
           <div className="aboutacchive3"></div>
@@ -237,7 +237,7 @@ export const About_us = () => {
               </Link>
               <div className="arrow1">→</div>
             </div>
-            <p>Be part of the future of fashion commerce</p>
+            <p className="dismorewrite">Be part of the future of fashion commerce</p>
 
           </div>
 
@@ -248,7 +248,7 @@ export const About_us = () => {
               </Link>
               <div className="arrow2">→</div>
             </div>
-            <p>A unique source of global and local fashion intelligence</p>
+            <p className="dismorewrite">A unique source of global and local fashion intelligence</p>
 
           </div>
 
@@ -259,7 +259,7 @@ export const About_us = () => {
               </Link>
               <div className="arrow2">→</div>
             </div>
-            <p>All your fashion needs in one app</p>
+            <p className="dismorewrite">All your fashion needs in one app</p>
 
           </div>
         </div>

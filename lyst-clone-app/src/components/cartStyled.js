@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const CartHead = styled.div`
-
-margin-left: 80px;
-margin-top: 150px;
+  margin-left: 80px;
+  margin-top: 150px;
   @media (min-width: 0px) and (max-width: 600px) {
     margin: auto;
   }
-
 `;
 
 export const CartPage = styled.div`
