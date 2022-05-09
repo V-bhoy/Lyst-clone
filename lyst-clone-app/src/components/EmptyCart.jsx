@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 export default function EmptyCart() {
-  console.log("Empty");
   return (
     <>
       <div
@@ -11,6 +10,7 @@ export default function EmptyCart() {
           textAlign: "center",
           objectFit: "cover",
           overflow: "hidden",
+          marginTop: "80px",
         }}
       >
         <img
@@ -22,8 +22,8 @@ export default function EmptyCart() {
 
       <div style={{ textAlign: "center", margin: "20px 0px" }}>
         <Link to={"/"}>
-          <Button variant="contained" size="large">
-            SHOP NOW
+          <Button variant="contained" size="large" >
+            CONTINUE SHOPPING
           </Button>
         </Link>
       </div>
