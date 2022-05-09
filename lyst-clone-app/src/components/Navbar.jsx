@@ -4,6 +4,7 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
+import PersonIcon from "@mui/icons-material/Person";
 import {
   BottomNav,
   DropDown,
@@ -19,8 +20,9 @@ import { Link } from "react-router-dom";
 import SecondaryNav from "./SecondaryNav";
 import MobileNav from "./MobileNav";
 import SearchList from "./SearchList";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchItem } from "../redux/action";
+import { useGlobalContext } from "../contextAPI";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -36,9 +38,15 @@ function HideOnScroll(props) {
 }
 
 const Navbar = (props) => {
+  const { isLoggedIn } = useSelector((state) => state.login);
+  console.log(typeof isLoggedIn, isLoggedIn);
+  const currentUser = JSON.parse(localStorage.getItem("CurrentUser")) || "";
+  const { logOutUser } = useGlobalContext();
+
   const [activeProd, setActiveProd] = useState(false);
   const [activeLink, setActiveLink] = useState("Men");
   const [dropActive, setDropActive] = useState(false);
+  const [loginActive, setLoginActive] = useState(false);
   const [searchActive, setsearchActive] = useState(false);
   const [searchValue, setsearchValue] = useState("");
 
@@ -105,11 +113,36 @@ const Navbar = (props) => {
                   </DropDown>
                 )}
               </div>
-              <Link to="/login">
-                <p className="hover:underline">Sign in</p>
-              </Link>
+              {!isLoggedIn && (
+                <Link to="/login">
+                  <p className="hover:underline">Sign in</p>
+                </Link>
+              )}
+              {isLoggedIn && (
+                <div
+                  className="relative cursor-pointer"
+                  onClick={() => setLoginActive(!loginActive)}
+                >
+                  Account
+                  <KeyboardArrowDownIcon style={{ fontSize: "1rem" }} />
+                  {loginActive && <DropDownSpan></DropDownSpan>}
+                  {loginActive && (
+                    <DropDown>
+                      <p className="text-[16px] w-[180px] flex items-end font-bold">
+                        <PersonIcon style={{ fontSize: "28px" }} />
+                        <span className="pl-2"> {currentUser} </span>
+                      </p>
+                      <button
+                        className="w-full mt-4 bg-gray-300 py-2 text-[15px]"
+                        onClick={() => logOutUser()}
+                      >
+                        Log Out
+                      </button>
+                    </DropDown>
+                  )}
+                </div>
+              )}
               <Link to="/signup">
-                {" "}
                 <NavButton className="hover:underline">Join</NavButton>
               </Link>
             </TopNav>
