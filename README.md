@@ -44,6 +44,7 @@ This is a team project, built by us in the Construct Week - Unit 4 at Masai Scho
 **Home Page**
 
 ![Screenshot (103)](https://user-images.githubusercontent.com/56001279/167425809-da8dee61-03d3-498f-bd5b-6a0c5479b492.png)
+
 ![Screenshot (107)](https://user-images.githubusercontent.com/56001279/167426416-d6ba6941-4cba-41e6-b066-75d53466aeac.png)
 
 **Search DropDown**
