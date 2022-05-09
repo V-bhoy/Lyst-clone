@@ -44,7 +44,6 @@ export const ProductsReducer = (state = initState, { type, payload }) => {
         ...state,
         filterData: [],
       };
-
     case SEARCH_ITEMS:
       return {
         ...state,
