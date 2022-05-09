@@ -7,6 +7,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   //actions
   const addNewUser = (detail) => {
+    console.log(detail);
     store.dispatch({ type: "ADD_USER", payload: { userDetail: detail } });
   };
 

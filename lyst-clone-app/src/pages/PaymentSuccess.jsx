@@ -16,7 +16,7 @@ const PaymentSuccess = () => {
 
           <img src="https://mrhomez.in/wp-content/uploads/2020/11/tick.gif" alt="encrypted" className={styles.logo} />
 
-          <button type="submit" className={styles.morebtn} onClick={() => navigate("/Home")}>BUY MORE</button>
+          <button type="submit" className={styles.morebtn} onClick={() => navigate("/")}>BUY MORE</button>
 
         </div>
     </div>

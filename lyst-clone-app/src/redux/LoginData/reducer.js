@@ -22,6 +22,10 @@ const loginReducer = (state = preloadedState, action) => {
         };
   
       case "LOGIN_USER":
+        localStorage.setItem(
+          "CurrentUser",
+          JSON.stringify([...state.currentUser, action.payload.currentUser])
+        );
         return {
           ...state,
           isLoggedIn: true,
