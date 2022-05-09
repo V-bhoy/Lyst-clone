@@ -7,7 +7,8 @@ import { Flex,
      ItemSpec,
       ImageDiv,
        ValueDiv,
-      Quantity} from './cartStyled'
+      Quantity,
+      Desc} from './cartStyled'
 import { deleteItem } from '../redux/action'
 import { useDispatch } from 'react-redux'
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -55,7 +56,7 @@ export default function CartItem({ title, id, desc, img, price,qty }) {
         <ItemInfo>
             <ItemSpec>
             <h2>{title}</h2>
-            <h4>{desc}</h4>
+            <Desc>{desc}</Desc>
             </ItemSpec>
             
 

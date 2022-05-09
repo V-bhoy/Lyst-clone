@@ -5,6 +5,8 @@ export const CartHead = styled.div`
   margin-top: 150px;
   @media (min-width: 0px) and (max-width: 600px) {
     margin: auto;
+    margin-top: 100px;
+    text-align : center;
   }
 `;
 
@@ -13,7 +15,6 @@ export const CartPage = styled.div`
   margin: auto;
   @media (min-width: 0px) and (max-width: 600px) {
     width: 80%;
-  }
 `;
 
 export const CartTotal = styled.div`
@@ -115,7 +116,7 @@ export const ItemInfo = styled.div`
   @media (min-width: 0px) and (max-width: 600px) {
     display: block;
     width: 80%;
-    font-size: 80%;
+    font-size: 90%;
     text-align: center;
     line-height: 0.7cm;
   }
@@ -210,6 +211,8 @@ export const CheckOutTop = styled.div`
   margin-left : 40px;
   @media (min-width: 0px) and (max-width: 600px) {
     padding: 10px 18px 10px 18px;
+    text-align: center;
+    margin-bottom: -10px;
   }
 `;
 
@@ -217,5 +220,13 @@ export const Quantity = styled.h4`
   @media (min-width: 0px) and (max-width: 600px) {
   margin-bottom : 2px;
    font-size: 20px;
+  }
+`;
+export const Desc = styled.h2`
+  @media (min-width: 0px) and (max-width: 600px) {
+    width: 120%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 `;
