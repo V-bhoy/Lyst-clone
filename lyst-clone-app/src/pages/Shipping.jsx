@@ -121,7 +121,7 @@ const Shipping = () => {
                 <span>Return to information</span>
               </ReturnToInfo>
             </Link>
-            <Link to="payment">
+            <Link to="/payment">
               <PaymentButton>Continue to payment</PaymentButton>
             </Link>
           </PaymentDiv>

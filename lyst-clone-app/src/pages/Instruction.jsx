@@ -4,6 +4,7 @@ import CartItemSummry from "./CartItemSummry";
 // import "./StyledComponents/CartItemSummryStyled";
 import "./StyledComponents/CartItemSummryStyled";
 import "./Instruction.css";
+import { Link } from "react-router-dom";
 const Instruction = () => {
   const [user, setUser] = useState({
     fName: "",
@@ -249,12 +250,14 @@ const Instruction = () => {
                   <i class="fa-solid fa-angle-left"></i> Return to cart
                 </div>
                 <div>
-                  <button
-                    type="submit"
-                    class="btn btn-dark Instruction-Main-left-form-btn"
-                  >
-                    Continue to shipping
-                  </button>
+                  <Link to="/shipping">
+                    <button
+                      type="submit"
+                      class="btn btn-dark Instruction-Main-left-form-btn"
+                    >
+                      Continue to shipping
+                    </button>
+                  </Link>
                 </div>
               </div>
             </form>
