@@ -1,250 +1,262 @@
-.contactcoverdiv{
-    display:  flex;
-    margin: auto;
-    margin-top: 9%;
-    width: 65%;
-    height: 635px;
-   gap: 40px;
+.contactcoverdiv {
+  display: flex;
+  margin: auto;
+  margin-top: 9%;
+  width: 65%;
+  height: 635px;
+  gap: 40px;
 }
 
-.contactinnerdiv{
-    height: 600px;
-    width: 30%;
-    
+.contactinnerdiv {
+  height: 600px;
+  width: 30%;
 }
 
-.contactinnerdiv1{
-    width:65%;
+.contactinnerdiv1 {
+  width: 65%;
 }
 
 /* 1 */
-.line1{
-    margin-top: 16px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
-    
+.line1 {
+  margin-top: 16px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp1{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    
+.supp1 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 /* 2 */
-.line2{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line2 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp2{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp2 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 3 */
-.line3{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line3 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp3{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp3 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 4 */
-.line4{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line4 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp4{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp4 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 5 */
-.line5{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line5 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp5{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp5 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 6 */
-.line6{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line6 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp6{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp6 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 
 /* 7 */
-.line7{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line7 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp7{
-    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp7 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 8 */
-.line8{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line8 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.supp8{    height: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold; font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 18px;}
+.supp8 {
+  height: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* 9 */
-.line9{
-    margin-top: 17px;
-    background-color: black;
-    height: 3px;
-    width: 92%;
-    margin-left: 20px;
+.line9 {
+  margin-top: 17px;
+  background-color: black;
+  height: 3px;
+  width: 92%;
+  margin-left: 20px;
 }
 
-.contactinnerdiv1 h2{
-    font-weight: bold;
-    font-size: 27px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 2.2;
-    /* border: 1px solid red; */
+.contactinnerdiv1 h2 {
+  font-weight: bold;
+  font-size: 27px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 2.2;
+  /* border: 1px solid red; */
 }
 
-.contactinnerdiv1 p{
-    font-size: 15px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 1.4;
-    font-weight: 300;
-    color: #000;
+.contactinnerdiv1 p {
+  font-size: 15px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #000;
 }
 
-.p1{
-    margin-top: 6%;
+.p1 {
+  margin-top: 6%;
 }
 
-.p2{
-    margin-top: 20px;
+.p2 {
+  margin-top: 20px;
 }
 
-
-.helpcenter{
-    color: #000;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-weight: 300;
+.helpcenter {
+  color: #000;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
-h5{
-    font-weight: 500;
-    font-size: 14px;
-    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+h5 {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: Suisse Intl, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.helpbutton{
-    margin-top:15px;
-    width: 7.5%;
-    display: block;
-    display: flex;
-    background-color: #212121;
-    border-radius: 35px;
-    height: 45px;
-    margin-left: 91%;
+.helpbutton {
+  margin-top: 15px;
+  width: 7.5%;
+  display: block;
+  display: flex;
+  background-color: #212121;
+  border-radius: 35px;
+  height: 45px;
+  margin-left: 91%;
 }
 
-.helpbutton img{
-    margin-top:8px;
-    margin-left: 6px;
-      height: 30px;
-      width: 30px;  
+.helpbutton img {
+  margin-top: 8px;
+  margin-left: 6px;
+  height: 30px;
+  width: 30px;
 }
 
-.btn{
-    border: 1px solid #212121;;
-    font-size: 18px;
-    height:40px;
-    width: 65px;
-    background-color: #212121 !important;
-    color: white;
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif;
+.btn {
+  border: 1px solid #212121;
+  font-size: 18px;
+
+  background-color: #212121 !important;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif;
 }
-.helpbutton div{
+.helpbutton div {
   margin-top: 3px;
 }
