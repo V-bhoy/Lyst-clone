@@ -19,6 +19,7 @@ import {
   BorderDiv,
   CheckOutTop
 } from "../components/cartStyled";
+import { Link } from "@mui/material";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -85,7 +86,9 @@ export default function Cart() {
         YOUR SHOPPING BAG : You Have Total {totalItem} Items In Your Bag
       </CartHead>
       <CheckOutTop>
+        
         <CheckOut>PROCEED TO CHECKOUT</CheckOut>
+
       </CheckOutTop>
       <BorderDiv
         style={{
@@ -128,6 +131,7 @@ export default function Cart() {
           <CartSubtotal>
             <h3 style={{fontWeight: "900"}}>Grand Total : &#8377; {totalAmount}</h3>
             <br />
+            
             <CheckOut>
               PROCEED TO CHECKOUT
             </CheckOut>
