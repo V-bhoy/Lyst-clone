@@ -65,7 +65,6 @@ export const CartCoupon = styled.div`
 export const CartSubtotal = styled.div`
 text-align: right;
   line-height: 1.8;
-  border : 1px solid red;
   @media (min-width: 0px) and (max-width: 600px) {
    
     text-align: center;
