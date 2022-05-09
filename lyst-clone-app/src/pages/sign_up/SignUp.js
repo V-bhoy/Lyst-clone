@@ -75,7 +75,6 @@ const SignUp = () => {
       <div className="sign-up__content-container">
     
         <form
-          action=""
           className="sign-up-form"
           onSubmit={(e) => handleSubmit(e)}
         >
@@ -165,7 +164,7 @@ const SignUp = () => {
               <p className="sign-up-form__error-message">{errorMessage}</p>
             )}
 
-            <button type="submit" className="sign-up__submit-btn" onClick={() => navigate("/login")}>
+            <button type="submit" className="sign-up__submit-btn" >   
               Join Lyst
             </button>
 

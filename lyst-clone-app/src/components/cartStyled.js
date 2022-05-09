@@ -66,7 +66,7 @@ export const CartSubtotal = styled.div`
   width: 42%;
   text-align: right;
   line-height: 1.8;
-  margin-right: 30px;
+
   @media (min-width: 0px) and (max-width: 600px) {
     width: 100%;
     margin-top : 20px;

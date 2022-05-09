@@ -1,4 +1,5 @@
 .mainrg{
+    margin-top: 100px;
     height: 1250px;
     width: 50%;
     border: 2px solid grey;
@@ -66,7 +67,7 @@
 }
 
 .raja{
-    height: 45px;
+    height: 50px;
     width: 100%;
     border-radius: 8px;
     border-bottom: 1px solid grey;
