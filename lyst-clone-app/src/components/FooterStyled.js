@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   width: 100%;
+  position: relative;
   background-color: #f5f4f2;
   border-top: 1px solid black;
 `;
@@ -97,6 +98,9 @@ export const BottomText = styled.div`
   & p {
     font-size: 14px;
     margin-bottom: 20px;
+    & a {
+      text-decoration: none;
+    }
     & a:hover {
       text-decoration: underline;
     }
@@ -129,6 +133,9 @@ export const MiddleContainer = styled.div`
     font-size: 15px;
     margin: 5px 0;
   }
+  & a {
+    text-decoration: none;
+  }
   & a:hover {
     text-decoration: underline;
   }
@@ -152,6 +159,9 @@ export const RightContainer = styled.div`
   & li {
     font-size: 15px;
     margin: 5px 0;
+  }
+  & a {
+    text-decoration: none;
   }
   & a:hover {
     text-decoration: underline;

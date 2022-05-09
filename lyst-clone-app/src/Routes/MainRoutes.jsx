@@ -9,7 +9,7 @@ import LoggedIn from "../pages/logged-in/LoggedIn";
 import Cart from "../pages/Cart";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
-// import Instruction from "../pages/Instruction";
+import Instruction from "../pages/Instruction";
 import Shipping from "../pages/Shipping";
 import Payment from "../pages/Payment";
 import { Helpcenter } from "../pages/Help Center/Helpcenter";
@@ -33,10 +33,13 @@ const MainRoutes = () => {
         <Route path="/aboutus" element={<About_us />} />
         <Route path="/logged-in" element={<LoggedIn />} />
         <Route path="/products/:id" element={<Products />} />
-         <Route path="/information" element={<information />} /> 
+        <Route path="/instruction" element={<Instruction />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
+        <Route path="/information" element={<Instruction />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
