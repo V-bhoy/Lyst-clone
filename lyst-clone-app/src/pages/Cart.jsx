@@ -17,7 +17,7 @@ import {
   CouponInput,
   CouponSubmit,
   BorderDiv,
-  CheckOutTop
+  CheckOutTop,
 } from "../components/cartStyled";
 import { Link } from "react-router-dom";
 
@@ -82,14 +82,13 @@ export default function Cart() {
 
   return (
     <>
-      <CartHead style={{fontWeight: "900"}}>
+      <CartHead style={{ fontWeight: "900" }}>
         YOUR SHOPPING BAG : You Have Total {totalItem} Items In Your Bag.
       </CartHead>
       <CheckOutTop>
-        <Link to={"/Shipping"}>
-        <CheckOut>PROCEED TO CHECKOUT</CheckOut>
+        <Link to={"/Information"}>
+          <CheckOut>PROCEED TO CHECKOUT</CheckOut>
         </Link>
-
       </CheckOutTop>
       <BorderDiv
         style={{
@@ -130,12 +129,10 @@ export default function Cart() {
           </CartCoupon>
 
           <CartSubtotal>
-            <h3 style={{fontWeight: "900"}}>Grand Total : &#8377; {totalAmount}</h3>
+            <h3 style={{ fontWeight: "900" }}>Grand Total : $ {totalAmount}</h3>
             <br />
-            <Link to={"/Shipping"}>
-            <CheckOut>
-              PROCEED TO CHECKOUT
-            </CheckOut>
+            <Link to={"/Information"}>
+              <CheckOut>PROCEED TO CHECKOUT</CheckOut>
             </Link>
           </CartSubtotal>
         </CartRight>

@@ -39,7 +39,6 @@ function HideOnScroll(props) {
 
 const Navbar = (props) => {
   const { isLoggedIn } = useSelector((state) => state.login);
-  console.log(typeof isLoggedIn, isLoggedIn);
   const currentUser = JSON.parse(localStorage.getItem("CurrentUser")) || "";
   const { logOutUser } = useGlobalContext();
 

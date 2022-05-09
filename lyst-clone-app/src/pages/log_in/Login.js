@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../contextAPI";
 import {
   BsFillSuitHeartFill,
@@ -8,8 +8,10 @@ import {
 } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import styles from "./log_in.module.css";
+import { useSelector } from "react-redux";
 
 const Login = () => {
+  const { isLoggedIn } = useSelector((state) => state.login);
   const [personDetail, setPersonDetail] = useState({
     email: "",
     password: "",
@@ -39,6 +41,9 @@ const Login = () => {
       setErrorMessage(result.error);
     }
   };
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  }
   return (
     <div>
       <div className={styles.sign_in_container}>

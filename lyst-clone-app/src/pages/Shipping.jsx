@@ -22,11 +22,6 @@ import {
   DekstopView,
 } from "./StyledComponents/ShippingStyled";
 const Shipping = () => {
-  let data = {
-    email: "abc@gmail.com",
-    address: "location xyz,XYZ",
-  };
-  localStorage.setItem("userData", JSON.stringify(data));
   let userData = JSON.parse(localStorage.getItem("userData")) || [];
   return (
     <MainContainer>
@@ -113,7 +108,7 @@ const Shipping = () => {
             </div>
           </IPES>
           <PaymentDiv>
-            <Link to="Information">
+            <Link to="/Information">
               <ReturnToInfo>
                 <span>
                   <KeyboardArrowLeftIcon />
