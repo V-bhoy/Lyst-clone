@@ -1,5 +1,4 @@
-import Button from "@mui/material/Button";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartItems } from "../redux/action";
 import {
@@ -17,9 +16,9 @@ import {
 
 const CartItemSummry = () => {
   let cartData = JSON.parse(localStorage.getItem("cart")) || [];
-  console.log(cartData, "cart");
 
-  const { totalPrice, tax } = useSelector((state) => state.shipping);
+  const { tax } = useSelector((state) => state.shipping);
+  const { totalAmount } = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
 
@@ -52,7 +51,7 @@ const CartItemSummry = () => {
           <div>
             <p>Subtotal</p>
             <p>
-              $<span>{totalPrice}</span>
+              $<span>{totalAmount}</span>
             </p>
           </div>
           <div>
@@ -71,7 +70,7 @@ const CartItemSummry = () => {
           <div>
             <p style={{ fontSize: "12px", color: "#717171" }}>USD </p>
             <p style={{ fontSize: "24px", color: "#323232" }}>
-              $<span>{totalPrice + tax}</span>
+              $<span>{(totalAmount + tax).toFixed(1)}</span>
             </p>
           </div>
         </TotalBox>

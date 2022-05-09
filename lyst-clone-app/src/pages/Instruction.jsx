@@ -29,7 +29,6 @@ const Instruction = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
     localStorage.setItem("userData", JSON.stringify(user));
     navigate("/shipping");
   };
