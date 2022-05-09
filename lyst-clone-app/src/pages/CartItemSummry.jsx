@@ -1,10 +1,8 @@
-import Button from "@mui/material/Button";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCartItems, updateTotalPrice } from "../redux/action";
+import { getCartItems } from "../redux/action";
 import {
   RightInnerBox,
-  GiftCard,
   PriceBox,
   TotalBox,
   ProdSummryBox,
@@ -20,30 +18,9 @@ const CartItemSummry = () => {
   let cartData = JSON.parse(localStorage.getItem("cart")) || [];
   console.log(cartData, "cart");
 
-  // let totalPrice = 0;
-  // data.map((prod) => {
-  //   totalPrice = totalPrice + prod.quant * prod.price;
-  // });
-  const [promoCode, setPromoCode] = useState("");
-
-  const { totalPrice, tax, promoCodeStatus } = useSelector(
-    (state) => state.shipping
-  );
+  const { totalPrice, tax } = useSelector((state) => state.shipping);
 
   const dispatch = useDispatch();
-  const handleClick = () => {
-    if (promoCodeStatus && promoCode == "Masai30") {
-      let discountPrice = totalPrice - totalPrice * 0.3;
-      dispatch(updateTotalPrice(discountPrice));
-      setPromoCode("");
-    } else if (promoCode !== "Masai30") {
-      alert("Enter valid code");
-      setPromoCode("");
-    } else {
-      alert("Already used");
-      setPromoCode("");
-    }
-  };
   useEffect(() => {
     dispatch(getCartItems());
   }, []);
@@ -68,17 +45,6 @@ const CartItemSummry = () => {
             );
           })}
         </ProdSummryBox>
-        <GiftCard>
-          <input
-            value={promoCode}
-            onChange={(e) => setPromoCode(e.target.value)}
-            type="text"
-            placeholder="Gift card or discount code"
-          />
-          <Button onClick={handleClick} size="large">
-            Apply
-          </Button>
-        </GiftCard>
         <PriceBox>
           <div>
             <p>Subtotal</p>

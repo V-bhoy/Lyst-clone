@@ -9,7 +9,6 @@ import {
 const initState = {
   data: [],
   filterData: [],
-  cartData: [],
 
   searchData: [],
 };
