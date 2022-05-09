@@ -21,7 +21,6 @@ import PaymentSuccess from "../pages/PaymentSuccess";
 const MainRoutes = () => {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
@@ -39,7 +38,6 @@ const MainRoutes = () => {
         <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
     </>
   );
 };

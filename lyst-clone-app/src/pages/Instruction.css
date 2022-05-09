@@ -1,0 +1,42 @@
+.Instruction{
+    margin: 0px;
+    padding: 0px;
+}
+.Instruction-Main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows: auto; */
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.Instruction-Main>div{
+    border: 2px solid black;
+    padding: 20px;
+}
+.Instruction-Main-left-email{
+    margin-bottom: 50px;
+}
+.Instruction-Main-left-email-top{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+.Instruction-Main-left-form-btn-div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.Instruction-Main-left-form-btn{
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+.Instruction-Main-right-summary-details{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.Instruction-Main-right-product{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
