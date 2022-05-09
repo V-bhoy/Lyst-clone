@@ -14,8 +14,10 @@ import {
 } from "./StyledComponents/Products.styled";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProductDetail = ({ setItemOverlay }) => {
+  const { isLoggedIn } = useSelector((state) => state.login);
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
 
@@ -106,8 +108,12 @@ const ProductDetail = ({ setItemOverlay }) => {
             <div
               className="w-full bg-black text-center my-4 cursor-pointer"
               onClick={() => {
-                addToCart();
-                handleClick();
+                if (isLoggedIn) {
+                  addToCart();
+                  handleClick();
+                } else {
+                  navigate("/login");
+                }
               }}
             >
               <AddToCartBtn>Add to cart</AddToCartBtn>

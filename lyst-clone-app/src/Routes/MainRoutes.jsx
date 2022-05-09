@@ -18,7 +18,6 @@ import { Contact } from "../pages/Help Center/Contact";
 import { About_us } from "../pages/Help Center/About_us";
 import PaymentSuccess from "../pages/PaymentSuccess";
 
-
 const MainRoutes = () => {
   return (
     <>
