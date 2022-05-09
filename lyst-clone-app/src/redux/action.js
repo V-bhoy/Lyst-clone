@@ -1,6 +1,5 @@
 import data from "../db.json";
 import {
-  APPLYDISCOUNT,
   GETCARTDATA,
   SORT_DATA,
   CLEAR_FILTER,
@@ -74,10 +73,6 @@ export const clearFilter = () => ({
   type: CLEAR_FILTER,
 });
 
-export const updateTotalPrice = (value) => ({
-  type: APPLYDISCOUNT,
-  payload: value,
-});
 export const getCartItems = () => {
   let totalPrice = 0;
   let cartData = JSON.parse(localStorage.getItem("cart")) || [];
