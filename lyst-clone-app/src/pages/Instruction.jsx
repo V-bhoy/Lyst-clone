@@ -167,8 +167,6 @@ const Instruction = () => {
                 </div>
 
 
-
-
                 <div className='Instruction-Main-right'>
 
                     <CartItemSummry/>
