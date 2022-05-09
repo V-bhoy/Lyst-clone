@@ -10,7 +10,7 @@ export const ShippingReducer = (state = initState, { type, payload }) => {
       return {
         ...state,
         totalPrice: payload.totalPrice,
-        tax: payload.totalPrice * 0.12,
+        tax: +(payload.totalPrice * 0.12).toFixed(1),
         cartData: payload.cartData,
       };
     }

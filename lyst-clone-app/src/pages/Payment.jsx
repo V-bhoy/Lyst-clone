@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Payment.module.css";
 import CartItemSummry from "./CartItemSummry";
 
@@ -213,6 +213,7 @@ const Payment = () => {
                 <h3>
                   <input
                     type="radio"
+                    name="pay"
                     style={{ height: "20px", width: "50px" }}
                   />
                   AfterPay
@@ -237,6 +238,7 @@ const Payment = () => {
                 <h3>
                   <input
                     type="radio"
+                    name="pay"
                     style={{ height: "20px", width: "50px" }}
                   />
                   Pay later with Klarna
@@ -274,6 +276,7 @@ const Payment = () => {
                 <h3>
                   <input
                     type="radio"
+                    name="add"
                     style={{ height: "20px", width: "50px" }}
                   />
                   Same as shipping address
@@ -284,6 +287,7 @@ const Payment = () => {
                 <h3 style={{ marginTop: "10px" }}>
                   <input
                     type="radio"
+                    name="add"
                     style={{ height: "20px", width: "50px" }}
                   />
                   Use a different billing address
@@ -292,8 +296,8 @@ const Payment = () => {
 
               <div style={{ display: "flex" }}>
                 <div style={{ marginTop: "20px" }}>
-                  <a
-                    href="shipping.jsx"
+                  <Link
+                    to="/shipping"
                     style={{
                       textDecoration: "none",
                       color: "black",
@@ -301,7 +305,7 @@ const Payment = () => {
                     }}
                   >
                     Return to shipping
-                  </a>
+                  </Link>
                 </div>
                 <div style={{ marginTop: "20px" }}>
                   <button
