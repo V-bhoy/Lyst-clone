@@ -164,7 +164,7 @@ const SignUp = () => {
               <p className="sign-up-form__error-message">{errorMessage}</p>
             )}
 
-            <button type="submit" className="sign-up__submit-btn" onClick={() => navigate("/login")}>
+            <button type="submit" className="sign-up__submit-btn" >   
               Join Lyst
             </button>
 

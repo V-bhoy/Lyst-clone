@@ -161,7 +161,7 @@ const Payment = () => {
 
         </div>
       </div>  
-      <div style={{marginLeft:"230px", marginTop:"150px"}}>
+      <div style={{width:"40%", margin:"auto", marginTop:"150px"}}>
         <CartItemSummry />
       </div>
     </div>

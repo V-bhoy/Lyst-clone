@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import React from "react";
-import {store} from "./redux/store";
+import { store } from "./redux/store";
 import axios from "axios";
 
 const AppContext = React.createContext();
@@ -23,8 +23,8 @@ const AppProvider = ({ children }) => {
 
   const verifyUser = (personDetail) => {
     const resultantUser = store
-      .getState().login       
-      .userList.find((item) => item.email === personDetail.email);
+      .getState()
+      .login.userList.find((item) => item.email === personDetail.email);
     if (!resultantUser) return { verified: false, error: "User not found." };
     if (resultantUser.password !== personDetail.password)
       return { verified: false, error: "wrong password." };

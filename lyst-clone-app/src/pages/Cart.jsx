@@ -17,7 +17,9 @@ import {
   CouponInput,
   CouponSubmit,
   BorderDiv,
+  CheckOutTop
 } from "../components/cartStyled";
+import { Link } from "react-router-dom";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -80,12 +82,15 @@ export default function Cart() {
 
   return (
     <>
-      <CartHead>
-        YOUR SHOPPING BAG : You Have Total {totalItem} Items In Your Bag
+      <CartHead style={{fontWeight: "900"}}>
+        YOUR SHOPPING BAG : You Have Total {totalItem} Items In Your Bag.
       </CartHead>
-      <div style={{ height: "50px", textAlign: "center", marginTop: "10px" }}>
+      <CheckOutTop>
+        <Link to={"/Shipping"}>
         <CheckOut>PROCEED TO CHECKOUT</CheckOut>
-      </div>
+        </Link>
+
+      </CheckOutTop>
       <BorderDiv
         style={{
           borderBottom: "0.5px solid grey",
@@ -125,11 +130,13 @@ export default function Cart() {
           </CartCoupon>
 
           <CartSubtotal>
-            <h3>Grand Total : &#8377; {totalAmount}</h3>
+            <h3 style={{fontWeight: "900"}}>Grand Total : &#8377; {totalAmount}</h3>
             <br />
+            <Link to={"/Shipping"}>
             <CheckOut>
               PROCEED TO CHECKOUT
             </CheckOut>
+            </Link>
           </CartSubtotal>
         </CartRight>
       </CartPage>
