@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Stack from "@mui/material/Stack";
 import ProductsFilterBar from "../components/ProductsFilterBar";
 import { getData, sortData } from "../redux/action";
 import ProductDetail from "./ProductDetail";
@@ -28,6 +31,20 @@ const Products = () => {
   id.toLowerCase() === "coats" || id.toLowerCase() === "dresses"
     ? (heading = "Women")
     : (heading = "Men");
+
+  if (Data.length === 0) {
+    return (
+      <div className="mt-[100px] px-4 py-4 h-[50vh] flex justify-center items-center">
+        <Stack sx={{ width: "100%" }} spacing={2}>
+          <Alert severity="warning">
+            <AlertTitle>Note</AlertTitle>
+            Right Now We are only dealing in —{" "}
+            <strong>Jackets | Jeans | Dresses | Coats</strong>
+          </Alert>
+        </Stack>
+      </div>
+    );
+  }
 
   return (
     <>

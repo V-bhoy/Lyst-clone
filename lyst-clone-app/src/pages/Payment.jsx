@@ -310,7 +310,10 @@ const Payment = () => {
                 <div style={{ marginTop: "20px" }}>
                   <button
                     className={styles.rgrg}
-                    onClick={() => navigate("/PaymentSuccess")}
+                    onClick={() => {
+                      localStorage.removeItem("cart");
+                      navigate("/PaymentSuccess");
+                    }}
                   >
                     Pay now
                   </button>
