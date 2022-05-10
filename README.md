@@ -27,9 +27,9 @@ This is a team project, built by us in the Construct Week - Unit 4 at Masai Scho
 - `Search`: User can search for any of the products present in the website.
 - `Product Category Page`: Products created dynamically with filter by category, name and price.
 - `Cart`: User can see or remove products added in the cart. Also the user can not add data to the cart without signing in to the website.
-- `Checkout Page`: Users can increase, decrease the quantity of the product and can apply discount coupon.
+- `Checkout Page`: Users can increase, decrease the quantity of the product and can apply discount coupons.
 - `Payment Page`: Users can add their payment details, address and make payment.
-- `Additional Features`: Kept the branding, fonts, colors and favicon and titles consistent throughtout the whole site to give a feel like the original site.
+- `Additional Features`: Kept the branding, fonts, colors and favicon and titles consistent throughout the whole site to give a feel like the original site.
 
 ## Tech Stack
 
